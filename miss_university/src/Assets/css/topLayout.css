@@ -6,8 +6,23 @@
   align-items: center;
   box-sizing: border-box;
 }
-
 .logo {
   width: 234px;
   height: 50px;
+}
+.right {
+  display: flex;
+}
+.nav {
+  display: flex;
+  flex-direction: row;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: -0.64px;
+  column-gap: 40px;
+}
+.dropdownIcon {
+  stroke: #191919;
+  width: 15px;
+  height: 15px;
 }
