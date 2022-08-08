@@ -4,12 +4,14 @@ import { HashRouter, Routes, Route } from "react-router-dom";
 import Home from "./Screens/Home";
 import Second from "./Screens/Second";
 import { TopLayout } from "./Screens/TopLayout";
-import BottomLayout from "./Screens/BottomLayout";
+import { Banner } from "./Screens/Banner";
+import { BottomLayout } from "./Screens/BottomLayout";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{ position: "relative" }}>
       <TopLayout />
+      <Banner />
       <HashRouter>
         <Routes>
           <Route path="/" element={<Home />} />
