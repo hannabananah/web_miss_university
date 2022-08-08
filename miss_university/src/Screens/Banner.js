@@ -5,7 +5,7 @@ import { ReactComponent as SVGBanner } from "../Assets/images/banner.svg";
 export const Banner = () => {
   return (
     <div id="banner_root">
-      <div id="container">
+      <div id="banner_container">
         <div class="left">
           <SVGBanner className="bannerImage" />
           <span class="titleText">월드 미스 유니버시티 참가자 프로필 소개</span>

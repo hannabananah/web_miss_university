@@ -3,6 +3,9 @@
   box-sizing: border-box;
   background-color: #ffffff;
   color: #191919;
+  position: sticky;
+  top: 0;
+  z-index:5;
 }
 #header {
   max-width: 1280px;
@@ -29,9 +32,29 @@
   letter-spacing: -0.64px;
   column-gap: 40px;
   align-items: center;
-}
-.list {
   list-style: none;
+}
+.nav li {
+  position: relative;
+}
+.nav li:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  left: 0;
+  bottom: -3px;
+  height: 1px;
+  background-color: #191919;
+  transition: 0.5s;
+}
+.nav li:hover:before {
+  width: 100%;
+}
+.nav a:visited {
+  color: inherit;
+}
+.nav a:link {
+  text-decoration: none;
 }
 .dropdown {
   width: 140px;

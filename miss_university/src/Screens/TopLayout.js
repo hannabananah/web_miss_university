@@ -37,9 +37,17 @@ export const TopLayout = () => {
         </div>
         {/* right */}
         <div className="right">
-          <ul className="list nav">
-            <li>애니챗 HOME</li>
-            <li>월드 미스 유니버시티 HOME</li>
+          <ul className="nav">
+            <li>
+              <a href="#" target="_blank">
+                애니챗 HOME
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                월드 미스 유니버시티 HOME
+              </a>
+            </li>
             <li>
               <Select
                 placeholder="언어 설정"
