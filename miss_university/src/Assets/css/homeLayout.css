@@ -6,7 +6,6 @@
 #main_container {
   max-width: 1280px;
   width: 100%;
-  height: 1720px;
   margin: 0 auto;
   padding: 64px 0 100px;
   display: flex;
@@ -203,65 +202,4 @@ input[type="search"]::-webkit-search-cancel-button {
   font-size: 20px;
   line-height: 20px;
   letter-spacing: -0.8px;
-}
-.pagination {
-  margin-top: 48px;
-  display: inline-block;
-  display: flex;
-  align-self: center;
-}
-.pagination a {
-  color: #333333;
-  float: left;
-  padding: 0 15px;
-  text-decoration: none;
-  display: flex;
-  align-self: center;
-}
-.pagination a.active {
-  font-weight: bold;
-  color: #7c4dff;
-  position: relative;
-  z-index: 1;
-}
-.pagination a.active:before {
-  position: absolute;
-  top: -4px;
-  left: 4px;
-  content: "";
-  width: 30px;
-  height: 30px;
-  border-radius: 15px;
-  background-color: #f8f6fb;
-  z-index: -1;
-}
-.pageIcon1 {
-  width: 12px;
-  height: 10px;
-  stroke: #191919;
-}
-.pageIcon2 {
-  width: 24px;
-  height: 24px;
-  stroke: #191919;
-  transform: rotate(90deg);
-  padding-top: 15px;
-  padding-bottom: 8px;
-}
-.pageIcon3 {
-  width: 24px;
-  height: 24px;
-  stroke: #191919;
-  transform: rotate(-90deg);
-  padding-top: 15px;
-  padding-bottom: 8px;
-}
-.pageIcon4 {
-  width: 12px;
-  height: 10px;
-  stroke: #191919;
-  transform: rotate(-180deg);
-}
-a.marks {
-  padding: 0;
 }
