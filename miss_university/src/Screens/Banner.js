@@ -6,13 +6,13 @@ export const Banner = () => {
   return (
     <div id="banner_root">
       <div id="banner_container">
-        <div class="left">
+        <div className="left">
           <SVGBanner className="bannerImage" />
-          <span class="titleText">월드 미스 유니버시티 참가자 프로필 소개</span>
+          <span className="titleText">월드 미스 유니버시티 참가자 프로필 소개</span>
         </div>
-        <div class="subText">
+        <div className="subText">
           참가자 SNS 게시물 보러 가기&nbsp;
-          <span class="arrowMark">&#8250;</span>
+          <span className="arrowMark">&#8250;</span>
         </div>
       </div>
     </div>

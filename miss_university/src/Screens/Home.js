@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Link, useNavigate } from "react-router-dom";
 import "../Assets/css/homeLayout.css";
 import { ReactComponent as SVGSearch } from "../Assets/images/search.svg";
@@ -468,19 +467,15 @@ function Home() {
             </div>
           </div>
         </div>
-        <div class="pagination">
+        <div className="pagination">
           <a className="marks" href="#">
-            {" "}
-            <SVGDoubleArrow className="pageIcon1" />{" "}
+            <SVGDoubleArrow className="pageIcon1" />
           </a>
           <a className="marks" href="#">
-            {" "}
-            <SVGArrow className="pageIcon2" />{" "}
+            <SVGArrow className="pageIcon2" />
           </a>
           <a href="#">1</a>
-          <a href="#" class="active">
-            2
-          </a>
+          <a href="#">2</a>
           <a href="#">3</a>
           <a href="#">4</a>
           <a href="#">5</a>
@@ -490,12 +485,10 @@ function Home() {
           <a href="#">9</a>
           <a href="#">10</a>
           <a className="marks" href="#">
-            {" "}
-            <SVGArrow className="pageIcon3" />{" "}
+            <SVGArrow className="pageIcon3" />
           </a>
           <a className="marks" href="#">
-            {" "}
-            <SVGDoubleArrow className="pageIcon4" />{" "}
+            <SVGDoubleArrow className="pageIcon4" />
           </a>
         </div>
         {/* <button onClick={goSecond}>ddd</button> */}

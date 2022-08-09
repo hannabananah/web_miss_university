@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Select from "react-select";
 
 import "../Assets/css/topLayout.css";
@@ -28,15 +28,33 @@ export const TopLayout = () => {
       fontWeight: state.isSelected ? "bold" : "normal",
     }),
   };
+
+ // Sticky TopLayout Area
+ useEffect(() => {
+  window.addEventListener("scroll", shadow);
+  return () => {
+    window.removeEventListener("scroll", shadow);
+  };
+});
+
+// 스크롤 시 그림자 효과 생성
+const shadow = (e) => {
+  const header = document.querySelector(".scrollShadow");
+  const scrollTop = window.scrollY;
+  scrollTop >= 320
+    ? header.classList.add("shadow")
+    : header.classList.remove("shadow");
+};
+
   return (
-    <div id="top_root">
+    <div id="top_root" className="scrollShadow">
       <header id="header">
         {/* left */}
         <div>
           <SVGLogo className="logoIcon" />
         </div>
         {/* right */}
-        <div className="right">
+        <nav className="right">
           <ul className="nav">
             <li>
               <a href="#" target="_blank">
@@ -66,7 +84,7 @@ export const TopLayout = () => {
               />
             </li>
           </ul>
-        </div>
+        </nav>
       </header>
     </div>
   );
