@@ -1,0 +1,125 @@
+.modalLayout {
+  box-sizing: border-box;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1330px;
+  min-height: 612px;
+  max-height: 100vh;
+  background-color: #ffffff;
+  overflow: auto;
+  outline: none;
+  padding: 40px 56px;
+  border-radius: 6px;
+  z-index: 1;
+}
+.modalContainer {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 56px;
+}
+.modalLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modalImgContainer {
+  width: 180px;
+  height: 250px;
+  margin: 0 auto;
+  /* 이미지 삽입 필요 */
+  background-color: azure;
+}
+.modalImg {
+  width: 100%;
+}
+.modalName {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: -0.54px;
+  margin: 12px 0;
+}
+.modalDetails {
+  display: flex;
+  column-gap: 24px;
+}
+.modalDetail {
+  display: flex;
+  column-gap: 6px;
+  align-items: center;
+}
+.modalFlag {
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  /* 이미지 삽입 필요 */
+  background-color: pink;
+}
+.modalIcon {
+  width: 18px;
+  height: 18px;
+  fill: #737373;
+}
+.modaltext {
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: -0.56px;
+  color: #737373;
+}
+.modalAmbition {
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.42px;
+  color: #737373;
+  margin: 18px 0 40px;
+}
+.modalInfoContainer {
+  width: 328px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.modalInfo {
+  display: flex;
+  justify-content: space-between;
+}
+.modalsubjectText {
+  width: 58px;
+  text-align: left;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: -0.42px;
+  color: #7c4dff;
+  word-break: keep-all;
+}
+.modaldetailText {
+  width: 258px;
+  text-align: left;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: -0.42px;
+  color: #737373;
+}
+.modalTextContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.modalImgsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 32px;
+}
+.modalImagesList {
+  width: 162px;
+  height: 225px;
+  /* 이미지 삽입 필요 */
+  background-color: azure;
+}
+/* 모달 백그라운드 투명도 */
+.ReactModal__Overlay {
+  background-color: rgba(25, 25, 25, 0.3) !important;
+  z-index: 5;
+}

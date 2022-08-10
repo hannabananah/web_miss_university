@@ -41,10 +41,10 @@ address {
   font-style: inherit;
   cursor: pointer;
 }
-.number{
-    cursor: pointer;
+.number {
+  cursor: pointer;
 }
-p {
+.rights {
   color: #bebebe;
   display: flex;
   font-size: 12px;

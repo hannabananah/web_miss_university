@@ -6,8 +6,9 @@ import "../Assets/css/pagination.css";
 import { ReactComponent as SVGSearch } from "../Assets/images/search.svg";
 import ParticipantsList from "../Component/ParticipantsList";
 import Posts from "../Component/Posts";
+import DetailModal from "../Component/DetailModal";
 
-export const Home = () => {
+export const Home = ({ popupmodal }) => {
   const navigate = useNavigate();
   // const goSecond = () => {
   //   navigate("/second");
@@ -26,6 +27,14 @@ export const Home = () => {
     setPage(page);
     setList(page);
   };
+
+  // 모달 팝업
+  const [isOpen, setIsOpen] = useState(false);
+
+  function popupmodal() {
+    setIsOpen(!isOpen);
+  }
+
   return (
     <div id="home_root">
       <section id="main_container">
@@ -47,7 +56,13 @@ export const Home = () => {
         </div>
         <div className="listContainer">
           {currentList.map((participant, index) => {
-            return <Posts participant={participant} key={index} />;
+            return (
+              <Posts
+                key={index}
+                participant={participant}
+                popupmodal={popupmodal}
+              />
+            );
           })}
         </div>
         <Pagination
@@ -59,6 +74,8 @@ export const Home = () => {
           onChange={handlePageChange}
         />
         {/* <button onClick={goSecond}>ddd</button> */}
+
+        <DetailModal isOpen={isOpen} popupmodal={popupmodal} />
       </section>
     </div>
   );

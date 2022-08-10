@@ -22,7 +22,7 @@ export const BottomLayout = () => {
           <span>대표번호 : <span className="number">02-6959-3088</span></span>
           <span>법인등록번호 : 110111-7783700</span>
         </div>
-        <p>COPYRIGHT (C) ANYCHAT CORP. ALL RIGHTS RESERVED.</p>
+        <p className="rights">COPYRIGHT (C) ANYCHAT CORP. ALL RIGHTS RESERVED.</p>
       </footer>
     </div>
   );

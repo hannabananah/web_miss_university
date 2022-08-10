@@ -1,10 +1,10 @@
-import React from "react";
-import "../Assets/css/homeLayout.css";
+import React, { useState } from "react";
+import "../Assets/css/posts.css";
 import { ReactComponent as SVGCard } from "../Assets/images/sideCard.svg";
 import { ReactComponent as SVGArrow } from "../Assets/images/arrow.svg";
 import { ReactComponent as SVGPeople } from "../Assets/images/people.svg";
 
-const Posts = ({ participant }) => {
+const Posts = ({ participant, popupmodal }) => {
   return (
     <div className="cardContainer">
       <div className="mainCard">
@@ -25,7 +25,7 @@ const Posts = ({ participant }) => {
             <span className="detailText">{participant.fallowerNum}</span>
           </div>
           {/* 프로필 자세히 보기 */}
-          <p className="seeMoreText1">
+          <p className="seeMoreText1" onClick={popupmodal}>
             프로필 자세히 보기
             <SVGArrow className="arrowIcon1" />
           </p>
