@@ -27,6 +27,19 @@ export const TopLayout = () => {
       ...provided,
       color: state.isSelected ? "#7c4dff" : "#191919",
       fontWeight: state.isSelected ? "bold" : "normal",
+      boxSizing: "border-box",
+      width: "140px",
+      display: "flex",
+      justifyContent: "center",
+      rowGap: "20px",
+      paddingRight: "28px",
+      paddingLeft: "28px",
+      fontSize: "14px",
+      lineHeight: "14px",
+      letterSpacing: "-0.42px",
+      "&:hover": {
+        backgroundColor: "transparent",
+      },
     }),
   };
 
