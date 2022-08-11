@@ -1,0 +1,93 @@
+.rankMedalLayout1 {
+  box-sizing: border-box;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  top: -44px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid rgba(193, 155, 63, 0.3);
+  background: linear-gradient(
+    103.05deg,
+    #c19b3f -6.28%,
+    #d6be75 50.94%,
+    #e7d78b 78.71%,
+    #f9f1bb 105.06%
+  );
+  z-index: 1;
+}
+.rankMedalText1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 10px;
+  line-height: 10px;
+  letter-spacing: -0.96px;
+  color: #fff7c4;
+}
+.rankMedalNum {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 22px;
+  letter-spacing: -1.2px;
+}
+.rankMedalLayout2 {
+  box-sizing: border-box;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  top: -44px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid rgba(105, 109, 114, 0.3);
+  background: linear-gradient(
+    103.05deg,
+    #696d72 -12.58%,
+    #92949a 37.05%,
+    #bfc1c2 71.36%,
+    #f1f1f1 105.06%
+  );
+  z-index: 1;
+}
+.rankMedalText2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 10px;
+  line-height: 10px;
+  letter-spacing: -0.96px;
+  color: #f1f1f1;
+}
+.rankMedalLayout3 {
+  box-sizing: border-box;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  top: -44px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid rgba(164, 74, 42, 0.3);
+  background: linear-gradient(
+    103.05deg,
+    #a44a2a -12.58%,
+    #aa5f39 37.05%,
+    #d19265 71.36%,
+    #f9cda7 105.06%
+  );
+  z-index: 1;
+}
+.rankMedalText3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 10px;
+  line-height: 10px;
+  letter-spacing: -0.96px;
+  color: #f9cda7;
+}

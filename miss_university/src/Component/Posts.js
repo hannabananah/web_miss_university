@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import "../Assets/css/posts.css";
+// 순위권 표시
+import Raking from "./Ranked.js";
 import { ReactComponent as SVGCard } from "../Assets/images/sideCard.svg";
 import { ReactComponent as SVGArrow } from "../Assets/images/arrow.svg";
 import { ReactComponent as SVGPeople } from "../Assets/images/people.svg";
-
 const Posts = ({ participant, popupmodal }) => {
   return (
     <div className="cardContainer">
@@ -11,7 +12,9 @@ const Posts = ({ participant, popupmodal }) => {
         <span className="decoText1">WORLD</span>
         <span className="decoText2">MISS UNIVERSITY</span>
         {/* 프로필 이미지 삽입 필요 */}
-        <div className="photo">{participant.profileImg}</div>
+        <div className="photo" onClick={popupmodal}>
+          {participant.profileImg}
+        </div>
         <div className="detailContainer">
           {/* 국가 관련 디테일 */}
           <div className="details">
@@ -36,9 +39,13 @@ const Posts = ({ participant, popupmodal }) => {
           </p>
         </div>
       </div>
-      <div>
-        <SVGCard className="sideCardImage" />
-        <span className="name">{participant.name}</span>
+      <div className="sideArea">
+        {/* 순위권 표시 */}
+        <Raking />
+        <div className="sideCardLayout" onClick={popupmodal}>
+          <SVGCard className="sideCardImage" />
+          <span className="name">{participant.name}</span>
+        </div>
       </div>
     </div>
   );

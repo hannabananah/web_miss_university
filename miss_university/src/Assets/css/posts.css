@@ -38,6 +38,7 @@
   width: 180px;
   height: 250px;
   margin-bottom: 16px;
+  cursor: pointer;
   /* 프로필 이미지 삽입 필요 */
   background-color: azure;
 }
@@ -115,9 +116,23 @@
   stroke: #7c4dff;
   transform: rotate(-90deg);
 }
+.sideArea {
+  position: relative;
+}
+.sideCardLayout {
+  cursor: pointer;
+}
 .sideCardImage {
   width: 44px;
   height: 414px;
+  /* 기본 색상 */
+  stroke: #737373;
+  /* 1위 색상 */
+  /* stroke: #c19b3f; */
+  /* 2위 색상 */
+  /* stroke: #696d72; */
+  /* 3위 색상 */
+  /* stroke: #a44a2a; */
   position: relative;
 }
 .name {

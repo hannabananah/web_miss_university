@@ -4,8 +4,11 @@ import { Link, useNavigate } from "react-router-dom";
 import "../Assets/css/homeLayout.css";
 import "../Assets/css/pagination.css";
 import { ReactComponent as SVGSearch } from "../Assets/images/search.svg";
-import ParticipantsList from "../Component/ParticipantsList";
+// 페이징 처리되면 콘텐츠 넘어가는 영역
 import Posts from "../Component/Posts";
+// 프로필 카드 하나에 대한 참가자 정보
+import ParticipantsList from "../Component/ParticipantsList";
+// 프로필 자세히 보기 모달 팝업
 import DetailModal from "../Component/DetailModal";
 
 export const Home = ({ popupmodal }) => {

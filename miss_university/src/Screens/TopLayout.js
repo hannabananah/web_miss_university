@@ -58,12 +58,12 @@ export const TopLayout = () => {
         <nav className="right">
           <ul className="nav">
             <li>
-              <a href="#" target="_blank">
+              <a href="https://www.anychat.com/main/" target="_blank">
                 애니챗 HOME
               </a>
             </li>
             <li>
-              <a href="#" target="_blank">
+              <a href="http://wmu.or.kr/" target="_blank">
                 월드 미스 유니버시티 HOME
               </a>
             </li>

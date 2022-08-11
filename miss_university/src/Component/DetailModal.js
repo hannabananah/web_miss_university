@@ -1,10 +1,21 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
+// 0201,0202 (<" "의 프로필 사진>텍스트 디폴트 크기 32px)
 import "../Assets/css/modal.css";
+
+// 0203(이름의 길이가 너무 길어서 최대 가로 길이를 넘어갈 경우:<" "의 프로필 사진>텍스트 크기를 24px로 변경)
+// import "../Assets/css/modalLongName.css";
+
+// 0203(폰트 크기를 24로 줄였음에도 우측 텍스트와의 여백이 40px이 안될 경우 이름의 길이가 너무 길어서 최대 가로 길이를 넘어갈 경우 폰트 사이즈 22px로 변경)
+// import "../Assets/css/modalTooLongName.css";
+
+// 순위권 표시
+import Raking from "../Component/ModalRanked";
 import { ReactComponent as SVGPeople } from "../Assets/images/people.svg";
 Modal.setAppElement("#root");
 
 const DetailModal = ({ popupmodal, isOpen }) => {
+  const name = "ZABELO HILABISA";
   return (
     <div>
       <Modal
@@ -18,8 +29,10 @@ const DetailModal = ({ popupmodal, isOpen }) => {
           <div className="modalLeft">
             <div className="modalImgContainer">
               <img src="#" className="modalImg" />
+              {/* 순위권 표시 */}
+              <Raking />
             </div>
-            <div className="modalName">ZABELO HILABISA</div>
+            <div className="modalName">{name}</div>
             <div className="modalDetails">
               <div className="modalDetail">
                 <div className="modalFlag"></div>
@@ -65,11 +78,14 @@ const DetailModal = ({ popupmodal, isOpen }) => {
           {/* 모달 오른쪽 */}
           <div className="modalRight">
             <div className="modalTextContainer">
-              <h3 className="modalTitle">ZABELO HILABISA의 프로필 사진</h3>
-              <div className="modalsubText">
-                참가자 SNS 게시물 보러 가기&nbsp;
-                <span className="arrowMark">&#8250;</span>
+              {/* 해당 팜가자의 이름이 길어질 경우 폰트 사이즈가 바뀌는 영역 */}
+              <div className="modalTitle">
+                <span>{name}</span>의 프로필 사진
               </div>
+              <a href="#" className="modalsubText">
+                SNS 게시물 보러 가기&nbsp;
+                <span className="arrowMark">&#8250;</span>
+              </a>
             </div>
             {/* 모달 이미지 리스트 */}
             <div className="modalImgsContainer">

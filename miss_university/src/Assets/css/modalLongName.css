@@ -110,10 +110,11 @@
   align-items: flex-end;
   margin-bottom: 18px;
 }
+/* 폰트 사이즈 변경 */
 .modalTitle {
-  font-size: 32px;
-  line-height: 32px;
-  letter-spacing: -1.28px;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: -0.96px;
 }
 .modalTitle span {
   color: #7c4dff;
