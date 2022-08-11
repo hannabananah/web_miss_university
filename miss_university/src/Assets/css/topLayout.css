@@ -1,0 +1,92 @@
+#top_root {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  color: #191919;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+#header {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  height: 98px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+.logoIcon {
+  width: 234px;
+  height: 50px;
+}
+.right {
+  display: flex;
+}
+.nav {
+  display: flex;
+  flex-direction: row;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: -0.64px;
+  column-gap: 40px;
+  align-items: center;
+  list-style: none;
+}
+.nav li:first-child,
+.nav li:nth-child(2) {
+  position: relative;
+}
+.nav li:first-child:before,
+.nav li:nth-child(2):before {
+  content: "";
+  position: absolute;
+  width: 0;
+  left: 0;
+  bottom: -3px;
+  height: 1px;
+  background-color: #191919;
+  transition: 0.5s;
+}
+.nav li:first-child:hover:before,
+.nav li:nth-child(2):hover:before {
+  width: 100%;
+}
+.nav a:visited {
+  color: inherit;
+}
+.nav a:link {
+  text-decoration: none;
+}
+.dropdown {
+  width: 140px;
+}
+/* 언어 설정 드롭다운 */
+.css-1s2u09g-control {
+  background-color: #ffffff !important;
+  border: none !important;
+  cursor: pointer !important;
+}
+.css-1okebmr-indicatorSeparator {
+  display: none !important;
+}
+.css-14el2xx-placeholder {
+  color: #191919 !important;
+  cursor: pointer !important;
+}
+.css-tlfecz-indicatorContainer {
+  color: #191919 !important;
+}
+.css-1gtu0rj-indicatorContainer {
+  color: #191919 !important;
+}
+.css-qc6sy-singleValue {
+  overflow: visible !important;
+}
+/* 스크롤 시 생기는 그림자 */
+.shadow {
+  -webkit-box-shadow: 0 5px 9px -2px rgba(25, 25, 25, 0.08);
+  -moz-box-shadow: 0 5px 9px -2px rgba(25, 25, 25, 0.08);
+  box-shadow: 0 5px 9px -2px rgba(25, 25, 25, 0.08);
+}

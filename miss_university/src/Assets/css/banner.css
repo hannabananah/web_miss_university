@@ -1,0 +1,55 @@
+#banner_root {
+  width: 100%;
+  height: 320px;
+  box-sizing: border-box;
+  color: #191919;
+  background-color: #f6f2ff;
+  display: flex;
+  align-items: center;
+}
+#banner_container {
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 100%;
+  height: 182px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.left {
+  position: relative;
+  width: 740px;
+  height: 182px;
+}
+.bannerImage {
+  width: 740px;
+  height: 182px;
+}
+.titleText {
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: -0.96px;
+  position: absolute;
+  top: 55px;
+  right: 10px;
+}
+.subText {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: -0.64px;
+  display: flex;
+  align-items: center;
+  align-self: center;
+  background: linear-gradient(to left, rgb(124, 77, 255), rgb(252, 110, 111));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+.arrowMark {
+  width: 9px;
+  height: 18px;
+}
