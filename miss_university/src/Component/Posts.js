@@ -6,7 +6,7 @@ import { ReactComponent as SVGCard } from "../Assets/images/sideCard.svg";
 import { ReactComponent as SVGArrow } from "../Assets/images/arrow.svg";
 import { ReactComponent as SVGPeople } from "../Assets/images/people.svg";
 
-const Posts = ({ user, participant, popupmodal }) => {
+const Posts = ({ user, popupmodal, onClick }) => {
   return (
     <div className="cardContainer">
       <div className="mainCard">
@@ -14,7 +14,8 @@ const Posts = ({ user, participant, popupmodal }) => {
         <span className="decoText2">MISS UNIVERSITY</span>
         {/* 프로필 이미지 삽입 필요 */}
 
-        <div className="photo" onClick={()=>popupmodal(user.muidx,user.language)}>
+        {/* <div className="photo" onClick={()=>popupmodal(user.muidx,user.language)}> */}
+        <div className="photo" onClick={onClick}>
           <img src={user.profile_url} alt={user.name + 'profile image'} className="profileImage" />
         </div>
         <div className="detailContainer">
@@ -33,8 +34,7 @@ const Posts = ({ user, participant, popupmodal }) => {
             <span className="detailText">{user.follower_count}</span>
           </div>
           {/* 프로필 자세히 보기 */}
-          {/* <p className="seeMoreText1" onClick={popupmodal}> */}
-          <p className="seeMoreText1" onClick={()=>{}}>
+          <p className="seeMoreText1" onClick={onClick}>
             프로필 자세히 보기
             <SVGArrow className="arrowIcon1" />
           </p>
@@ -47,7 +47,7 @@ const Posts = ({ user, participant, popupmodal }) => {
       </div>
       <div className="sideArea">
         {user.rank === 1 && <Raking />}
-        <div className="sideCardLayout" onClick={popupmodal}>
+        <div className="sideCardLayout" onClick={onClick}>
           <SVGCard className="sideCardImage" />
           <span className="name">{user.name}</span>
         </div>

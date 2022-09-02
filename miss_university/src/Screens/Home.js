@@ -17,82 +17,77 @@ export const Home = ({ popupmodal }) => {
   const [userData, setUserData] = useState([]);
   // const [lang, setLang] = useState(); 
 
-  const [userIdx, setUserIdx] = useState();
-  const [userLan, setUserLan] = useState();
-
   // 페이지네이션
-  const [page, setPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(1);
   const [currentList, setCurrentList] = useState(ParticipantsList.slice(0, 12));
+  const [lastMuidx, setLastMuidx] = useState(0);
 
   // 모달 팝업
   const [isOpen, setIsOpen] = useState(false);
+  const [user, setUser] = useState([]);
 
   const navigate = useNavigate();
   // const goSecond = () => {
   //   navigate("/second");
   // };
 
-  useEffect(()=>{
-    const fetchData = async () => {
-      const response = await axios.post(
-        "https://anystorydev.anychat.com:3030/v1/login/get_web_miss_list",
-      // "https://anystorydev.anychat.com:3030/v1/miss_university/get_web_miss_list",
-      {
-        page : page,
-        language : "ko",
-        last_muidx : 0,
-        search_result : "",
-      },
-      ).then((response)=>{
-        // console.log(response.data.data.user_data)
-        setUserData(response.data.data.user_data)
 
-      }).catch(error =>{
-        console.log(error)
-      })
-    };
-    fetchData();
-  },[])
-
-  
   // const setList = (page) => {
   //   const newList = ParticipantsList.slice(12 * (page - 1), 12 * page);
   //   setCurrentList(newList);
   // };
 
-  //페이지네이션
-  const handlePageChange = (page) => {
-    setPage(page);
-    // setList(page);
+  const fetchData = async (page,last_idx) => {
+    const response = await axios.post(
+      "https://anystorydev.anychat.com:3030/v1/login/get_web_miss_list",
+    {
+      page : page,
+      language : "ko",
+      last_muidx : last_idx,
+      search_result : "",
+    },
+    ).then((response)=>{
+      setUserData(response.data.data.user_data)
 
-    const fetchData = async () => {
-      const response = await axios.post(
-        "https://anystorydev.anychat.com:3030/v1/login/get_web_miss_list",
-      {
-        page : page,
-        language : "ko",
-        last_muidx : 0,
-        search_result : "",
-      },
-      ).then((response)=>{
-        // console.log(response.data.data.user_data)
-        setUserData(response.data.data.user_data)
-
-      }).catch(error =>{
-        console.log(error)
-      })
-    };
-    fetchData();
+    }).catch(error =>{
+      console.log(error)
+    })
   };
 
+  useEffect(()=>{
+    fetchData(1,0);
+  },[])
 
-  function popupmodal(idx,lan) {
-    setIsOpen(!isOpen);
-    setUserIdx(idx)
-    setUserLan(lan)
-  }
+  //페이지네이션
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+    // setList(page);
+
+    fetchData(page, userData[userData.length-1].muidx);
+  };
+  // console.log(currentPage,userData[userData.length-1].muidx)
+ 
+
+  const fetchDetailsData = async (userIdx, userCountry) => {
+    const response = await axios.post(
+      "https://anystorydev.anychat.com:3030/v1/login/get_web_miss_detail",
+    {
+      muidx : userIdx,
+      language : userCountry,
+    },
+    ).then((response)=>{
+      setUser(response.data.data)
+    }).catch(error =>{
+      console.log(error)
+    })
+  };
 
   console.log(userData)
+
+  const onClickDetails = (idx,country) =>{
+    setIsOpen(!isOpen);
+    fetchDetailsData(idx, country);
+  }
 
   return (
     <div id="home_root">
@@ -120,12 +115,13 @@ export const Home = ({ popupmodal }) => {
                 key={index}
                 user={user}
                 popupmodal={popupmodal}
+                onClick={()=>onClickDetails(user.muidx, user.country)}
               />
             );
           })}
         </div>
         <Pagination
-          activePage={page}
+          activePage={currentPage}
           totalItemsCount={ParticipantsList.length}
           pageRangeDisplayed={10}
           prevPageText={"‹"}
@@ -134,7 +130,7 @@ export const Home = ({ popupmodal }) => {
         />
         {/* <button onClick={goSecond}>ddd</button> */}
 
-        <DetailModal isOpen={isOpen} popupmodal={popupmodal} userIdx={userIdx} userLan={userLan} />
+        <DetailModal isOpen={isOpen} onClickDetails={onClickDetails} user={user} />
       </section>
     </div>
   );

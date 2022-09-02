@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
 // 0201,0202 (<" "의 프로필 사진>텍스트 디폴트 크기 32px)
 import "../Assets/css/modal.css";
@@ -13,39 +13,15 @@ import axios from "axios";
 // 순위권 표시
 import Raking from "../Component/ModalRanked";
 import { ReactComponent as SVGPeople } from "../Assets/images/people.svg";
-import { useEffect } from "react";
-import { useSyncExternalStore } from "react";
 Modal.setAppElement("#root");
 
-const DetailModal = ({ popupmodal, isOpen, userIdx, userLan }) => {
-  const [user, setUser] = useState([]);
-
-  useEffect(()=>{
-    const fetchData = async () => {
-      const response = await axios.post(
-        "https://anystorydev.anychat.com:3030/v1/login/get_web_miss_detail",
-      {
-        muidx : userIdx,
-        language : userLan,
-      },
-      ).then((response)=>{
-        setUser(response.data.data)
-      }).catch(error =>{
-        console.log(error)
-      })
-    };
-    fetchData();
-  },[userIdx])
-
-  console.log(user);
-
-  const name = "ZABELO HILABISA";
+const DetailModal = ({ onClickDetails, isOpen, user }) => {
 
   return (
     <div>
       <Modal
         isOpen={isOpen}
-        onRequestClose={popupmodal}
+        onRequestClose={onClickDetails}
         contentLabel="participant details"
         className="modalLayout"
       >
@@ -112,9 +88,12 @@ const DetailModal = ({ popupmodal, isOpen, userIdx, userLan }) => {
             </div>
             {/* 모달 이미지 리스트 */}
             <div className="modalImgsContainer">
-              {user.image_data?.map((u)=>{
+              {user.image_data?.map((u,idx)=>{
                 return (
-                  <div className="modalImagesList">
+                  <div 
+                    key={idx} 
+                    className="modalImagesList"
+                    >
                     <img src={u.file_url} className="modalImg" />
                   </div>
                 )
