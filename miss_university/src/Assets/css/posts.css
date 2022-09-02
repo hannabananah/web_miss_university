@@ -39,8 +39,13 @@
   height: 250px;
   margin-bottom: 16px;
   cursor: pointer;
-  /* 프로필 이미지 삽입 필요 */
-  background-color: azure;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.profileImage {
+  width: 100%;
+  object-fit: cover;
 }
 .detailContainer {
   display: flex;

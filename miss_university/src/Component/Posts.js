@@ -5,30 +5,34 @@ import Raking from "./Ranked.js";
 import { ReactComponent as SVGCard } from "../Assets/images/sideCard.svg";
 import { ReactComponent as SVGArrow } from "../Assets/images/arrow.svg";
 import { ReactComponent as SVGPeople } from "../Assets/images/people.svg";
-const Posts = ({ participant, popupmodal }) => {
+
+const Posts = ({ user, participant, popupmodal }) => {
   return (
     <div className="cardContainer">
       <div className="mainCard">
         <span className="decoText1">WORLD</span>
         <span className="decoText2">MISS UNIVERSITY</span>
         {/* 프로필 이미지 삽입 필요 */}
-        <div className="photo" onClick={popupmodal}>
-          {participant.profileImg}
+
+        {/* <div className="photo" onClick={popupmodal}> */}
+        <div className="photo" onClick={()=>{}}>
+          <img src={user.profile_url} alt={user.name + 'profile image'} className="profileImage" />
         </div>
         <div className="detailContainer">
           {/* 국가 관련 디테일 */}
           <div className="details">
             {/* 국기 이미지 삽입 필요 */}
-            <div className="flag">{participant.nationFlag}</div>
-            <span className="detailText">{participant.nationality}</span>
+            <div className="flag">{user.country}</div>
+            {/* <span className="detailText">{user.nationality}</span> */}
           </div>
           {/* 팔로워 관련 디테일 */}
           <div className="details">
             <SVGPeople className="peopleIcon" />
-            <span className="detailText">{participant.fallowerNum}</span>
+            {/* <span className="detailText">{participant.fallowerNum}</span> */}
           </div>
           {/* 프로필 자세히 보기 */}
-          <p className="seeMoreText1" onClick={popupmodal}>
+          {/* <p className="seeMoreText1" onClick={popupmodal}> */}
+          <p className="seeMoreText1" onClick={()=>{}}>
             프로필 자세히 보기
             <SVGArrow className="arrowIcon1" />
           </p>
@@ -44,7 +48,7 @@ const Posts = ({ participant, popupmodal }) => {
         <Raking />
         <div className="sideCardLayout" onClick={popupmodal}>
           <SVGCard className="sideCardImage" />
-          <span className="name">{participant.name}</span>
+          <span className="name">{user.name}</span>
         </div>
       </div>
     </div>

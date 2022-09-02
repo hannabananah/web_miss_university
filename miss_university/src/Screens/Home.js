@@ -15,6 +15,7 @@ import { useEffect } from "react";
 
 export const Home = ({ popupmodal }) => {
   const [posts, setPosts] = useState([]);
+  const [userData, setUserData] = useState([]);
 
   const navigate = useNavigate();
   // const goSecond = () => {
@@ -48,7 +49,8 @@ export const Home = ({ popupmodal }) => {
 
     const fetchData = async () => {
       const response = await axios.post(
-      "https://anystorydev.anychat.com:3030/v1/miss_university/get_web_miss_list",
+        "https://anystorydev.anychat.com:3030/v1/login/get_web_miss_list",
+      // "https://anystorydev.anychat.com:3030/v1/miss_university/get_web_miss_list",
       {
         page : page,
         language : "ko",
@@ -56,16 +58,18 @@ export const Home = ({ popupmodal }) => {
         search_result : "",
       },
       ).then((response)=>{
-        const data = response.data
-        console.log(data)
+        // console.log(response.data.data.user_data)
+        setUserData(response.data.data.user_data)
 
       }).catch(error =>{
         console.log(error)
       })
     };
     fetchData();
-  })
-  
+  },[])
+
+  console.log(userData)
+
   return (
     <div id="home_root">
       <section id="main_container">
@@ -86,12 +90,13 @@ export const Home = ({ popupmodal }) => {
           </div>
         </div>
         <div className="listContainer">
-          {currentList.map((participant, index) => {
+          {userData.map((user, index) => {
             return (
               <Posts
                 key={index}
-                participant={participant}
-                popupmodal={popupmodal}
+                user={user}
+                // participant={participant}
+                // popupmodal={popupmodal}
               />
             );
           })}
