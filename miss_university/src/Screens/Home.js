@@ -67,6 +67,7 @@ export const Home = ({ popupmodal }) => {
   };
   // console.log(currentPage,userData[userData.length-1].muidx)
  
+  const [loaded, setLoaded] = useState(false);
 
   const fetchDetailsData = async (userIdx, userCountry) => {
     const response = await axios.post(
@@ -77,13 +78,16 @@ export const Home = ({ popupmodal }) => {
     },
     ).then((response)=>{
       setUser(response.data.data)
+      setLoaded(true)
     }).catch(error =>{
       console.log(error)
+      setLoaded(false)
     })
   };
 
   console.log(userData)
 
+  
   const onClickDetails = (muidx,country) =>{
     setIsOpen(true);
     fetchDetailsData(muidx, country);
@@ -92,6 +96,7 @@ export const Home = ({ popupmodal }) => {
   const onCloseModal = () => {
     if (isOpen) {
       setIsOpen(false)
+      setLoaded(false)
     }
   }
 
@@ -136,7 +141,13 @@ export const Home = ({ popupmodal }) => {
         />
         {/* <button onClick={goSecond}>ddd</button> */}
 
-        <DetailModal isOpen={isOpen} onCloseModal={onCloseModal} onClickDetails={onClickDetails} user={user} />
+        <DetailModal 
+          isOpen={isOpen} 
+          onCloseModal={onCloseModal} 
+          onClickDetails={onClickDetails} 
+          user={user} 
+          loaded={loaded} 
+          />
       </section>
     </div>
   );

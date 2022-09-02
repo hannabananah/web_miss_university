@@ -16,7 +16,11 @@ const Posts = ({ user, popupmodal, onClick }) => {
 
         {/* <div className="photo" onClick={()=>popupmodal(user.muidx,user.language)}> */}
         <div className="photo" onClick={onClick}>
-          <img src={user.profile_url} alt={user.name + 'profile image'} className="profileImage" />
+          {
+            user.profile_url === null 
+            ? "No Image" 
+            : <img src={user.profile_url} alt={user.name + 'profile image'} className="profileImage" />
+          }
         </div>
         <div className="detailContainer">
           {/* 국가 관련 디테일 */}
