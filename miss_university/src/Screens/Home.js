@@ -12,9 +12,12 @@ import ParticipantsList from "../Component/ParticipantsList";
 // 프로필 자세히 보기 모달 팝업
 import DetailModal from "../Component/DetailModal";
 
+const postsPerPage = 12;
+
 export const Home = ({ popupmodal }) => {
   const [posts, setPosts] = useState([]);
   const [userData, setUserData] = useState([]);
+  const [totalPage, setTotalPage] = useState();
   // const [lang, setLang] = useState(); 
 
   // 페이지네이션
@@ -48,6 +51,7 @@ export const Home = ({ popupmodal }) => {
     },
     ).then((response)=>{
       setUserData(response.data.data.user_data)
+      setTotalPage(response.data.data.total_page)
 
     }).catch(error =>{
       console.log(error)
@@ -60,6 +64,7 @@ export const Home = ({ popupmodal }) => {
 
   //페이지네이션
   const handlePageChange = (page) => {
+   
     setCurrentPage(page);
     // setList(page);
 
@@ -78,6 +83,7 @@ export const Home = ({ popupmodal }) => {
     },
     ).then((response)=>{
       setUser(response.data.data)
+      console.log('user:::::::',response.data.data)
       setLoaded(true)
     }).catch(error =>{
       console.log(error)
@@ -131,10 +137,12 @@ export const Home = ({ popupmodal }) => {
             );
           })}
         </div>
+
+        <></>
         <Pagination
           activePage={currentPage}
-          totalItemsCount={ParticipantsList.length}
-          pageRangeDisplayed={10}
+          totalItemsCount={ postsPerPage * totalPage }
+          pageRangeDisplayed={totalPage}
           prevPageText={"‹"}
           nextPageText={"›"}
           onChange={handlePageChange}

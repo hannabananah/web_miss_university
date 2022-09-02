@@ -29,7 +29,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           {/* 모달 왼쪽 */}
           <div className="modalLeft">
             <div className="modalImgContainer">
-              <img src="#" className="modalImg" />
+              <img src={user.profile_img} className="modalImg" />
               {/* 순위권 표시 */}
               <Raking />
             </div>
