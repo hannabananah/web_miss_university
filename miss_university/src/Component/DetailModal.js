@@ -15,13 +15,13 @@ import Raking from "../Component/ModalRanked";
 import { ReactComponent as SVGPeople } from "../Assets/images/people.svg";
 Modal.setAppElement("#root");
 
-const DetailModal = ({ onClickDetails, isOpen, user }) => {
+const DetailModal = ({ onCloseModal, isOpen, user }) => {
 
   return (
     <div>
       <Modal
         isOpen={isOpen}
-        onRequestClose={onClickDetails}
+        onRequestClose={onCloseModal}
         contentLabel="participant details"
         className="modalLayout"
       >
@@ -94,7 +94,7 @@ const DetailModal = ({ onClickDetails, isOpen, user }) => {
                     key={idx} 
                     className="modalImagesList"
                     >
-                    <img src={u.file_url} className="modalImg" />
+                    <img src={u.file_url} className="modalImg" alt={`image-${idx}`} />
                   </div>
                 )
               })}

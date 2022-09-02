@@ -84,9 +84,15 @@ export const Home = ({ popupmodal }) => {
 
   console.log(userData)
 
-  const onClickDetails = (idx,country) =>{
-    setIsOpen(!isOpen);
-    fetchDetailsData(idx, country);
+  const onClickDetails = (muidx,country) =>{
+    setIsOpen(true);
+    fetchDetailsData(muidx, country);
+    console.log(muidx)
+  }
+  const onCloseModal = () => {
+    if (isOpen) {
+      setIsOpen(false)
+    }
   }
 
   return (
@@ -130,7 +136,7 @@ export const Home = ({ popupmodal }) => {
         />
         {/* <button onClick={goSecond}>ddd</button> */}
 
-        <DetailModal isOpen={isOpen} onClickDetails={onClickDetails} user={user} />
+        <DetailModal isOpen={isOpen} onCloseModal={onCloseModal} onClickDetails={onClickDetails} user={user} />
       </section>
     </div>
   );
