@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Modal from "react-modal";
 // 0201,0202 (<" "의 프로필 사진>텍스트 디폴트 크기 32px)
 import "../Assets/css/modal.css";
+import axios from "axios";
 
 // 0203(이름의 길이가 너무 길어서 최대 가로 길이를 넘어갈 경우:<" "의 프로필 사진>텍스트 크기를 24px로 변경)
 // import "../Assets/css/modalLongName.css";
@@ -12,10 +13,34 @@ import "../Assets/css/modal.css";
 // 순위권 표시
 import Raking from "../Component/ModalRanked";
 import { ReactComponent as SVGPeople } from "../Assets/images/people.svg";
+import { useEffect } from "react";
+import { useSyncExternalStore } from "react";
 Modal.setAppElement("#root");
 
-const DetailModal = ({ popupmodal, isOpen }) => {
+const DetailModal = ({ popupmodal, isOpen, userIdx, userLan }) => {
+  const [user, setUser] = useState([]);
+
+  useEffect(()=>{
+    const fetchData = async () => {
+      const response = await axios.post(
+        "https://anystorydev.anychat.com:3030/v1/login/get_web_miss_detail",
+      {
+        muidx : userIdx,
+        language : userLan,
+      },
+      ).then((response)=>{
+        setUser(response.data.data)
+      }).catch(error =>{
+        console.log(error)
+      })
+    };
+    fetchData();
+  },[userIdx])
+
+  console.log(user);
+
   const name = "ZABELO HILABISA";
+
   return (
     <div>
       <Modal
@@ -32,11 +57,11 @@ const DetailModal = ({ popupmodal, isOpen }) => {
               {/* 순위권 표시 */}
               <Raking />
             </div>
-            <div className="modalName">{name}</div>
+            <div className="modalName">{user.name}</div>
             <div className="modalDetails">
               <div className="modalDetail">
                 <div className="modalFlag"></div>
-                <span className="modaltext">ALGERIA</span>
+                <span className="modaltext">{user.country}</span>
               </div>
               <div className="modalDetail">
                 <SVGPeople className="modalIcon" />
@@ -44,34 +69,32 @@ const DetailModal = ({ popupmodal, isOpen }) => {
               </div>
             </div>
             <div className="modalAmbition">
-              나라를 성공적으로 대표하고, 아프리카 문화를 전세계에 널리
-              홍보하겠습니다.
+              {user.vision}
             </div>
             <div className="modalInfoContainer">
               <div className="modalInfo">
                 <div className="modalsubjectText">참가번호</div>
-                <div className="modaldetailText">01</div>
+                <div className="modaldetailText">{user.participantion_number}</div>
               </div>
               <div className="modalInfo">
                 <div className="modalsubjectText">교육</div>
                 <div className="modaldetailText">
-                  Mouloud Mammeri Mouloud Mammeri university
+                  {user.education}
                 </div>
               </div>
               <div className="modalInfo">
                 <div className="modalsubjectText">전공</div>
-                <div className="modaldetailText">지질학</div>
+                <div className="modaldetailText">{user.major}</div>
               </div>
               <div className="modalInfo">
                 <div className="modalsubjectText">취미</div>
                 <div className="modaldetailText">
-                  해변가기, 여행가기, 수영하기, 서핑하기, 쇼핑하기, 독서하기,
-                  명상하기, 음악듣기
+                  {user.hobby}
                 </div>
               </div>
               <div className="modalInfo">
                 <div className="modalsubjectText">특기</div>
-                <div className="modaldetailText">연기</div>
+                <div className="modaldetailText">{user.specialty}</div>
               </div>
             </div>
           </div>
@@ -80,7 +103,7 @@ const DetailModal = ({ popupmodal, isOpen }) => {
             <div className="modalTextContainer">
               {/* 해당 팜가자의 이름이 길어질 경우 폰트 사이즈가 바뀌는 영역 */}
               <div className="modalTitle">
-                <span>{name}</span>의 프로필 사진
+                <span>{user.name}</span>의 프로필 사진
               </div>
               <a href="#" className="modalsubText">
                 SNS 게시물 보러 가기&nbsp;
@@ -89,36 +112,13 @@ const DetailModal = ({ popupmodal, isOpen }) => {
             </div>
             {/* 모달 이미지 리스트 */}
             <div className="modalImgsContainer">
-              <div className="modalImagesList">
-                <img src="#" className="modalImg" />
-              </div>
-              <div className="modalImagesList">
-                <img src="#" className="modalImg" />
-              </div>
-              <div className="modalImagesList">
-                <img src="#" className="modalImg" />
-              </div>
-              <div className="modalImagesList">
-                <img src="#" className="modalImg" />
-              </div>
-              <div className="modalImagesList">
-                <img src="#" className="modalImg" />
-              </div>
-              <div className="modalImagesList">
-                <img src="#" className="modalImg" />
-              </div>
-              <div className="modalImagesList">
-                <img src="#" className="modalImg" />
-              </div>
-              <div className="modalImagesList">
-                <img src="#" className="modalImg" />
-              </div>
-              <div className="modalImagesList">
-                <img src="#" className="modalImg" />
-              </div>
-              <div className="modalImagesList">
-                <img src="#" className="modalImg" />
-              </div>
+              {user.image_data?.map((u)=>{
+                return (
+                  <div className="modalImagesList">
+                    <img src={u.file_url} className="modalImg" />
+                  </div>
+                )
+              })}
             </div>
           </div>
         </div>

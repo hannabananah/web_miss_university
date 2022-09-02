@@ -14,21 +14,23 @@ const Posts = ({ user, participant, popupmodal }) => {
         <span className="decoText2">MISS UNIVERSITY</span>
         {/* 프로필 이미지 삽입 필요 */}
 
-        {/* <div className="photo" onClick={popupmodal}> */}
-        <div className="photo" onClick={()=>{}}>
+        <div className="photo" onClick={()=>popupmodal(user.muidx,user.language)}>
           <img src={user.profile_url} alt={user.name + 'profile image'} className="profileImage" />
         </div>
         <div className="detailContainer">
           {/* 국가 관련 디테일 */}
           <div className="details">
             {/* 국기 이미지 삽입 필요 */}
-            <div className="flag">{user.country}</div>
+            <div className="countryWrap">
+              <div className="flag"></div>
+              <p className="userCountry">{user.country}</p>
+            </div>
             {/* <span className="detailText">{user.nationality}</span> */}
           </div>
           {/* 팔로워 관련 디테일 */}
           <div className="details">
             <SVGPeople className="peopleIcon" />
-            {/* <span className="detailText">{participant.fallowerNum}</span> */}
+            <span className="detailText">{user.follower_count}</span>
           </div>
           {/* 프로필 자세히 보기 */}
           {/* <p className="seeMoreText1" onClick={popupmodal}> */}
@@ -44,8 +46,7 @@ const Posts = ({ user, participant, popupmodal }) => {
         </div>
       </div>
       <div className="sideArea">
-        {/* 순위권 표시 */}
-        <Raking />
+        {user.rank === 1 && <Raking />}
         <div className="sideCardLayout" onClick={popupmodal}>
           <SVGCard className="sideCardImage" />
           <span className="name">{user.name}</span>
