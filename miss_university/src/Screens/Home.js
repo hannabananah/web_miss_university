@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Pagination from "react-js-pagination";
 import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 import "../Assets/css/homeLayout.css";
 import "../Assets/css/pagination.css";
 import { ReactComponent as SVGSearch } from "../Assets/images/search.svg";
@@ -10,8 +11,11 @@ import Posts from "../Component/Posts";
 import ParticipantsList from "../Component/ParticipantsList";
 // 프로필 자세히 보기 모달 팝업
 import DetailModal from "../Component/DetailModal";
+import { useEffect } from "react";
 
 export const Home = ({ popupmodal }) => {
+  const [posts, setPosts] = useState([]);
+
   const navigate = useNavigate();
   // const goSecond = () => {
   //   navigate("/second");
@@ -38,6 +42,30 @@ export const Home = ({ popupmodal }) => {
     setIsOpen(!isOpen);
   }
 
+
+
+  useEffect(()=>{
+
+    const fetchData = async () => {
+      const response = await axios.post(
+      "https://anystorydev.anychat.com:3030/v1/miss_university/get_web_miss_list",
+      {
+        page : page,
+        language : "ko",
+        last_muidx : 0,
+        search_result : "",
+      },
+      ).then((response)=>{
+        const data = response.data
+        console.log(data)
+
+      }).catch(error =>{
+        console.log(error)
+      })
+    };
+    fetchData();
+  })
+  
   return (
     <div id="home_root">
       <section id="main_container">
@@ -70,7 +98,7 @@ export const Home = ({ popupmodal }) => {
         </div>
         <Pagination
           activePage={page}
-          totalItemsCount={151}
+          totalItemsCount={ParticipantsList.length}
           pageRangeDisplayed={10}
           prevPageText={"‹"}
           nextPageText={"›"}
