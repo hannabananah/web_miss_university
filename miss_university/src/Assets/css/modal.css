@@ -32,9 +32,7 @@
   /* 이미지 삽입 필요 */
   background-color: azure;
 }
-.modalImg {
-  width: 100%;
-}
+
 .modalName {
   font-weight: bold;
   font-size: 20px;
@@ -155,8 +153,13 @@
 .modalImagesList {
   width: 162px;
   height: 225px;
-  /* 이미지 삽입 필요 */
-  background-color: azure;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.modalImg {
+  height: 100%;
 }
 /* 모달 백그라운드 투명도 */
 .ReactModal__Overlay {
