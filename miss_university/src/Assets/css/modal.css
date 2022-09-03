@@ -29,8 +29,10 @@
   height: 250px;
   margin: 0 auto;
   position: relative;
-  /* 이미지 삽입 필요 */
-  background-color: azure;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .modalName {

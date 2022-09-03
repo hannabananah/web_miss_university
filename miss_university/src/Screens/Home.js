@@ -15,15 +15,16 @@ import DetailModal from "../Component/DetailModal";
 const postsPerPage = 12;
 
 export const Home = ({ popupmodal }) => {
-  const [posts, setPosts] = useState([]);
+  // const [posts, setPosts] = useState([]);
   const [userData, setUserData] = useState([]);
   const [totalPage, setTotalPage] = useState();
   // const [lang, setLang] = useState(); 
+  const [loaded, setLoaded] = useState(false);
 
   // 페이지네이션
   const [currentPage, setCurrentPage] = useState(1);
-  const [currentList, setCurrentList] = useState(ParticipantsList.slice(0, 12));
-  const [lastMuidx, setLastMuidx] = useState(0);
+  // const [currentList, setCurrentList] = useState(ParticipantsList.slice(0, 12));
+  // const [lastMuidx, setLastMuidx] = useState(0);
 
   // 모달 팝업
   const [isOpen, setIsOpen] = useState(false);
@@ -34,12 +35,12 @@ export const Home = ({ popupmodal }) => {
   //   navigate("/second");
   // };
 
-
   // const setList = (page) => {
   //   const newList = ParticipantsList.slice(12 * (page - 1), 12 * page);
   //   setCurrentList(newList);
   // };
 
+  //참가자 리스트 데이터
   const fetchData = async (page,last_idx) => {
     const response = await axios.post(
       "https://anystorydev.anychat.com:3030/v1/login/get_web_miss_list",
@@ -64,16 +65,12 @@ export const Home = ({ popupmodal }) => {
 
   //페이지네이션
   const handlePageChange = (page) => {
-   
     setCurrentPage(page);
-    // setList(page);
-
-    fetchData(page, userData[userData.length-1].muidx);
+    fetchData(page, userData[userData.length-1].muidx); //현재 보고 있는 페이지의 마지막 참가자 muidx 넘겨주기
   };
-  // console.log(currentPage,userData[userData.length-1].muidx)
- 
-  const [loaded, setLoaded] = useState(false);
+  console.log(userData)
 
+  //모달 데이터
   const fetchDetailsData = async (userIdx, userCountry) => {
     const response = await axios.post(
       "https://anystorydev.anychat.com:3030/v1/login/get_web_miss_detail",
@@ -90,9 +87,6 @@ export const Home = ({ popupmodal }) => {
       setLoaded(false)
     })
   };
-
-  console.log(userData)
-
   
   const onClickDetails = (muidx,country) =>{
     setIsOpen(true);
@@ -141,8 +135,9 @@ export const Home = ({ popupmodal }) => {
         <></>
         <Pagination
           activePage={currentPage}
-          totalItemsCount={ postsPerPage * totalPage }
-          pageRangeDisplayed={totalPage}
+          totalItemsCount={ postsPerPage * totalPage } // 총 포스트 갯수
+          itemsCountPerPage={postsPerPage} // 페이지당 보여줄 포스트 갯수
+          pageRangeDisplayed={10} // 페이저 갯수
           prevPageText={"‹"}
           nextPageText={"›"}
           onChange={handlePageChange}
