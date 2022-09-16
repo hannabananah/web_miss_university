@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Pagination from "react-js-pagination";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -18,7 +18,7 @@ export const Home = ({ popupmodal }) => {
   // const [posts, setPosts] = useState([]);
   const [userData, setUserData] = useState([]);
   const [totalPage, setTotalPage] = useState();
-  // const [lang, setLang] = useState(); 
+  // const [lang, setLang] = useState();
   const [loaded, setLoaded] = useState(false);
 
   // 페이지네이션
@@ -41,65 +41,67 @@ export const Home = ({ popupmodal }) => {
   // };
 
   //참가자 리스트 데이터
-  const fetchData = async (page,last_idx) => {
-    const response = await axios.post(
-      "https://anystorydev.anychat.com:3030/v1/login/get_web_miss_list",
-    {
-      page : page,
-      language : "ko",
-      last_muidx : last_idx,
-      search_result : "",
-    },
-    ).then((response)=>{
-      console.log(response.data.data)
-      setUserData(response.data.data.user_data)
-      setTotalPage(response.data.data.total_page)
-
-    }).catch(error =>{
-      console.log(error)
-    })
+  const fetchData = async (page, last_idx) => {
+    const response = await axios
+      .post("https://anystorydev.anychat.com:3030/v1/login/get_web_miss_list", {
+        page: page,
+        language: "en",
+        last_muidx: last_idx,
+        search_result: "",
+      })
+      .then((response) => {
+        console.log(response.data.data);
+        setUserData(response.data.data.user_data);
+        setTotalPage(response.data.data.total_page);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
-  useEffect(()=>{
-    fetchData(1,0);
-  },[])
+  useEffect(() => {
+    fetchData(1, 0);
+  }, []);
 
   //페이지네이션
   const handlePageChange = (page) => {
     setCurrentPage(page);
-    fetchData(page, userData[userData.length-1].muidx); //현재 보고 있는 페이지의 마지막 참가자 muidx 넘겨주기
+    fetchData(page, userData[userData.length - 1].muidx); //현재 보고 있는 페이지의 마지막 참가자 muidx 넘겨주기
   };
-  console.log(userData)
+  console.log(userData);
 
   //모달 데이터
   const fetchDetailsData = async (userIdx, userCountry) => {
-    const response = await axios.post(
-      "https://anystorydev.anychat.com:3030/v1/login/get_web_miss_detail",
-    {
-      muidx : userIdx,
-      language : userCountry,
-    },
-    ).then((response)=>{
-      setUser(response.data.data)
-      console.log('user:::::::',response.data.data)
-      setLoaded(true)
-    }).catch(error =>{
-      console.log(error)
-      setLoaded(false)
-    })
+    const response = await axios
+      .post(
+        "https://anystorydev.anychat.com:3030/v1/login/get_web_miss_detail",
+        {
+          muidx: userIdx,
+          language: userCountry,
+        }
+      )
+      .then((response) => {
+        setUser(response.data.data);
+        console.log("user:::::::", response.data.data);
+        setLoaded(true);
+      })
+      .catch((error) => {
+        console.log(error);
+        setLoaded(false);
+      });
   };
-  
-  const onClickDetails = (muidx,country) =>{
+
+  const onClickDetails = (muidx, country) => {
     setIsOpen(true);
     fetchDetailsData(muidx, country);
-    console.log(muidx)
-  }
+    console.log(muidx);
+  };
   const onCloseModal = () => {
     if (isOpen) {
-      setIsOpen(false)
-      setLoaded(false)
+      setIsOpen(false);
+      setLoaded(false);
     }
-  }
+  };
 
   return (
     <div id="home_root">
@@ -127,7 +129,7 @@ export const Home = ({ popupmodal }) => {
                 key={index}
                 user={user}
                 popupmodal={popupmodal}
-                onClick={()=>onClickDetails(user.muidx, user.country)}
+                onClick={() => onClickDetails(user.muidx, user.country)}
               />
             );
           })}
@@ -136,7 +138,7 @@ export const Home = ({ popupmodal }) => {
         <></>
         <Pagination
           activePage={currentPage}
-          totalItemsCount={ postsPerPage * totalPage } // 총 포스트 갯수
+          totalItemsCount={postsPerPage * totalPage} // 총 포스트 갯수
           itemsCountPerPage={postsPerPage} // 페이지당 보여줄 포스트 갯수
           pageRangeDisplayed={10} // 페이저 갯수
           prevPageText={"‹"}
@@ -145,13 +147,13 @@ export const Home = ({ popupmodal }) => {
         />
         {/* <button onClick={goSecond}>ddd</button> */}
 
-        <DetailModal 
-          isOpen={isOpen} 
-          onCloseModal={onCloseModal} 
-          onClickDetails={onClickDetails} 
-          user={user} 
-          loaded={loaded} 
-          />
+        <DetailModal
+          isOpen={isOpen}
+          onCloseModal={onCloseModal}
+          onClickDetails={onClickDetails}
+          user={user}
+          loaded={loaded}
+        />
       </section>
     </div>
   );

@@ -1,5 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Select from "react-select";
+import axios from "axios";
 
 import "../Assets/css/topLayout.css";
 import "react-dropdown/style.css";
@@ -21,6 +22,33 @@ export const TopLayout = () => {
     { value: "ไทย (th)", label: "ไทย (th)" },
     { value: "Tagalog (tl)", label: "Tagalog (tl)" },
   ];
+
+  const [user, setUser] = useState([]);
+  const [userData, setUserData] = useState([]);
+  const [totalPage, setTotalPage] = useState();
+  //참가자 언어 설정
+  const langData = async (page, last_idx) => {
+    const response = await axios
+      .post("https://anystorydev.anychat.com:3030/v1/login/get_web_miss_list", {
+        page: page,
+        language: "en",
+        last_muidx: last_idx,
+        search_result: "",
+      })
+      .then((response) => {
+        console.log(response.data.data);
+        options(response.data.data.user_data);
+        setTotalPage(response.data.data.total_page);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  useEffect(() => {
+    langData(1, 0);
+  }, []);
+  console.log(Select);
 
   const customStyles = {
     option: (provided, state) => ({
