@@ -51,6 +51,7 @@ export const Home = ({ popupmodal }) => {
       search_result : "",
     },
     ).then((response)=>{
+      console.log(response.data.data)
       setUserData(response.data.data.user_data)
       setTotalPage(response.data.data.total_page)
 

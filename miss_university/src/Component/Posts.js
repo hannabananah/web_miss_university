@@ -12,15 +12,10 @@ const Posts = ({ user, popupmodal, onClick }) => {
       <div className="mainCard">
         <span className="decoText1">WORLD</span>
         <span className="decoText2">MISS UNIVERSITY</span>
-        {/* 프로필 이미지 삽입 필요 */}
-
-        {/* <div className="photo" onClick={()=>popupmodal(user.muidx,user.language)}> */}
         <div className="photo" onClick={onClick}>
-          {
-            user.profile_url === null 
+          {user.profile_url === null 
             ? "No Image" 
-            : <img src={user.profile_url} alt={user.name + 'profile image'} className="profileImage" />
-          }
+            : <img src={user.profile_url} alt={user.name + 'profile image'} className="profileImage" />}
         </div>
         <div className="detailContainer">
           {/* 국가 관련 디테일 */}
@@ -33,20 +28,22 @@ const Posts = ({ user, popupmodal, onClick }) => {
             {/* <span className="detailText">{user.nationality}</span> */}
           </div>
           {/* 팔로워 관련 디테일 */}
-          <div className="details">
+          {/* <div className="details">
             <SVGPeople className="peopleIcon" />
             <span className="detailText">{user.follower_count}</span>
-          </div>
+          </div> */}
           {/* 프로필 자세히 보기 */}
-          <p className="seeMoreText1" onClick={onClick}>
-            프로필 자세히 보기
-            <SVGArrow className="arrowIcon1" />
-          </p>
-          {/* SNS 보러 가기 */}
-          <p className="seeMoreText2">
-            SNS 보러 가기
-            <SVGArrow className="arrowIcon2" />
-          </p>
+          <div style={{display:'flex', flexDirection:"column"}}>
+            <p className="seeMoreText1" onClick={onClick}>
+              프로필 자세히 보기
+              <SVGArrow className="arrowIcon1" />
+            </p>
+            {/* SNS 보러 가기 */}
+            <p className="seeMoreText2">
+              SNS 보러 가기
+              <SVGArrow className="arrowIcon2" />
+            </p>       
+          </div>
         </div>
       </div>
       <div className="sideArea">

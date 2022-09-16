@@ -31,7 +31,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
             <div className="modalImgContainer">
               <img src={user.profile_img} className="modalImg" />
               {/* 순위권 표시 */}
-              <Raking />
+              {/* <Raking /> */}
             </div>
             <div className="modalName">{user.name}</div>
             <div className="modalDetails">
@@ -39,10 +39,10 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
                 <div className="modalFlag"></div>
                 <span className="modaltext">{user.country}</span>
               </div>
-              <div className="modalDetail">
+              {/* <div className="modalDetail">
                 <SVGPeople className="modalIcon" />
                 <span className="modaltext">1,050</span>
-              </div>
+              </div> */}
             </div>
             <div className="modalAmbition">
               {user.vision}

@@ -53,6 +53,8 @@
   flex-direction: column;
   row-gap: 6px;
   position: relative;
+  /* flex:1;
+  justify-content:space-between */
 }
 .details {
   display: flex;
