@@ -28,10 +28,10 @@ const Posts = ({ user, popupmodal, onClick }) => {
             {/* <span className="detailText">{user.nationality}</span> */}
           </div>
           {/* 팔로워 관련 디테일 */}
-          {/* <div className="details">
-            <SVGPeople className="peopleIcon" />
-            <span className="detailText">{user.follower_count}</span>
-          </div> */}
+          <div className="details">
+            {/* <SVGPeople className="peopleIcon" />
+            <span className="detailText">{user.follower_count}</span> */}
+          </div>
           {/* 프로필 자세히 보기 */}
           <div style={{display:'flex', flexDirection:"column"}}>
             <p className="seeMoreText1" onClick={onClick}>

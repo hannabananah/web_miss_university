@@ -107,7 +107,7 @@ export const Home = ({ popupmodal }) => {
         <h1 className="headText">참가자 소개</h1>
         <div className="textArea">
           <p className="alignText">
-            참가자 실시간 정렬 순서: 애니스토리 팔로워 순서
+            {/* 참가자 실시간 정렬 순서: 애니스토리 팔로워 순서 */}
           </p>
           <div className="searchInput">
             <SVGSearch className="searchIcon" />
