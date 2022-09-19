@@ -165,6 +165,8 @@ export const Home = ({ popupmodal, selectedValue }) => {
         <div className="textArea">
           <p className="alignText">
             {/* 참가자 실시간 정렬 순서: 애니스토리 팔로워 순서 */}
+            {/* {t("sequance_participants")} */}
+            {/* {t("sequance_follower")} */}
           </p>
           <div className="searchInput">
             <SVGSearch className="searchIcon" />
@@ -175,7 +177,7 @@ export const Home = ({ popupmodal, selectedValue }) => {
               type="text"
               name="seraching participants"
               className="searchText"
-              placeholder="참가자 이름 및 국적으로 검색하실 수 있습니다."
+              placeholder={t("search_from_name_nation")}
               color="#7c4dff"
             />
             {search !== "" && (

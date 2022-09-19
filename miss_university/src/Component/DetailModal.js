@@ -4,6 +4,7 @@ import Modal from "react-modal";
 import "../Assets/css/modal.css";
 import axios from "axios";
 import ImageModal from "../Component/ImageModal";
+import { useTranslation, initReactI18next } from "react-i18next";
 
 // 0203(이름의 길이가 너무 길어서 최대 가로 길이를 넘어갈 경우:<" "의 프로필 사진>텍스트 크기를 24px로 변경)
 // import "../Assets/css/modalLongName.css";
@@ -17,6 +18,7 @@ import { ReactComponent as SVGPeople } from "../Assets/images/people.svg";
 Modal.setAppElement("#root");
 
 const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
+  const { t } = useTranslation();
   const [isOpenImage, setIsOpenImage] = useState(false);
   const [targetIdx, setTargetIdx] = useState(0);
 
@@ -60,25 +62,25 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
             <div className="modalAmbition">{user.vision}</div>
             <div className="modalInfoContainer">
               <div className="modalInfo">
-                <div className="modalsubjectText">참가번호</div>
+                <div className="modalsubjectText">{t("participant_num")}</div>
                 <div className="modaldetailText">
                   {user.participantion_number}
                 </div>
               </div>
               <div className="modalInfo">
-                <div className="modalsubjectText">교육</div>
+                <div className="modalsubjectText">{t("detail_edu")}</div>
                 <div className="modaldetailText">{user.education}</div>
               </div>
               <div className="modalInfo">
-                <div className="modalsubjectText">전공</div>
+                <div className="modalsubjectText">{t("detail_major")}</div>
                 <div className="modaldetailText">{user.major}</div>
               </div>
               <div className="modalInfo">
-                <div className="modalsubjectText">취미</div>
+                <div className="modalsubjectText">{t("detail_hobby")}</div>
                 <div className="modaldetailText">{user.hobby}</div>
               </div>
               <div className="modalInfo">
-                <div className="modalsubjectText">특기</div>
+                <div className="modalsubjectText">{t("detail_specialty")}</div>
                 <div className="modaldetailText">{user.specialty}</div>
               </div>
             </div>
@@ -95,7 +97,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
                 className="modalsubText"
                 target="_blank"
               >
-                SNS 게시물 보러 가기&nbsp;
+                {t("link_to_sns")}&nbsp;
                 <span className="arrowMark">&#8250;</span>
               </a>
             </div>

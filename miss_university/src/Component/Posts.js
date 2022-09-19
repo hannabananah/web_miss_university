@@ -5,8 +5,11 @@ import Raking from "./Ranked.js";
 import { ReactComponent as SVGCard } from "../Assets/images/sideCard.svg";
 import { ReactComponent as SVGArrow } from "../Assets/images/arrow.svg";
 import { ReactComponent as SVGPeople } from "../Assets/images/people.svg";
+import { useTranslation, initReactI18next } from "react-i18next";
 
 const Posts = ({ user, popupmodal, onClick }) => {
+  const { t } = useTranslation();
+
   return (
     <div className="cardContainer">
       <div className="mainCard">
@@ -41,7 +44,8 @@ const Posts = ({ user, popupmodal, onClick }) => {
           {/* 프로필 자세히 보기 */}
           <div style={{ display: "flex", flexDirection: "column" }}>
             <p className="seeMoreText1" onClick={onClick}>
-              프로필 자세히 보기
+              {/* 프로필 자세히 보기 */}
+              {t("see_more_detail")}
               <SVGArrow className="arrowIcon1" />
             </p>
             {/* SNS 보러 가기 */}
@@ -50,7 +54,8 @@ const Posts = ({ user, popupmodal, onClick }) => {
               className="seeMoreText2"
               target="_blank"
             >
-              SNS 보러 가기
+              {/* SNS 보러 가기 */}
+              {t("link_to_sns")}
               <SVGArrow className="arrowIcon2" />
             </a>
           </div>
