@@ -16,6 +16,7 @@ const postsPerPage = 12;
 
 export const Home = ({ popupmodal }) => {
   const [search, setSearch] = useState("");
+  const [language, setLanguage] = useState("en");
   // const [posts, setPosts] = useState([]);
   const [userData, setUserData] = useState([]);
   const [totalPage, setTotalPage] = useState();
@@ -46,7 +47,7 @@ export const Home = ({ popupmodal }) => {
     const response = await axios
       .post("https://anystorydev.anychat.com:3030/v1/login/get_web_miss_list", {
         page: page,
-        language: "en",
+        language: language,
         last_muidx: last_idx,
         search_result: "",
       })
@@ -107,30 +108,42 @@ export const Home = ({ popupmodal }) => {
   //참가자 검색
   const onChangeSearch = (e) => {
     setSearch(e.target.value);
+    if (e.target.value === "") {
+      fetchData(1, 0);
+    }
+  }
+  // 페이지 네이션이랑 중복되니까 나중에 수정해야함
+  const searchData = async (page, last_idx) => {
+    const response = await axios
+    .post(
+      "https://anystorydev.anychat.com:3030/v1/login/get_web_miss_list",
+      {
+        page: currentPage,
+        language: language,
+        last_muidx: last_idx,
+        search_result: search,
+      },
+    )
+    .then((response) => {
+      console.log(response);
+      setUserData(response.data.data.user_data);
+      setTotalPage(response.data.data.total_page)
+    })
+    .catch((error) => {
+      console.log(error);
+    });
   }
   const onkeydown = async(e) => {
     if(e.keyCode === 13){
-      // const response = await axios
-      // .post(
-      //   "https://anystorydev.anychat.com:3030/v1/login/get_web_miss_list",
-      //   {
-      //     page: 1,
-      //     language:'',
-      //     last_muidx: 0,
-      //     search_result: search,
-      //   },
-      // )
-      // .then((response) => {
-      //   console.log(response);
-      //   setUserData(response.data.data.user_data);
-      // })
-      // .catch((error) => {
-      //   console.log(error);
-      // });
-
+      searchData(currentPage, userData[userData.length - 1].muidx); //현재 보고 있는 페이지의 마지막 참가자 muidx 넘겨주기
     } //if 끝
   } //onkeydown 끝
   
+  const onClickClear = () => {
+    setSearch('')
+    fetchData(1, 0);
+  }
+
   return (
     <div id="home_root">
       <section id="main_container">
@@ -145,12 +158,13 @@ export const Home = ({ popupmodal }) => {
               value={search}
               onChange={onChangeSearch}
               onKeyDown={onkeydown}
-              type="search"
+              type="text"
               name="seraching participants"
               className="searchText"
               placeholder="참가자 이름 및 국적으로 검색하실 수 있습니다."
               color="#7c4dff"
             />
+            {search !== "" && <button onClick={onClickClear} className="clearBtn">clear</button>}
           </div>
         </div>
         <div className="listContainer">
