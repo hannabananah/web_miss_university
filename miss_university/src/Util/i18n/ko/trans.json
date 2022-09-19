@@ -1,0 +1,21 @@
+{ 
+    "Welcome to React": "채팅방",
+    "Name": "성명",
+    "langGuide": "자국어 선택 시 자동 번역됩니다.",
+    "login": "로그인",
+    "exit": "나가기",
+    "chattingRoomEnterMent1": "QR 채팅방에 입장하셨습니다.",
+    "chattingRoomEnterMent2": "채팅 서버 접속 성공",
+    "save": "저장",
+    "ChatRoomName": "채팅방 이름",
+    "messageInput": "메세지를 입력해 주세요.",
+    "popupMent1": "만족하시면", 
+    "popupMent2": "다운받으세요!",
+    "popupMent3": "LAMP",
+    "chatEnd1": "대화를 종료하시겠습니까?",
+    "chatEnd2": "종료하시면 더 이상 대화가 불가합니다.",
+    "btnConfirm": "종료",
+    "btnCancel": "취소",
+    "qrChatExitInfo": "QR채팅이 종료되었습니다",
+    "downLoadApp":"앱 다운로드"
+}
