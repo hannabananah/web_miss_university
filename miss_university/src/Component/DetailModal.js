@@ -90,7 +90,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
             <div className="modalImgsContainer">
               {
                 loaded ? 
-                user.image_data?.map((u,idx)=>{
+                user.content_data?.map((u,idx)=>{
                   return (
                     <div 
                       key={idx} 
