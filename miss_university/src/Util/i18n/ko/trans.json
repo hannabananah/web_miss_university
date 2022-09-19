@@ -17,5 +17,14 @@
   "link_to_sns": "SNS 게시물 보러 가기",
   "setting_language": "언어 설정",
   "link_to_anychat_homepage": "애니챗HOME",
-  "link_to_worldmissuniversity_homepage": "월드 미스 유니버시티 HOME"
+  "link_to_worldmissuniversity_homepage": "월드 미스 유니버시티 HOME",
+  "terms_and_conditions":"이용약관",
+  "privacy_policy":"개인정보처리방침",
+  "customer_service":"고객센터",
+  "visit_us":"찾아오시는 길",
+  "anychat_corp":"주식회사 애니챗",
+  "address":"서울시 강남구 선릉로 93길 50 현석타워 8층",
+  "president":"대표 : 이승진",
+  "Phone":"대표번호",
+  "registrationNum":"법인등록번호"
 }
