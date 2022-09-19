@@ -16,6 +16,7 @@
     #f9f1bb 105.06%
   );
   z-index: 1;
+  cursor: default;
 }
 .rankMedalText1 {
   position: absolute;
@@ -51,6 +52,7 @@
     #f1f1f1 105.06%
   );
   z-index: 1;
+  cursor: default;
 }
 .rankMedalText2 {
   position: absolute;
@@ -80,6 +82,7 @@
     #f9cda7 105.06%
   );
   z-index: 1;
+  cursor: default;
 }
 .rankMedalText3 {
   position: absolute;
