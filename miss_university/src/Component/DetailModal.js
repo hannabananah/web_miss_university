@@ -101,7 +101,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
             </div>
             {/* 모달 이미지 리스트 */}
             <div className="modalImgsContainer" style={{display:"flex",flexDirection:"column"}}>
-              <div style={{display:"flex", gap:"6px"}}>
+              <div style={{display:"flex", gap:"6px", flexWrap:"wrap"}}>
               {
                 loaded && 
                 user.content_data?.map((u,idx)=>{
