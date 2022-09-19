@@ -47,7 +47,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
         </div>
       </div>
       <div className="sideArea">
-        {user.rank === 1 && <Raking />}
+        {user.rank < 4 && <Raking user={user} />}
         <div className="sideCardLayout" onClick={onClick}>
           <SVGCard className="sideCardImage" />
           <span className="name">{user.name}</span>

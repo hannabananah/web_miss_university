@@ -24,6 +24,9 @@
   flex-direction: column;
   align-items: center;
 }
+.modalRight {
+  width: 100%;
+}
 .modalImgContainer {
   width: 180px;
   height: 250px;
@@ -149,7 +152,7 @@
 .modalImgsContainer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   row-gap: 32px;
 }
 .modalImagesList {

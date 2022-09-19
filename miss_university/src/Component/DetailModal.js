@@ -3,6 +3,7 @@ import Modal from "react-modal";
 // 0201,0202 (<" "의 프로필 사진>텍스트 디폴트 크기 32px)
 import "../Assets/css/modal.css";
 import axios from "axios";
+import ImageModal from "../Component/ImageModal";
 
 // 0203(이름의 길이가 너무 길어서 최대 가로 길이를 넘어갈 경우:<" "의 프로필 사진>텍스트 크기를 24px로 변경)
 // import "../Assets/css/modalLongName.css";
@@ -16,6 +17,19 @@ import { ReactComponent as SVGPeople } from "../Assets/images/people.svg";
 Modal.setAppElement("#root");
 
 const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
+
+  const [isOpenImage, setIsOpenImage] = useState(false);
+  const [targetIdx, setTargetIdx] = useState(0);
+
+  const onClickImage = (idx) => {
+    setIsOpenImage(true)
+    setTargetIdx(idx)
+  }
+  const onCloseImageModal = () => {
+    if (isOpenImage) {
+      setIsOpenImage(false)
+    }
+  }
 
   return (
     <div>
@@ -90,13 +104,13 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
             <div className="modalImgsContainer">
               {
                 loaded ? 
-                user.image_data?.map((u,idx)=>{
+                user.content_data?.map((u,idx)=>{
                   return (
                     <div 
                       key={idx} 
                       className="modalImagesList"
                       >
-                      <img src={u.file_url} className="modalImg" alt={`image-${idx}`} />
+                      <img src={u.file_url} onClick={()=>onClickImage(idx)} className="modalImg" alt={`image-${idx}`} />
                     </div>
                   )
                 })
@@ -106,6 +120,14 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           </div>
         </div>
       </Modal>
+      <ImageModal 
+        isOpenImage={isOpenImage} 
+        onCloseImageModal={onCloseImageModal} 
+        // onClickDetails={onClickDetails} 
+        user={user} 
+        targetIdx={targetIdx}
+        // loaded={loaded} 
+      />
     </div>
   );
 };
