@@ -15,6 +15,7 @@ import DetailModal from "../Component/DetailModal";
 const postsPerPage = 12;
 
 export const Home = ({ popupmodal }) => {
+  const [search, setSearch] = useState("");
   // const [posts, setPosts] = useState([]);
   const [userData, setUserData] = useState([]);
   const [totalPage, setTotalPage] = useState();
@@ -101,6 +102,33 @@ export const Home = ({ popupmodal }) => {
     }
   }
 
+  //참가자 검색
+  const onChangeSearch = (e) => {
+    setSearch(e.target.value);
+  }
+  const onkeydown = async(e) => {
+    if(e.keyCode === 13){
+      // const response = await axios
+      // .post(
+      //   "https://anystorydev.anychat.com:3030/v1/login/get_web_miss_list",
+      //   {
+      //     page: 1,
+      //     language:'',
+      //     last_muidx: 0,
+      //     search_result: search,
+      //   },
+      // )
+      // .then((response) => {
+      //   console.log(response);
+      //   setUserData(response.data.data.user_data);
+      // })
+      // .catch((error) => {
+      //   console.log(error);
+      // });
+
+    } //if 끝
+  } //onkeydown 끝
+  
   return (
     <div id="home_root">
       <section id="main_container">
@@ -112,6 +140,9 @@ export const Home = ({ popupmodal }) => {
           <div className="searchInput">
             <SVGSearch className="searchIcon" />
             <input
+              value={search}
+              onChange={onChangeSearch}
+              onKeyDown={onkeydown}
               type="search"
               name="seraching participants"
               className="searchText"
@@ -133,7 +164,6 @@ export const Home = ({ popupmodal }) => {
           })}
         </div>
 
-        <></>
         <Pagination
           activePage={currentPage}
           totalItemsCount={ postsPerPage * totalPage } // 총 포스트 갯수
