@@ -15,9 +15,8 @@ import DetailModal from "../Component/DetailModal";
 import i18n from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
 
-
-import ko from '../Util/i18n/ko/trans.json';
-import en from '../Util/i18n/en/trans.json';
+import ko from "../Util/i18n/ko/trans.json";
+import en from "../Util/i18n/en/trans.json";
 
 i18n
   .use(initReactI18next) // passes i18n down to react-i18next
@@ -25,35 +24,53 @@ i18n
     // the translations
     // (tip move them in a JSON file and import them,
     // or even better, manage them via a UI: https://react.i18next.com/guides/multiple-translation-files#manage-your-translations-with-a-management-gui)
-    fallbackLng: 'en',
+    fallbackLng: "en",
     debug: true,
 
-    
     lng: "en", // if you're using a language detector, do not define the lng option
- 
+
     resources: {
       en: {
-        lang: en
+        lang: en,
         // translation: {
         //   "Welcome to React": "Welcome to React and react-i18next"
         // }
       },
       ko: {
-        lang: ko
+        lang: ko,
       },
     },
-    ns: ['lang'],
+    ns: ["lang"],
 
     interpolation: {
-      escapeValue: false // react already safes from xss => https://www.i18next.com/translation-function/interpolation#unescape
-    }
+      escapeValue: false, // react already safes from xss => https://www.i18next.com/translation-function/interpolation#unescape
+    },
   });
 
 const postsPerPage = 12;
+i18n
+  .use(initReactI18next) // passes i18n down to react-i18next
+  .init({
+    // the translations
+    // (tip move them in a JSON file and import them,
+    // or even better, manage them via a UI: https://react.i18next.com/guides/multiple-translation-files#manage-your-translations-with-a-management-gui)
+    resources: {
+      en: {
+        translation: {
+          "참가자 소개": "Participants",
+        },
+      },
+    },
+    lng: "en", // if you're using a language detector, do not define the lng option
+    fallbackLng: "ko",
 
+    interpolation: {
+      escapeValue: false, // react already safes from xss => https://www.i18next.com/translation-function/interpolation#unescape
+    },
+  });
+//
 export const Home = ({ popupmodal }) => {
   const { t } = useTranslation();
-
   const [search, setSearch] = useState("");
   const [language, setLanguage] = useState("en");
   // const [posts, setPosts] = useState([]);
@@ -147,49 +164,34 @@ export const Home = ({ popupmodal }) => {
   //참가자 검색
   const onChangeSearch = (e) => {
     setSearch(e.target.value);
-    if (e.target.value === "") {
-      fetchData(1, 0);
-    }
-  }
-  // 페이지 네이션이랑 중복되니까 나중에 수정해야함
-  const searchData = async (page, last_idx) => {
-    const response = await axios
-    .post(
-      "https://anystorydev.anychat.com:3030/v1/login/get_web_miss_list",
-      {
-        page: currentPage,
-        language: language,
-        last_muidx: last_idx,
-        search_result: search,
-      },
-    )
-    .then((response) => {
-      console.log(response);
-      setUserData(response.data.data.user_data);
-      setTotalPage(response.data.data.total_page)
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-  }
-  const onkeydown = async(e) => {
-    if(e.keyCode === 13){
-      searchData(currentPage, userData[userData.length - 1].muidx); //현재 보고 있는 페이지의 마지막 참가자 muidx 넘겨주기
+  };
+  const onkeydown = async (e) => {
+    if (e.keyCode === 13) {
+      // const response = await axios
+      // .post(
+      //   "https://anystorydev.anychat.com:3030/v1/login/get_web_miss_list",
+      //   {
+      //     page: 1,
+      //     language:'',
+      //     last_muidx: 0,
+      //     search_result: search,
+      //   },
+      // )
+      // .then((response) => {
+      //   console.log(response);
+      //   setUserData(response.data.data.user_data);
+      // })
+      // .catch((error) => {
+      //   console.log(error);
+      // });
     } //if 끝
-  } //onkeydown 끝
-  
-  const onClickClear = () => {
-    setSearch('')
-    fetchData(1, 0);
-  }
+  }; //onkeydown 끝
 
   return (
     <div id="home_root">
       <section id="main_container">
         <h1 className="headText">참가자 소개</h1>
-
-        <h2>{t('Welcome to React')}</h2>
-
+        <h2>{t("참가자 소개")}</h2>
         <div className="textArea">
           <p className="alignText">
             {/* 참가자 실시간 정렬 순서: 애니스토리 팔로워 순서 */}
@@ -206,7 +208,11 @@ export const Home = ({ popupmodal }) => {
               placeholder="참가자 이름 및 국적으로 검색하실 수 있습니다."
               color="#7c4dff"
             />
-            {search !== "" && <button onClick={onClickClear} className="clearBtn">clear</button>}
+            {search !== "" && (
+              <button onClick={onClickClear} className="clearBtn">
+                clear
+              </button>
+            )}
           </div>
         </div>
         <div className="listContainer">
@@ -221,7 +227,6 @@ export const Home = ({ popupmodal }) => {
             );
           })}
         </div>
-
         <Pagination
           activePage={currentPage}
           totalItemsCount={postsPerPage * totalPage} // 총 포스트 갯수
@@ -232,7 +237,6 @@ export const Home = ({ popupmodal }) => {
           onChange={handlePageChange}
         />
         {/* <button onClick={goSecond}>ddd</button> */}
-
         <DetailModal
           isOpen={isOpen}
           onCloseModal={onCloseModal}
