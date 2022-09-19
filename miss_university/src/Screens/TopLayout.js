@@ -92,11 +92,11 @@ export const TopLayout = ({
                 {t("link_to_worldmissuniversity_homepage")}
               </a>
             </li>
-            <li>
+            {/* <li>
               <a href="#" target="_blank">
                 월드 미스 유니버시티 소식통
               </a>
-            </li>
+            </li> */}
             <li>
               <Select
                 placeholder={t("link_to_worldmissuniversity_homepage")}

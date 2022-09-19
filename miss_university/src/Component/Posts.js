@@ -31,8 +31,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <div className="details">
             {/* 국기 이미지 삽입 필요 */}
             <div className="countryWrap">
-              <div className="flag"></div>
-              <p className="userCountry">{user.country}</p>
+              <p className="userCountry">{user.name}</p>
             </div>
             {/* <span className="detailText">{user.nationality}</span> */}
           </div>
@@ -65,7 +64,10 @@ const Posts = ({ user, popupmodal, onClick }) => {
         {user.rank < 4 && <Raking user={user} />}
         <div className="sideCardLayout" onClick={onClick}>
           <SVGCard className="sideCardImage" />
-          <span className="name">{user.name}</span>
+          <span className="name">
+            <span className="flag"></span>
+            {user.country}
+          </span>
         </div>
       </div>
     </div>
