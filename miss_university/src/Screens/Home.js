@@ -12,9 +12,36 @@ import ParticipantsList from "../Component/ParticipantsList";
 // 프로필 자세히 보기 모달 팝업
 import DetailModal from "../Component/DetailModal";
 
-const postsPerPage = 12;
+import i18n from "i18next";
+import { useTranslation, initReactI18next } from "react-i18next";
 
+const postsPerPage = 12;
+//
+i18n
+  .use(initReactI18next) // passes i18n down to react-i18next
+  .init({
+    // the translations
+    // (tip move them in a JSON file and import them,
+    // or even better, manage them via a UI: https://react.i18next.com/guides/multiple-translation-files#manage-your-translations-with-a-management-gui)
+    resources: {
+      en: {
+        translation: {
+          "참가자 소개": "Participants",
+        },
+      },
+    },
+    lng: "en", // if you're using a language detector, do not define the lng option
+    fallbackLng: "ko",
+
+    interpolation: {
+      escapeValue: false, // react already safes from xss => https://www.i18next.com/translation-function/interpolation#unescape
+    },
+  });
+//
 export const Home = ({ popupmodal }) => {
+  //
+  const { t } = useTranslation();
+  //
   const [search, setSearch] = useState("");
   // const [posts, setPosts] = useState([]);
   const [userData, setUserData] = useState([]);
@@ -107,9 +134,9 @@ export const Home = ({ popupmodal }) => {
   //참가자 검색
   const onChangeSearch = (e) => {
     setSearch(e.target.value);
-  }
-  const onkeydown = async(e) => {
-    if(e.keyCode === 13){
+  };
+  const onkeydown = async (e) => {
+    if (e.keyCode === 13) {
       // const response = await axios
       // .post(
       //   "https://anystorydev.anychat.com:3030/v1/login/get_web_miss_list",
@@ -127,14 +154,14 @@ export const Home = ({ popupmodal }) => {
       // .catch((error) => {
       //   console.log(error);
       // });
-
     } //if 끝
-  } //onkeydown 끝
-  
+  }; //onkeydown 끝
+
   return (
     <div id="home_root">
       <section id="main_container">
         <h1 className="headText">참가자 소개</h1>
+        <h2>{t("참가자 소개")}</h2>
         <div className="textArea">
           <p className="alignText">
             {/* 참가자 실시간 정렬 순서: 애니스토리 팔로워 순서 */}
@@ -165,7 +192,6 @@ export const Home = ({ popupmodal }) => {
             );
           })}
         </div>
-
         <Pagination
           activePage={currentPage}
           totalItemsCount={postsPerPage * totalPage} // 총 포스트 갯수
@@ -176,7 +202,6 @@ export const Home = ({ popupmodal }) => {
           onChange={handlePageChange}
         />
         {/* <button onClick={goSecond}>ddd</button> */}
-
         <DetailModal
           isOpen={isOpen}
           onCloseModal={onCloseModal}

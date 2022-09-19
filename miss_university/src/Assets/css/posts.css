@@ -65,9 +65,9 @@
   fill: #737373;
 }
 .flag {
-  width: 16px;
-  height: 16px;
-  border-radius: 8px;
+  width: 22px;
+  height: 22px;
+  border-radius: 11px;
   /* 국기 이미지 삽입 필요 */
   background-color: pink;
 }
@@ -162,4 +162,5 @@
 .userCountry {
   flex: 1;
   white-space: "no-wrap";
+  font-size: 20px;
 }
