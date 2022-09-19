@@ -18,61 +18,29 @@ import { useTranslation, initReactI18next } from "react-i18next";
 import ko from "../Util/i18n/ko/trans.json";
 import en from "../Util/i18n/en/trans.json";
 
-i18n
-  .use(initReactI18next) // passes i18n down to react-i18next
-  .init({
-    // the translations
-    // (tip move them in a JSON file and import them,
-    // or even better, manage them via a UI: https://react.i18next.com/guides/multiple-translation-files#manage-your-translations-with-a-management-gui)
-    fallbackLng: "en",
-    debug: true,
-
-    lng: "en", // if you're using a language detector, do not define the lng option
-
-    resources: {
-      en: {
-        lang: en,
-        // translation: {
-        //   "Welcome to React": "Welcome to React and react-i18next"
-        // }
-      },
-      ko: {
-        lang: ko,
-      },
+i18n.use(initReactI18next).init({
+  fallbackLng: "en",
+  debug: true,
+  lng: "en",
+  resources: {
+    en: {
+      lang: en,
     },
-    ns: ["lang"],
-
-    interpolation: {
-      escapeValue: false, // react already safes from xss => https://www.i18next.com/translation-function/interpolation#unescape
+    ko: {
+      lang: ko,
     },
-  });
+  },
+  ns: ["lang"],
 
+  interpolation: {
+    escapeValue: false,
+  },
+});
 const postsPerPage = 12;
-i18n
-  .use(initReactI18next) // passes i18n down to react-i18next
-  .init({
-    // the translations
-    // (tip move them in a JSON file and import them,
-    // or even better, manage them via a UI: https://react.i18next.com/guides/multiple-translation-files#manage-your-translations-with-a-management-gui)
-    resources: {
-      en: {
-        translation: {
-          "참가자 소개": "Participants",
-        },
-      },
-    },
-    lng: "en", // if you're using a language detector, do not define the lng option
-    fallbackLng: "ko",
-
-    interpolation: {
-      escapeValue: false, // react already safes from xss => https://www.i18next.com/translation-function/interpolation#unescape
-    },
-  });
-//
-export const Home = ({ popupmodal }) => {
+export const Home = ({ popupmodal, selectedValue }) => {
   const { t } = useTranslation();
   const [search, setSearch] = useState("");
-  const [language, setLanguage] = useState("en");
+  // const [language, setLanguage] = useState("en");
   // const [posts, setPosts] = useState([]);
   const [userData, setUserData] = useState([]);
   const [totalPage, setTotalPage] = useState();
@@ -103,7 +71,7 @@ export const Home = ({ popupmodal }) => {
     const response = await axios
       .post("https://anystorydev.anychat.com:3030/v1/login/get_web_miss_list", {
         page: page,
-        language: language,
+        language: selectedValue,
         last_muidx: last_idx,
         search_result: "",
       })
@@ -186,12 +154,14 @@ export const Home = ({ popupmodal }) => {
       // });
     } //if 끝
   }; //onkeydown 끝
-
+  const onClickClear = () => {
+    setSearch("");
+    fetchData(1, 0);
+  };
   return (
     <div id="home_root">
       <section id="main_container">
-        <h1 className="headText">참가자 소개</h1>
-        <h2>{t("참가자 소개")}</h2>
+        <h1 className="headText">{t("participant_info")}</h1>
         <div className="textArea">
           <p className="alignText">
             {/* 참가자 실시간 정렬 순서: 애니스토리 팔로워 순서 */}
