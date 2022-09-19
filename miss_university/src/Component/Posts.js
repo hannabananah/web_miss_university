@@ -13,9 +13,15 @@ const Posts = ({ user, popupmodal, onClick }) => {
         <span className="decoText1">WORLD</span>
         <span className="decoText2">MISS UNIVERSITY</span>
         <div className="photo" onClick={onClick}>
-          {user.profile_url === null 
-            ? "No Image" 
-            : <img src={user.profile_url} alt={user.name + 'profile image'} className="profileImage" />}
+          {user.profile_url === null ? (
+            "No Image"
+          ) : (
+            <img
+              src={user.profile_url}
+              alt={user.name + "profile image"}
+              className="profileImage"
+            />
+          )}
         </div>
         <div className="detailContainer">
           {/* 국가 관련 디테일 */}
@@ -33,16 +39,20 @@ const Posts = ({ user, popupmodal, onClick }) => {
             <span className="detailText">{user.follower_count}</span> */}
           </div>
           {/* 프로필 자세히 보기 */}
-          <div style={{display:'flex', flexDirection:"column"}}>
+          <div style={{ display: "flex", flexDirection: "column" }}>
             <p className="seeMoreText1" onClick={onClick}>
               프로필 자세히 보기
               <SVGArrow className="arrowIcon1" />
             </p>
             {/* SNS 보러 가기 */}
-            <p className="seeMoreText2">
+            <a
+              href="https://play.google.com/store/search?q=anystory&c=apps"
+              className="seeMoreText2"
+              target="_blank"
+            >
               SNS 보러 가기
               <SVGArrow className="arrowIcon2" />
-            </p>       
+            </a>
           </div>
         </div>
       </div>

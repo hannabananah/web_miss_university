@@ -8,12 +8,18 @@ export const Banner = () => {
       <div id="banner_container">
         <div className="left">
           <SVGBanner className="bannerImage" />
-          <span className="titleText">월드 미스 유니버시티 참가자 프로필 소개</span>
+          <span className="titleText">
+            월드 미스 유니버시티 참가자 프로필 소개
+          </span>
         </div>
-        <div className="subText">
+        <a
+          href="https://play.google.com/store/search?q=anystory&c=apps"
+          className="subText"
+          target="_blank"
+        >
           참가자 SNS 게시물 보러 가기&nbsp;
           <span className="arrowMark">&#8250;</span>
-        </div>
+        </a>
       </div>
     </div>
   );
