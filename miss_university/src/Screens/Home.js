@@ -68,7 +68,7 @@ export const Home = ({ popupmodal }) => {
     setCurrentPage(page);
     fetchData(page, userData[userData.length - 1].muidx); //현재 보고 있는 페이지의 마지막 참가자 muidx 넘겨주기
   };
-  console.log(userData);
+  // console.log(userData);
 
   //모달 데이터
   const fetchDetailsData = async (userIdx, userCountry) => {

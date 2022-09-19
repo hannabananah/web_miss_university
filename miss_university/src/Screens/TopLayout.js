@@ -1,53 +1,31 @@
 import React, { useState, useEffect } from "react";
 import Select from "react-select";
-import axios from "axios";
 
 import "../Assets/css/topLayout.css";
 import "react-dropdown/style.css";
 import { ReactComponent as SVGLogo } from "../Assets/images/logo.svg";
-export const TopLayout = () => {
+export const TopLayout = ({
+  selectedValue,
+  setSelectedValue,
+  handleChange,
+}) => {
   const options = [
-    { value: "한국어 (ko)", label: "한국어 (ko)" },
-    { value: "Englilsh (en)", label: "Englilsh (en)" },
-    { value: "简体中文 (zh-CN)", label: "简体中文 (zh-CN)" },
-    { value: "繁體中文 (zh-TW)", label: "繁體中文 (zh-TW)" },
-    { value: "日本語 (ja)", label: "日本語 (ja)" },
-    { value: "русский (ru)", label: "русский (ru)" },
-    { value: "Deutsch (de)", label: "Deutsch (de)" },
-    { value: "français (fr)", label: "français (fr)" },
-    { value: "español (es)", label: "español (es)" },
-    { value: "العربية (ar)", label: "العربية (ar)" },
-    { value: "Indonesia (id)", label: "Indonesia (id)" },
-    { value: "Tiếng Việt (vi)", label: "Tiếng Việt (vi)" },
-    { value: "ไทย (th)", label: "ไทย (th)" },
-    { value: "Tagalog (tl)", label: "Tagalog (tl)" },
+    { value: "ko", label: "한국어 (ko)" },
+    { value: "en", label: "Englilsh (en)" },
+    // { value: "zh-CN", label: "简体中文 (zh-CN)" },
+    // { value: "zh-TW", label: "繁體中文 (zh-TW)" },
+    // { value: "ja", label: "日本語 (ja)" },
+    // { value: "ru", label: "русский (ru)" },
+    // { value: "de", label: "Deutsch (de)" },
+    // { value: "fr", label: "français (fr)" },
+    // { value: "es", label: "español (es)" },
+    // { value: "ar", label: "العربية (ar)" },
+    // { value: "id", label: "Indonesia (id)" },
+    // { value: "vi", label: "Tiếng Việt (vi)" },
+    // { value: "th", label: "ไทย (th)" },
+    // { value: "tl", label: "Tagalog (tl)" },
   ];
 
-  const [user, setUser] = useState([]);
-  const [userData, setUserData] = useState([]);
-  const [totalPage, setTotalPage] = useState();
-  //참가자 언어 설정
-  const langData = async (page, last_idx) => {
-    const response = await axios
-      .post("https://anystorydev.anychat.com:3030/v1/login/get_web_miss_list", {
-        page: page,
-        language: "en",
-        last_muidx: last_idx,
-        search_result: "",
-      })
-      .then((response) => {
-        console.log(response.data.data);
-        options(response.data.data.user_data);
-        setTotalPage(response.data.data.total_page);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
-
-  useEffect(() => {
-    langData(1, 0);
-  }, []);
   console.log(Select);
 
   const customStyles = {
@@ -56,7 +34,7 @@ export const TopLayout = () => {
       color: state.isSelected ? "#7c4dff" : "#191919",
       fontWeight: state.isSelected ? "bold" : "normal",
       boxSizing: "border-box",
-      width: "140px",
+      width: "150px",
       display: "flex",
       justifyContent: "center",
       rowGap: "20px",
@@ -66,7 +44,9 @@ export const TopLayout = () => {
       lineHeight: "14px",
       letterSpacing: "-0.42px",
       "&:hover": {
-        backgroundColor: "transparent",
+        fontWeight: "bold",
+        backgroundColor: "#7c4dff",
+        color: "#fff",
       },
     }),
   };
@@ -109,12 +89,19 @@ export const TopLayout = () => {
               </a>
             </li>
             <li>
+              <a href="#" target="_blank">
+                월드 미스 유니버시티 소식통
+              </a>
+            </li>
+            <li>
               <Select
                 placeholder="언어 설정"
                 options={options}
                 isSearchable={false}
                 className="dropdown"
                 styles={customStyles}
+                value={options.filter((obj) => obj.value === selectedValue)}
+                onChange={handleChange}
                 theme={(theme) => ({
                   ...theme,
                   border: "none",

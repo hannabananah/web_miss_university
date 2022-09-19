@@ -58,9 +58,10 @@
 }
 .nav a:link {
   text-decoration: none;
+  color:#191919;
 }
 .dropdown {
-  width: 140px;
+  width: 150px;
 }
 /* 언어 설정 드롭다운 */
 .css-1s2u09g-control {
