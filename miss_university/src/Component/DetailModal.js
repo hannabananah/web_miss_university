@@ -91,7 +91,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           {/* 모달 오른쪽 */}
           <div className="modalRight">
             <div className="modalTextContainer">
-              {/* 해당 팜가자의 이름이 길어질 경우 폰트 사이즈가 바뀌는 영역 */}
+              {/* 해당 참가자의 이름이 길어질 경우 폰트 사이즈가 바뀌는 영역 */}
               <div className="modalTitle">
                 <span>{user.name}</span>의 프로필 사진
               </div>
@@ -101,21 +101,38 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               </a>
             </div>
             {/* 모달 이미지 리스트 */}
-            <div className="modalImgsContainer">
+            <div className="modalImgsContainer" style={{display:"flex",flexDirection:"column"}}>
+              <div style={{display:"flex", gap:"6px"}}>
               {
-                loaded ? 
+                loaded && 
                 user.content_data?.map((u,idx)=>{
-                  return (
-                    <div 
-                      key={idx} 
-                      className="modalImagesList"
-                      >
-                      <img src={u.file_url} onClick={()=>onClickImage(idx)} className="modalImg" alt={`image-${idx}`} />
-                    </div>
-                  )
+
+                  if (u.content_type === 2) { // 영상
+                    return (
+                      <div key={idx} className="modalImagesList">
+                        <video 
+                          src={u.file_url} 
+                          onClick={()=>onClickImage(idx)} 
+                          className="modalImg" 
+                          controls>
+                        </video>
+                      </div>  
+                    )
+                  } else if (u.content_type === 1) { // 사진
+                    return (
+                      <div 
+                        key={idx} 
+                        className="modalImagesList"
+                        >
+                        <img src={u.file_url} onClick={()=>onClickImage(idx)} className="modalImg" alt={`image-${idx}`} />
+                      </div>
+                    )
+                  }
                 })
-                : null
               }
+              </div>
+              
+
             </div>
           </div>
         </div>

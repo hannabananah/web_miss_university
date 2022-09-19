@@ -25,6 +25,11 @@
 }
 .closeBtn {
   position: absolute;
-  right: 150px;
+  right: 200px;
   top: 70px;
+  width: 25px;
+  height: 25px;
+  border: none;
+  text-indent: -9999em;
+  background:url("../images/close_wh.svg") no-repeat;
 }

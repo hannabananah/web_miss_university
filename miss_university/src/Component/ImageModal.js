@@ -33,11 +33,19 @@ const ImageModal = ({  isOpenImage, onCloseImageModal,user,targetIdx  }) => {
         >
         {
           user.content_data?.map((u,idx)=>{
-            return (
-                <SwiperSlide key={idx} className='swiper-slide'>
-                  <img src={u.file_url} alt={`image-${idx}`} className="bigImage" />
-                </SwiperSlide>
-              )
+              if (u.content_type === 1) { // 사진
+                return (
+                  <SwiperSlide key={idx} className='swiper-slide'>
+                    <img src={u.file_url} alt={`image-${idx}`} className="bigImage" />
+                  </SwiperSlide>
+                )
+              } else if (u.content_type === 2) { // 동영상
+                return (
+                  <SwiperSlide key={idx} className='swiper-slide'>
+                    <video src={u.file_url} className="bigImage" controls></video>
+                  </SwiperSlide>
+                )
+              }
             })
           }
         </Swiper>
