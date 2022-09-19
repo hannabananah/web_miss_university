@@ -1,28 +1,34 @@
 import React from "react";
 
 import "../Assets/css/bottomLayout.css";
+import i18n from "i18next";
+import { useTranslation, initReactI18next } from "react-i18next";
+
 export const BottomLayout = () => {
+  const { t } = useTranslation();
   return (
     <div id="bottom_root">
       <footer id="footer">
         {/* top */}
         <div className="top">
-          <span>이용약관</span>
-          <span className="emphasis">개인정보처리방침</span>
-          <span>고객센터</span>
-          <span>찾아오시는 길</span>
+          <span>{t("terms_and_conditions")}</span>
+          <span className="emphasis">{t("privacy_policy")}</span>
+          <span>{t("customer_service")}</span>
+          <span>{t("visit_us")}</span>
         </div>
         {/* bottom */}
         <div className="bottom">
-          <span>주식회사 애니챗</span>
-          <address className="address">
-            서울시 강남구 선릉로 93길 50 현석타워 8층
-          </address>
-          <span>대표 : 이승진</span>
-          <span>대표번호 : <span className="number">02-6959-3088</span></span>
-          <span>법인등록번호 : 110111-7783700</span>
+          <span>{t("anychat_corp")}</span>
+          <address className="address">{t("address")}</address>
+          <span>{t("president")}</span>
+          <span>
+            {t("phone")} : <span className="number">02-6959-3088</span>
+          </span>
+          <span>{t("registrationNum")} : 110111-7783700</span>
         </div>
-        <p className="rights">COPYRIGHT (C) ANYCHAT CORP. ALL RIGHTS RESERVED.</p>
+        <p className="rights">
+          COPYRIGHT (C) ANYCHAT CORP. ALL RIGHTS RESERVED.
+        </p>
       </footer>
     </div>
   );

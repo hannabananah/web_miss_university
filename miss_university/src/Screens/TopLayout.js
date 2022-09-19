@@ -4,11 +4,15 @@ import Select from "react-select";
 import "../Assets/css/topLayout.css";
 import "react-dropdown/style.css";
 import { ReactComponent as SVGLogo } from "../Assets/images/logo.svg";
+import i18n from "i18next";
+import { useTranslation, initReactI18next } from "react-i18next";
+
 export const TopLayout = ({
   selectedValue,
   setSelectedValue,
   handleChange,
 }) => {
+  const { t } = useTranslation();
   const options = [
     { value: "ko", label: "한국어 (ko)" },
     { value: "en", label: "Englilsh (en)" },
@@ -80,12 +84,12 @@ export const TopLayout = ({
           <ul className="nav">
             <li>
               <a href="https://www.anychat.com/main/" target="_blank">
-                애니챗 HOME
+                {t("link_to_anychat_homepage")}
               </a>
             </li>
             <li>
               <a href="http://wmu.or.kr/" target="_blank">
-                월드 미스 유니버시티 HOME
+                {t("link_to_worldmissuniversity_homepage")}
               </a>
             </li>
             <li>
@@ -95,7 +99,7 @@ export const TopLayout = ({
             </li>
             <li>
               <Select
-                placeholder="언어 설정"
+                placeholder={t("link_to_worldmissuniversity_homepage")}
                 options={options}
                 isSearchable={false}
                 className="dropdown"

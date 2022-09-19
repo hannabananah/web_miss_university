@@ -2,22 +2,24 @@ import React from "react";
 
 import "../Assets/css/banner.css";
 import { ReactComponent as SVGBanner } from "../Assets/images/banner.svg";
+import i18n from "i18next";
+import { useTranslation, initReactI18next } from "react-i18next";
+
 export const Banner = () => {
+  const { t } = useTranslation();
   return (
     <div id="banner_root">
       <div id="banner_container">
         <div className="left">
           <SVGBanner className="bannerImage" />
-          <span className="titleText">
-            월드 미스 유니버시티 참가자 프로필 소개
-          </span>
+          <span className="titleText">{t("contest_participant_info")}</span>
         </div>
         <a
           href="https://play.google.com/store/search?q=anystory&c=apps"
           className="subText"
           target="_blank"
         >
-          참가자 SNS 게시물 보러 가기&nbsp;
+          {t("link_to_her_sns")}&nbsp;
           <span className="arrowMark">&#8250;</span>
         </a>
       </div>
