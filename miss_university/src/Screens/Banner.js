@@ -18,14 +18,16 @@ export const Banner = () => {
           <SVGBanner3 className="bannerImage1" />
           <span className="titleText">{t("contest_participant_info")}</span>
         </div>
-        <a
-          href="https://play.google.com/store/search?q=anystory&c=apps"
-          className="subText"
-          target="_blank"
-        >
-          {t("link_to_her_sns")}&nbsp;
-          <span className="arrowMark">&#8250;</span>
-        </a>
+        <div className="bannerLink">
+          <a
+            href="https://play.google.com/store/search?q=anystory&c=apps"
+            className="subText"
+            target="_blank"
+          >
+            {t("link_to_her_sns")}&nbsp;
+            <span className="arrowMark">&#8250;</span>
+          </a>
+        </div>
       </div>
     </div>
   );

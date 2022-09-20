@@ -38,9 +38,6 @@
   right: 10px;
 }
 .subText {
-  position: absolute;
-  right: 0;
-  bottom: 0;
   font-weight: bold;
   font-size: 16px;
   line-height: 16px;
@@ -56,4 +53,17 @@
 .arrowMark {
   width: 9px;
   height: 18px;
+}
+.bannerLink {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 12px 16px;
+  height: 20px;
+  border-width: 1px;
+  border-style: solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
 }
