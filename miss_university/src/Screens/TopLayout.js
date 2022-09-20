@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Select from "react-select";
-
+import { useSelector, useDispatch } from "react-redux";
 import "../Assets/css/topLayout.css";
 import "react-dropdown/style.css";
 import { ReactComponent as SVGLogo } from "../Assets/images/logo.svg";
@@ -8,11 +8,16 @@ import i18n from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
 
 export const TopLayout = ({
-  selectedValue,
-  setSelectedValue,
-  handleChange,
+  selectLangVal,
+  onChangeLang,
+
+  number, onIncrease, onDecrease 
 }) => {
   const { t } = useTranslation();
+  const currLang = useSelector((state) => state.langData);
+
+  console.log('currLang:::::::::::::::::::::::',currLang);
+
   const options = [
     { value: "ko", label: "한국어 (ko)" },
     { value: "en", label: "Englilsh (en)" },
@@ -30,7 +35,7 @@ export const TopLayout = ({
     // { value: "tl", label: "Tagalog (tl)" },
   ];
 
-  console.log(Select);
+  // console.log(Select);
 
   const customStyles = {
     option: (provided, state) => ({
@@ -83,6 +88,13 @@ export const TopLayout = ({
         </div>
         {/* right */}
         <nav className="right">
+
+          <div>
+            <h3>{number}</h3>
+            <button onClick={onIncrease}>+1</button>
+            <button onClick={onDecrease}>-1</button>
+          </div>
+
           <ul className="nav">
             <li>
               <a href="https://www.anychat.com/main/" target="_blank">
@@ -100,7 +112,16 @@ export const TopLayout = ({
               </a>
             </li> */}
             <li>
-              <Select
+              <select
+                value={selectLangVal}
+                onChange={onChangeLang}>
+                {options.map((option,index)=>{
+                  return (
+                    <option key={index} value={option.value}>{option.label}</option>
+                  )
+                })}
+              </select>
+              {/* <Select
                 placeholder={t("link_to_worldmissuniversity_homepage")}
                 options={options}
                 isSearchable={false}
@@ -116,7 +137,7 @@ export const TopLayout = ({
                     primary: "#ffffff",
                   },
                 })}
-              />
+              /> */}
             </li>
           </ul>
         </nav>

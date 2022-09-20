@@ -15,27 +15,27 @@ import DetailModal from "../Component/DetailModal";
 import i18n from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
 
-import ko from "../Util/i18n/ko/trans.json";
-import en from "../Util/i18n/en/trans.json";
+// import ko from "../Util/i18n/ko/trans.json";
+// import en from "../Util/i18n/en/trans.json";
 
-i18n.use(initReactI18next).init({
-  fallbackLng: "en",
-  debug: true,
-  lng: "en",
-  resources: {
-    en: {
-      lang: en,
-    },
-    ko: {
-      lang: ko,
-    },
-  },
-  ns: ["lang"],
+// i18n.use(initReactI18next).init({
+//   fallbackLng: "ko",
+//   debug: true,
+//   lng: "ko",
+//   resources: {
+//     en: {
+//       lang: en,
+//     },
+//     ko: {
+//       lang: ko,
+//     },
+//   },
+//   ns: ["lang"],
 
-  interpolation: {
-    escapeValue: false,
-  },
-});
+//   interpolation: {
+//     escapeValue: false,
+//   },
+// });
 const postsPerPage = 12;
 export const Home = ({ popupmodal, selectedValue }) => {
   const { t } = useTranslation();
@@ -164,6 +164,7 @@ export const Home = ({ popupmodal, selectedValue }) => {
         <h1 className="headText">{t("participant_info")}</h1>
         <div className="textArea">
           <p className="alignText">
+            
             {/* 참가자 실시간 정렬 순서: 애니스토리 팔로워 순서 */}
             {/* {t("sequance_participants")} */}
             {/* {t("sequance_follower")} */}
