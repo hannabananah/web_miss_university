@@ -1,74 +1,74 @@
-import ALBA from "../Assets/images/flags/Albania.png";
-import ALGE from "../Assets/images/flags/Algeria.png";
-import ARGEN from "../Assets/images/flags/Argentina.png";
-import ARME from "../Assets/images/flags/Armenia.png";
-import AZER from "../Assets/images/flags/Azerbaijan.png";
-import BANG from "../Assets/images/flags/Bangladesh.png";
-import BELA from "../Assets/images/flags/Belarus.png";
-import BOLI from "../Assets/images/flags/Bolivia.png";
-import BOTS from "../Assets/images/flags/Botswana.png";
-import BRAZ from "../Assets/images/flags/Brazil.png";
-import BULGA from "../Assets/images/flags/Bulgaria.png";
-import CAME from "../Assets/images/flags/Cameroon.png";
-import CANA from "../Assets/images/flags/Canada.png";
-import COLOM from "../Assets/images/flags/Colombia.png";
-import COTE from "../Assets/images/flags/Cote_d_Ivoire.png";
-import CZECH from "../Assets/images/flags/Czech_Republic.png";
-import DOMI from "../Assets/images/flags/Dominican_Republic.png";
-import EL from "../Assets/images/flags/El_Salvador.png";
-import EQU from "../Assets/images/flags/Equador.png";
-import ESTO from "../Assets/images/flags/Estonia.png";
-import FRAN from "../Assets/images/flags/France.png";
-import GEO from "../Assets/images/flags/Georgia.png";
-import GER from "../Assets/images/flags/Germany.png";
-import GHA from "../Assets/images/flags/Ghana.png";
-import GUA from "../Assets/images/flags/Guatemala.png";
-import INDO from "../Assets/images/flags/Indonesia.png";
-import KAZA from "../Assets/images/flags/Kazakhstan.png";
-import KEN from "../Assets/images/flags/Kenya.png";
-import KOSO from "../Assets/images/flags/Kosovo.png";
-import KYRGY from "../Assets/images/flags/Kyrgyzstan.png";
-import MACE from "../Assets/images/flags/Macedonia.png";
-import MAL from "../Assets/images/flags/Malawi.png";
-import MALAY from "../Assets/images/flags/Malaysia.png";
-import MEX from "../Assets/images/flags/Mexico.png";
-import MOLD from "../Assets/images/flags/Moldova.png";
-import MONG from "../Assets/images/flags/Mongolia.png";
-import MONTE from "../Assets/images/flags/Montenegro.png";
-import NEW from "../Assets/images/flags/New_Zealand.png";
-import NICA from "../Assets/images/flags/Nicaragua.png";
-import NIG from "../Assets/images/flags/Nigeria.png";
-import PARA from "../Assets/images/flags/Paraguay.png";
-import PERU from "../Assets/images/flags/Peru.png";
-import PHIL from "../Assets/images/flags/Philippines.png";
-import PORT from "../Assets/images/flags/Portugal.png";
-import ROMA from "../Assets/images/flags/Romania.png";
-import RUS from "../Assets/images/flags/Russian_Federation.png";
-import SER from "../Assets/images/flags/Serbia.png";
-import SING from "../Assets/images/flags/Singapore.png";
-import KO from "../Assets/images/flags/South_Korea.png";
-import SPA from "../Assets/images/flags/Spain.png";
-import TAI from "../Assets/images/flags/Taiwan.png";
-import TAJI from "../Assets/images/flags/Tajikistan.png";
-import TANZA from "../Assets/images/flags/Tanzania.png";
-import THAI from "../Assets/images/flags/Thailand.png";
-import TRINI from "../Assets/images/flags/Trinidad_Tobago.png";
-import TURK from "../Assets/images/flags/Turkmenistan.png";
-import UGA from "../Assets/images/flags/Uganda.png";
+import Albania from "../Assets/images/flags/Albania.png";
+import Algeria from "../Assets/images/flags/Algeria.png";
+import Argentina from "../Assets/images/flags/Argentina.png";
+import Armenia from "../Assets/images/flags/Armenia.png";
+import Azerbaijan from "../Assets/images/flags/Azerbaijan.png";
+import Bangladesh from "../Assets/images/flags/Bangladesh.png";
+import Belarus from "../Assets/images/flags/Belarus.png";
+import Bolivia from "../Assets/images/flags/Bolivia.png";
+import Botswana from "../Assets/images/flags/Botswana.png";
+import Brazil from "../Assets/images/flags/Brazil.png";
+import Bulgaria from "../Assets/images/flags/Bulgaria.png";
+import Cameroon from "../Assets/images/flags/Cameroon.png";
+import Canada from "../Assets/images/flags/Canada.png";
+import Colombia from "../Assets/images/flags/Colombia.png";
+import Cote_d_Ivoire from "../Assets/images/flags/Cote_d_Ivoire.png";
+import Czech_Republic from "../Assets/images/flags/Czech_Republic.png";
+import Dominican_Republic from "../Assets/images/flags/Dominican_Republic.png";
+import El_Salvador from "../Assets/images/flags/El_Salvador.png";
+import Ecuador from "../Assets/images/flags/Ecuador.png";
+import Estonia from "../Assets/images/flags/Estonia.png";
+import France from "../Assets/images/flags/France.png";
+import Georgia from "../Assets/images/flags/Georgia.png";
+import Germany from "../Assets/images/flags/Germany.png";
+import Ghana from "../Assets/images/flags/Ghana.png";
+import Guatemala from "../Assets/images/flags/Guatemala.png";
+import Indonesia from "../Assets/images/flags/Indonesia.png";
+import Kazakhstan from "../Assets/images/flags/Kazakhstan.png";
+import Kenya from "../Assets/images/flags/Kenya.png";
+import Kosovo from "../Assets/images/flags/Kosovo.png";
+import Kyrgyzstan from "../Assets/images/flags/Kyrgyzstan.png";
+import Macedonia from "../Assets/images/flags/Macedonia.png";
+import Malawi from "../Assets/images/flags/Malawi.png";
+import Malaysia from "../Assets/images/flags/Malaysia.png";
+import Mexico from "../Assets/images/flags/Mexico.png";
+import Moldova from "../Assets/images/flags/Moldova.png";
+import Mongolia from "../Assets/images/flags/Mongolia.png";
+import Montenegro from "../Assets/images/flags/Montenegro.png";
+import New_Zealand from "../Assets/images/flags/New_Zealand.png";
+import Nicaragua from "../Assets/images/flags/Nicaragua.png";
+import Nigeria from "../Assets/images/flags/Nigeria.png";
+import Paraguay from "../Assets/images/flags/Paraguay.png";
+import Peru from "../Assets/images/flags/Peru.png";
+import Philippines from "../Assets/images/flags/Philippines.png";
+import Portugal from "../Assets/images/flags/Portugal.png";
+import Romania from "../Assets/images/flags/Romania.png";
+import Russian_Federation from "../Assets/images/flags/Russian_Federation.png";
+import Serbia from "../Assets/images/flags/Serbia.png";
+import Singapore from "../Assets/images/flags/Singapore.png";
+import South_Korea from "../Assets/images/flags/South_Korea.png";
+import Spain from "../Assets/images/flags/Spain.png";
+import Taiwan from "../Assets/images/flags/Taiwan.png";
+import Tajikistan from "../Assets/images/flags/Tajikistan.png";
+import Tanzania from "../Assets/images/flags/Tanzania.png";
+import Thailand from "../Assets/images/flags/Thailand.png";
+import Trinidad_Tobago from "../Assets/images/flags/Trinidad_Tobago.png";
+import Turkmenistan from "../Assets/images/flags/Turkmenistan.png";
+import Uganda from "../Assets/images/flags/Uganda.png";
 import USA from "../Assets/images/flags/USA.png";
-import UZB from "../Assets/images/flags/Uzbekistan.png";
-import VENE from "../Assets/images/flags/Venezuela.png";
-import VIET from "../Assets/images/flags/Viet_Nam.png";
-import ZAM from "../Assets/images/flags/Zambia.png";
-import ZIM from "../Assets/images/flags/Zimbabwe.png";
+import Uruguay from "../Assets/images/flags/Uruguay.png";
+import Uzbekistan from "../Assets/images/flags/Uzbekistan.png";
+import Venezuela from "../Assets/images/flags/Venezuela.png";
+import Viet_Nam from "../Assets/images/flags/Viet_Nam.png";
+import Zambia from "../Assets/images/flags/Zambia.png";
+import Zimbabwe from "../Assets/images/flags/Zimbabwe.png";
 
 const flags = {
   icons: {
-    ALBA: ALBA, //알바니아 국기
-    ALGE: ALGE, //알제리 국기
-    ARGEN: ARGEN, //알제리 국기
-    ARME: ARME, //알제리 국기
-    AZER: AZER, //알제리 국기
+    Albania: Albania, //알바니아 국기
+    Algeria: Algeria, //알제리 국기
+    Argentina: Argentina, //알제리 국기
+    Armenia: Armenia, //알제리 국기
   },
 };
 
