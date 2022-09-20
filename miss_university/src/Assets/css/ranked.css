@@ -17,6 +17,9 @@
   );
   z-index: 1;
   cursor: default;
+  -webkit-box-shadow: 3px 0 7px -1px rgba(25, 25, 25, 0.1);
+  -moz-box-shadow: 3px 0 7px -1px rgba(25, 25, 25, 0.1);
+  box-shadow: 3px 0 7px -1px rgba(25, 25, 25, 0.1);
 }
 .rankMedalText1 {
   position: absolute;
@@ -53,6 +56,9 @@
   );
   z-index: 1;
   cursor: default;
+  -webkit-box-shadow: 5px 0 10px -1px rgba(25, 25, 25, 0.1);
+  -moz-box-shadow: 5px 0 10px -1px rgba(25, 25, 25, 0.1);
+  box-shadow: 5px 0 10px -1px rgba(25, 25, 25, 0.1);
 }
 .rankMedalText2 {
   position: absolute;
@@ -83,6 +89,9 @@
   );
   z-index: 1;
   cursor: default;
+  -webkit-box-shadow: 5px 0 10px -1px rgba(25, 25, 25, 0.1);
+  -moz-box-shadow: 5px 0 10px -1px rgba(25, 25, 25, 0.1);
+  box-shadow: 5px 0 10px -1px rgba(25, 25, 25, 0.1);
 }
 .rankMedalText3 {
   position: absolute;

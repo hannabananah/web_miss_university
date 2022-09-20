@@ -13,6 +13,9 @@
   padding: 24px;
   box-sizing: border-box;
   border-radius: 6px;
+  -webkit-box-shadow: 3px 0 7px -1px rgba(25, 25, 25, 0.1);
+  -moz-box-shadow: 3px 0 7px -1px rgba(25, 25, 25, 0.1);
+  box-shadow: 3px 0 7px -1px rgba(25, 25, 25, 0.1);
 }
 .decoText1 {
   writing-mode: vertical-rl;
@@ -63,15 +66,6 @@
   width: 18px;
   height: 18px;
   fill: #737373;
-}
-.flag {
-  width: 22px;
-  height: 22px;
-  border-radius: 11px;
-  display: block;
-  margin-bottom:5px;
-  /* 국기 이미지 삽입 필요 */
-  background-color: pink;
 }
 .detailText {
   font-size: 14px;
@@ -128,6 +122,9 @@
 }
 .sideArea {
   position: relative;
+  -webkit-box-shadow: 3px 0 7px -1px rgba(25, 25, 25, 0.1);
+  -moz-box-shadow: 3px 0 7px -1px rgba(25, 25, 25, 0.1);
+  box-shadow: 3px 0 7px -1px rgba(25, 25, 25, 0.1);
 }
 .sideCardLayout {
   cursor: pointer;
@@ -149,18 +146,24 @@
   position: absolute;
   writing-mode: vertical-rl;
   top: 24px;
-  right: 12px;
+  right: 9px;
   color: #737373;
   font-size: 20px;
   line-height: 20px;
   letter-spacing: -0.8px;
   display: flex;
+  align-items: center;
+  align-content: center;
+}
+.flag {
+  margin-bottom: 5px;
+  /* border-radius: 50%;
+  overflow: hidden; */
 }
 .countryWrap {
-  display:flex;
-  align-items:center;
+  display: flex;
+  align-items: center;
   gap: 8px;
-
 }
 .userCountry {
   flex: 1;

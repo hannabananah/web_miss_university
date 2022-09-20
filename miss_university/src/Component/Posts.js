@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "../Assets/css/posts.css";
+import flags from "../Util/flags";
+
 // 순위권 표시
 import Raking from "./Ranked.js";
 import { ReactComponent as SVGCard } from "../Assets/images/sideCard.svg";
@@ -65,7 +67,9 @@ const Posts = ({ user, popupmodal, onClick }) => {
         <div className="sideCardLayout" onClick={onClick}>
           <SVGCard className="sideCardImage" />
           <span className="name">
-            <span className="flag"></span>
+            <span className="flag">
+              <img src={user.country && flags.icons.ALGE} />
+            </span>
             {user.country}
           </span>
         </div>
