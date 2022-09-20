@@ -77,7 +77,9 @@ export const TopLayout = ({
       <header id="header">
         {/* left */}
         <div>
-          <SVGLogo className="logoIcon" />
+          <a href="http://15.165.203.122/WMU/">
+            <SVGLogo className="logoIcon" />
+          </a>
         </div>
         {/* right */}
         <nav className="right">

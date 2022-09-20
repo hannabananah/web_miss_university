@@ -68,7 +68,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <SVGCard className="sideCardImage" />
           <span className="name">
             <span className="flag">
-              <img src={user.country && flags.icons.ALGE} />
+              <img src={user.country == flags.icons.ALGE} />
             </span>
             {user.country}
           </span>
