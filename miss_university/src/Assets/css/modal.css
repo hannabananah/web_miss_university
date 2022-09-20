@@ -55,11 +55,8 @@
   align-items: center;
 }
 .modalFlag {
-  width: 16px;
-  height: 16px;
-  border-radius: 8px;
-  /* 이미지 삽입 필요 */
-  background-color: pink;
+  display: flex;
+  align-items: center;
 }
 .modalIcon {
   width: 18px;

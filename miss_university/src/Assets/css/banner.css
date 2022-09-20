@@ -21,9 +21,13 @@
   width: 740px;
   height: 182px;
 }
-.bannerImage {
-  width: 740px;
-  height: 182px;
+.bannerImage1 {
+  width: 280px;
+  height: 70px;
+}
+.bannerImage2 {
+  width: 440px;
+  height: 70px;
 }
 .titleText {
   font-size: 24px;

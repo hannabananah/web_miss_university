@@ -11,7 +11,7 @@ import { useTranslation, initReactI18next } from "react-i18next";
 
 const Posts = ({ user, popupmodal, onClick }) => {
   const { t } = useTranslation();
-
+  // 국기 이미지
   const renderImage = (country) => {
     switch (user.country) {
       case "Albania":

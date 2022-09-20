@@ -1,7 +1,9 @@
 import React from "react";
 
 import "../Assets/css/banner.css";
-import { ReactComponent as SVGBanner } from "../Assets/images/banner.svg";
+import { ReactComponent as SVGBanner1 } from "../Assets/images/text_miss.svg";
+import { ReactComponent as SVGBanner2 } from "../Assets/images/text_university.svg";
+import { ReactComponent as SVGBanner3 } from "../Assets/images/text_world.svg";
 import i18n from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
 
@@ -11,7 +13,9 @@ export const Banner = () => {
     <div id="banner_root">
       <div id="banner_container">
         <div className="left">
-          <SVGBanner className="bannerImage" />
+          <SVGBanner1 className="bannerImage1" />
+          <SVGBanner2 className="bannerImage2" />
+          <SVGBanner3 className="bannerImage1" />
           <span className="titleText">{t("contest_participant_info")}</span>
         </div>
         <a
