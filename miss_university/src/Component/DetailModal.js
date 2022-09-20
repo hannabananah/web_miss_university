@@ -33,7 +33,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
   };
   // 국기 이미지
   const renderImage = (country) => {
-    switch (user.country) {
+    switch (country) {
       case "Albania":
         return (
           <img
@@ -772,6 +772,9 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
             <div className="modalDetails">
               <div className="modalDetail">
                 <span className="modalFlag">{renderImage(user.country)}</span>
+                {/* <span className="modalFlag">
+                  <img src={`../assets/images/flags/${user.country}.png`} alt={user.country}/>
+                </span> */}
                 <span className="modaltext">{user.country}</span>
               </div>
               {/* <div className="modalDetail">
@@ -855,7 +858,44 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
                       );
                     }
                   })}
+
+                {/* {loaded &&
+                  user.content_data?.filter((i,index)=>i.content_type === 2).map((u, idx) => {
+                    // 영상
+                    return (
+                      <div key={idx} className="modalImagesList">
+                        <video
+                          src={u.file_url}
+                          // onClick={() => onClickImage(
+                          //   user.content_data?.findIndex(file => file.content_type === 2)
+                          // )}
+                          // onClick={() => onClickImage(i.content_type === 2)}
+                          onClick={() => console.log(idx)}
+                          className="modalImg"
+                          controls
+                        ></video>
+                      </div>
+                    );
+                  })} */}
               </div>
+              {/* <div style={{ display: "flex", gap: "6px", flexWrap: "wrap" }}>
+                {loaded &&
+                  user.content_data?.filter(i=>i.content_type === 1).map((u, idx) => {
+                    // 사진
+                    return (
+                      <div key={idx} className="modalImagesList">
+                        <img
+                          src={u.file_url}
+                          onClick={() => onClickImage(idx)}
+                          className="modalImg"
+                          alt={`image-${idx}`}
+                        />
+                      </div>
+                    );
+                  }
+                  )}
+              </div> */}
+
             </div>
           </div>
         </div>
