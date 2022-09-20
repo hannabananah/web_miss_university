@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
-import Select from "react-select";
+// import Select from "react-select";
 import { useSelector, useDispatch } from "react-redux";
 import "../assets/css/topLayout.css";
 import "react-dropdown/style.css";
 import { ReactComponent as SVGLogo } from "../assets/images/logo.svg";
 import i18n from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
+import MenuItem from '@mui/material/MenuItem';
 
 export const TopLayout = ({
   selectLangVal,
@@ -37,28 +40,28 @@ export const TopLayout = ({
 
   // console.log(Select);
 
-  const customStyles = {
-    option: (provided, state) => ({
-      ...provided,
-      color: state.isSelected ? "#7c4dff" : "#191919",
-      fontWeight: state.isSelected ? "bold" : "normal",
-      boxSizing: "border-box",
-      width: "150px",
-      display: "flex",
-      justifyContent: "center",
-      rowGap: "20px",
-      paddingRight: "28px",
-      paddingLeft: "28px",
-      fontSize: "14px",
-      lineHeight: "14px",
-      letterSpacing: "-0.42px",
-      "&:hover": {
-        fontWeight: "bold",
-        backgroundColor: "#7c4dff",
-        color: "#fff",
-      },
-    }),
-  };
+  // const customStyles = {
+  //   option: (provided, state) => ({
+  //     ...provided,
+  //     color: state.isSelected ? "#7c4dff" : "#191919",
+  //     fontWeight: state.isSelected ? "bold" : "normal",
+  //     boxSizing: "border-box",
+  //     width: "150px",
+  //     display: "flex",
+  //     justifyContent: "center",
+  //     rowGap: "20px",
+  //     paddingRight: "28px",
+  //     paddingLeft: "28px",
+  //     fontSize: "14px",
+  //     lineHeight: "14px",
+  //     letterSpacing: "-0.42px",
+  //     "&:hover": {
+  //       fontWeight: "bold",
+  //       backgroundColor: "#7c4dff",
+  //       color: "#fff",
+  //     },
+  //   }),
+  // };
 
   // Sticky TopLayout Area
   useEffect(() => {
@@ -89,11 +92,12 @@ export const TopLayout = ({
         {/* right */}
         <nav className="right">
 
-          <div>
+          {/* 카운터 예제 */}
+          {/* <div>
             <h3>{number}</h3>
             <button onClick={onIncrease}>+1</button>
             <button onClick={onDecrease}>-1</button>
-          </div>
+          </div> */}
 
           <ul className="nav">
             <li>
@@ -111,16 +115,8 @@ export const TopLayout = ({
                 월드 미스 유니버시티 소식통
               </a>
             </li> */}
+            
             <li>
-              <select
-                value={selectLangVal}
-                onChange={onChangeLang}>
-                {options.map((option,index)=>{
-                  return (
-                    <option key={index} value={option.value}>{option.label}</option>
-                  )
-                })}
-              </select>
               {/* <Select
                 placeholder={t("link_to_worldmissuniversity_homepage")}
                 options={options}
@@ -140,6 +136,20 @@ export const TopLayout = ({
               /> */}
             </li>
           </ul>
+
+          <FormControl sx={{ minWidth: 120 }}>
+            <Select
+              value={selectLangVal}
+              onChange={onChangeLang}
+              // displayEmpty
+            >
+              {options.map((option,index)=>{
+                return (
+                  <MenuItem key={index} value={option.value}>{option.label}</MenuItem>
+                )
+              })}
+            </Select>
+          </FormControl>
         </nav>
       </header>
     </div>
