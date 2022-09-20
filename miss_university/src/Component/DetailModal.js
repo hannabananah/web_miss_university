@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
 // 0201,0202 (<" "의 프로필 사진>텍스트 디폴트 크기 32px)
-import "../Assets/css/modal.css";
+import "../assets/css/modal.css";
 import axios from "axios";
-import ImageModal from "../Component/ImageModal";
+import ImageModal from "./ImageModal";
 import { useTranslation, initReactI18next } from "react-i18next";
 
 // 0203(이름의 길이가 너무 길어서 최대 가로 길이를 넘어갈 경우:<" "의 프로필 사진>텍스트 크기를 24px로 변경)
-// import "../Assets/css/modalLongName.css";
+// import "../assets/css/modalLongName.css";
 
 // 0203(폰트 크기를 24로 줄였음에도 우측 텍스트와의 여백이 40px이 안될 경우 이름의 길이가 너무 길어서 최대 가로 길이를 넘어갈 경우 폰트 사이즈 22px로 변경)
-// import "../Assets/css/modalTooLongName.css";
+// import "../assets/css/modalTooLongName.css";
 
 // 순위권 표시
-import Raking from "../Component/ModalRanked";
-import { ReactComponent as SVGPeople } from "../Assets/images/people.svg";
+import Raking from "./ModalRanked";
+import { ReactComponent as SVGPeople } from "../assets/images/people.svg";
 Modal.setAppElement("#root");
 
 const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
@@ -39,7 +39,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Albania.png")
+              require("../assets/images/flags/Albania.png")
             }
             alt="국기 이미지"
           />
@@ -50,7 +50,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Algeria.png")
+              require("../assets/images/flags/Algeria.png")
             }
             alt="국기 이미지"
           />
@@ -61,7 +61,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Argentina.png")
+              require("../assets/images/flags/Argentina.png")
             }
             alt="국기 이미지"
           />
@@ -72,7 +72,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Armenia.png")
+              require("../assets/images/flags/Armenia.png")
             }
             alt="국기 이미지"
           />
@@ -83,7 +83,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Azerbaijan.png")
+              require("../assets/images/flags/Azerbaijan.png")
             }
             alt="국기 이미지"
           />
@@ -94,7 +94,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Bangladesh.png")
+              require("../assets/images/flags/Bangladesh.png")
             }
             alt="국기 이미지"
           />
@@ -105,7 +105,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Belarus.png")
+              require("../assets/images/flags/Belarus.png")
             }
             alt="국기 이미지"
           />
@@ -116,7 +116,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Bolivia.png")
+              require("../assets/images/flags/Bolivia.png")
             }
             alt="국기 이미지"
           />
@@ -127,7 +127,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Botswana.png")
+              require("../assets/images/flags/Botswana.png")
             }
             alt="국기 이미지"
           />
@@ -138,7 +138,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Brazil.png")
+              require("../assets/images/flags/Brazil.png")
             }
             alt="국기 이미지"
           />
@@ -149,7 +149,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Bulgaria.png")
+              require("../assets/images/flags/Bulgaria.png")
             }
             alt="국기 이미지"
           />
@@ -160,7 +160,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Cameroon.png")
+              require("../assets/images/flags/Cameroon.png")
             }
             alt="국기 이미지"
           />
@@ -171,7 +171,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Canada.png")
+              require("../assets/images/flags/Canada.png")
             }
             alt="국기 이미지"
           />
@@ -182,7 +182,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Canada.png")
+              require("../assets/images/flags/Canada.png")
             }
             alt="국기 이미지"
           />
@@ -193,7 +193,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Colombia.png")
+              require("../assets/images/flags/Colombia.png")
             }
             alt="국기 이미지"
           />
@@ -204,7 +204,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Cote_d_Ivoire.png")
+              require("../assets/images/flags/Cote_d_Ivoire.png")
             }
             alt="국기 이미지"
           />
@@ -215,7 +215,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Czech_Republic.png")
+              require("../assets/images/flags/Czech_Republic.png")
             }
             alt="국기 이미지"
           />
@@ -226,7 +226,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Dominican_Republic.png")
+              require("../assets/images/flags/Dominican_Republic.png")
             }
             alt="국기 이미지"
           />
@@ -237,7 +237,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/El_Salvador.png")
+              require("../assets/images/flags/El_Salvador.png")
             }
             alt="국기 이미지"
           />
@@ -248,7 +248,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Ecuador.png")
+              require("../assets/images/flags/Ecuador.png")
             }
             alt="국기 이미지"
           />
@@ -259,7 +259,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Estonia.png")
+              require("../assets/images/flags/Estonia.png")
             }
             alt="국기 이미지"
           />
@@ -270,7 +270,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/France.png")
+              require("../assets/images/flags/France.png")
             }
             alt="국기 이미지"
           />
@@ -281,7 +281,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Georgia.png")
+              require("../assets/images/flags/Georgia.png")
             }
             alt="국기 이미지"
           />
@@ -292,7 +292,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Germany.png")
+              require("../assets/images/flags/Germany.png")
             }
             alt="국기 이미지"
           />
@@ -303,7 +303,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Ghana.png")
+              require("../assets/images/flags/Ghana.png")
             }
             alt="국기 이미지"
           />
@@ -314,7 +314,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Guatemala.png")
+              require("../assets/images/flags/Guatemala.png")
             }
             alt="국기 이미지"
           />
@@ -325,7 +325,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Indonesia.png")
+              require("../assets/images/flags/Indonesia.png")
             }
             alt="국기 이미지"
           />
@@ -336,7 +336,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Kazakhstan.png")
+              require("../assets/images/flags/Kazakhstan.png")
             }
             alt="국기 이미지"
           />
@@ -347,7 +347,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Kenya.png")
+              require("../assets/images/flags/Kenya.png")
             }
             alt="국기 이미지"
           />
@@ -358,7 +358,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Kosovo.png")
+              require("../assets/images/flags/Kosovo.png")
             }
             alt="국기 이미지"
           />
@@ -369,7 +369,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Kyrgyzstan.png")
+              require("../assets/images/flags/Kyrgyzstan.png")
             }
             alt="국기 이미지"
           />
@@ -380,7 +380,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Macedonia.png")
+              require("../assets/images/flags/Macedonia.png")
             }
             alt="국기 이미지"
           />
@@ -391,7 +391,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Malawi.png")
+              require("../assets/images/flags/Malawi.png")
             }
             alt="국기 이미지"
           />
@@ -402,7 +402,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Malaysia.png")
+              require("../assets/images/flags/Malaysia.png")
             }
             alt="국기 이미지"
           />
@@ -413,7 +413,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Mexico.png")
+              require("../assets/images/flags/Mexico.png")
             }
             alt="국기 이미지"
           />
@@ -424,7 +424,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Moldova.png")
+              require("../assets/images/flags/Moldova.png")
             }
             alt="국기 이미지"
           />
@@ -435,7 +435,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Mongolia.png")
+              require("../assets/images/flags/Mongolia.png")
             }
             alt="국기 이미지"
           />
@@ -446,7 +446,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Montenegro.png")
+              require("../assets/images/flags/Montenegro.png")
             }
             alt="국기 이미지"
           />
@@ -457,7 +457,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/New_Zealand.png")
+              require("../assets/images/flags/New_Zealand.png")
             }
             alt="국기 이미지"
           />
@@ -468,7 +468,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Nicaragua.png")
+              require("../assets/images/flags/Nicaragua.png")
             }
             alt="국기 이미지"
           />
@@ -479,7 +479,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Nigeria.png")
+              require("../assets/images/flags/Nigeria.png")
             }
             alt="국기 이미지"
           />
@@ -490,7 +490,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Paraguay.png")
+              require("../assets/images/flags/Paraguay.png")
             }
             alt="국기 이미지"
           />
@@ -501,7 +501,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Peru.png")
+              require("../assets/images/flags/Peru.png")
             }
             alt="국기 이미지"
           />
@@ -512,7 +512,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Philippines.png")
+              require("../assets/images/flags/Philippines.png")
             }
             alt="국기 이미지"
           />
@@ -523,7 +523,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Portugal.png")
+              require("../assets/images/flags/Portugal.png")
             }
             alt="국기 이미지"
           />
@@ -534,7 +534,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Romania.png")
+              require("../assets/images/flags/Romania.png")
             }
             alt="국기 이미지"
           />
@@ -545,7 +545,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Russian_Federation.png")
+              require("../assets/images/flags/Russian_Federation.png")
             }
             alt="국기 이미지"
           />
@@ -556,7 +556,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Serbia.png")
+              require("../assets/images/flags/Serbia.png")
             }
             alt="국기 이미지"
           />
@@ -567,7 +567,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Singapore.png")
+              require("../assets/images/flags/Singapore.png")
             }
             alt="국기 이미지"
           />
@@ -578,7 +578,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/South_Korea.png")
+              require("../assets/images/flags/South_Korea.png")
             }
             alt="국기 이미지"
           />
@@ -589,7 +589,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Spain.png")
+              require("../assets/images/flags/Spain.png")
             }
             alt="국기 이미지"
           />
@@ -600,7 +600,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Taiwan.png")
+              require("../assets/images/flags/Taiwan.png")
             }
             alt="국기 이미지"
           />
@@ -611,7 +611,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Tajikistan.png")
+              require("../assets/images/flags/Tajikistan.png")
             }
             alt="국기 이미지"
           />
@@ -622,7 +622,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Tanzania.png")
+              require("../assets/images/flags/Tanzania.png")
             }
             alt="국기 이미지"
           />
@@ -633,7 +633,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Thailand.png")
+              require("../assets/images/flags/Thailand.png")
             }
             alt="국기 이미지"
           />
@@ -644,7 +644,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Trinidad_Tobago.png")
+              require("../assets/images/flags/Trinidad_Tobago.png")
             }
             alt="국기 이미지"
           />
@@ -655,7 +655,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Turkmenistan.png")
+              require("../assets/images/flags/Turkmenistan.png")
             }
             alt="국기 이미지"
           />
@@ -666,7 +666,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Uganda.png")
+              require("../assets/images/flags/Uganda.png")
             }
             alt="국기 이미지"
           />
@@ -677,7 +677,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/USA.png")
+              require("../assets/images/flags/USA.png")
             }
             alt="국기 이미지"
           />
@@ -688,7 +688,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Uruguay.png")
+              require("../assets/images/flags/Uruguay.png")
             }
             alt="국기 이미지"
           />
@@ -699,7 +699,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Uzbekistan.png")
+              require("../assets/images/flags/Uzbekistan.png")
             }
             alt="국기 이미지"
           />
@@ -710,7 +710,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Venezuela.png")
+              require("../assets/images/flags/Venezuela.png")
             }
             alt="국기 이미지"
           />
@@ -721,7 +721,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Viet_Nam.png")
+              require("../assets/images/flags/Viet_Nam.png")
             }
             alt="국기 이미지"
           />
@@ -732,7 +732,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Zambia.png")
+              require("../assets/images/flags/Zambia.png")
             }
             alt="국기 이미지"
           />
@@ -743,7 +743,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Zimbabwe.png")
+              require("../assets/images/flags/Zimbabwe.png")
             }
             alt="국기 이미지"
           />

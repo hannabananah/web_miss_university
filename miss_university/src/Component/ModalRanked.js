@@ -1,7 +1,7 @@
 import React  from "react";
 
-import "../Assets/css/modalRanked.css";
-import { ReactComponent as SVGRaking } from "../Assets/images/ranking.svg";
+import "../assets/css/modalRanked.css";
+import { ReactComponent as SVGRaking } from "../assets/images/ranking.svg";
 
 const ModalRanked = () => {
   const rank1 = "1";

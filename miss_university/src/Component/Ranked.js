@@ -1,5 +1,5 @@
 import React from "react";
-import "../Assets/css/ranked.css";
+import "../assets/css/ranked.css";
 import { useTranslation, initReactI18next } from "react-i18next";
 
 const Ranked = ({ user }) => {

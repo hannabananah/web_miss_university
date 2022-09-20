@@ -1,5 +1,5 @@
 import React, { useState, useEffect,useRef } from "react";
-import "../Assets/css/modal.css";
+import "../assets/css/modal.css";
 import axios from "axios";
 import Modal from "react-modal";
 
@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore,{ Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
-import "../Assets/css/imageModal.css"
+import "../assets/css/imageModal.css"
 
 const ImageModal = ({  isOpenImage, onCloseImageModal,user,targetIdx  }) => {
  
