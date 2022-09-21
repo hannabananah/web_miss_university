@@ -160,6 +160,7 @@
   align-items: center;
   overflow: hidden;
   background-color: black;
+  position: relative;
 }
 .modalImg {
   height: 100%;

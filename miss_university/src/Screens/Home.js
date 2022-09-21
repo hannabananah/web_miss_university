@@ -135,23 +135,24 @@ export const Home = ({ popupmodal, selectedValue }) => {
   };
   const onkeydown = async (e) => {
     if (e.keyCode === 13) {
-      // const response = await axios
-      // .post(
-      //   "https://anystorydev.anychat.com:3030/v1/login/get_web_miss_list",
-      //   {
-      //     page: 1,
-      //     language:'',
-      //     last_muidx: 0,
-      //     search_result: search,
-      //   },
-      // )
-      // .then((response) => {
-      //   console.log(response);
-      //   setUserData(response.data.data.user_data);
-      // })
-      // .catch((error) => {
-      //   console.log(error);
-      // });
+      const response = await axios
+      .post(
+        "https://anystorydev.anychat.com:3030/v1/login/get_web_miss_list",
+        {
+          page: 1,
+          language:'',
+          last_muidx: 0,
+          search_result: search,
+        },
+      )
+      .then((response) => {
+        console.log(response);
+        setUserData(response.data.data.user_data);
+        setTotalPage(response.data.data.total_page)
+      })
+      .catch((error) => {
+        console.log(error);
+      });
     } //if 끝
   }; //onkeydown 끝
   const onClickClear = () => {

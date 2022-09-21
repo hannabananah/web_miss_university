@@ -860,10 +860,16 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
                         <div key={idx} className="modalImagesList">
                           <video
                             src={u.file_url}
-                            onClick={() => onClickImage(idx)}
                             className="modalImg"
-                            controls
+                            // controls
                           ></video>
+                          <button 
+                            onClick={()=>onClickImage(idx)}
+                            style={{
+                              position:"absolute",
+                              left:"50%",
+                              top:"50%",
+                              transform:"translate(-50%,-50%)"}}>play</button>
                         </div>
                       );
                     } else if (u.content_type === 1) {
