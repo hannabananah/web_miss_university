@@ -811,7 +811,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
             <SVGCard className="sideCardImage1" />
           ) : user.rank === 2 ? (
             <SVGCard className="sideCardImage2" />
-          ) : user.rank === 3 ? (
+          ) : user.rank < 6 ? (
             <SVGCard className="sideCardImage3" />
           ) : (
             <SVGCard className="sideCardImage" />
@@ -826,7 +826,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               <span className="flag">{renderImage(user.country)}</span>
               {user.country}
             </span>
-          ) : user.rank === 3 ? (
+          ) : user.rank < 6 ? (
             <span className="name3">
               <span className="flag">{renderImage(user.country)}</span>
               {user.country}

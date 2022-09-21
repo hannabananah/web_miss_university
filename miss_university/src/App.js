@@ -32,7 +32,7 @@ function App({ setTotalPage }) {
 
   // handle onChange event of the dropdown
   // const handleChange = (e) => {
-    // setSelectedValue(e.value);
+  // setSelectedValue(e.value);
   // };
 
   //참가자 언어 설정
@@ -55,15 +55,10 @@ function App({ setTotalPage }) {
         selectLangVal={selectLangVal}
         setSelectLangVal={setSelectLangVal}
       />
-      <Banner />
+      <Banner selectLangVal={selectLangVal} />
       <HashRouter>
         <Routes>
-          <Route
-            path="/"
-            element={
-              <Home setTotalPage={setTotalPage} />
-            }
-          />
+          <Route path="/" element={<Home setTotalPage={setTotalPage} />} />
           {/* <Route path="/second" element={<Second />} /> */}
         </Routes>
       </HashRouter>
