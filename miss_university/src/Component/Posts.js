@@ -355,6 +355,17 @@ const Posts = ({ user, popupmodal, onClick }) => {
           />
         );
         break;
+      case "Lesotho":
+        return (
+          <img
+            src={
+              // user.country ==
+              require("../assets/images/flags/Lesotho.png")
+            }
+            alt="국기 이미지"
+          />
+        );
+        break;
       case "Macedonia":
         return (
           <img
@@ -427,6 +438,17 @@ const Posts = ({ user, popupmodal, onClick }) => {
             src={
               // user.country ==
               require("../assets/images/flags/Montenegro.png")
+            }
+            alt="국기 이미지"
+          />
+        );
+        break;
+      case "Namibia":
+        return (
+          <img
+            src={
+              // user.country ==
+              require("../assets/images/flags/Namibia.png")
             }
             alt="국기 이미지"
           />

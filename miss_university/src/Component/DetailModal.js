@@ -33,7 +33,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
   };
   // 국기 이미지
   const renderImage = (country) => {
-    switch (country) {
+    switch (user.country) {
       case "Albania":
         return (
           <img
@@ -375,6 +375,17 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           />
         );
         break;
+      case "Lesotho":
+        return (
+          <img
+            src={
+              // user.country ==
+              require("../assets/images/flags/Lesotho.png")
+            }
+            alt="국기 이미지"
+          />
+        );
+        break;
       case "Macedonia":
         return (
           <img
@@ -447,6 +458,17 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
             src={
               // user.country ==
               require("../assets/images/flags/Montenegro.png")
+            }
+            alt="국기 이미지"
+          />
+        );
+        break;
+      case "Namibia":
+        return (
+          <img
+            src={
+              // user.country ==
+              require("../assets/images/flags/Namibia.png")
             }
             alt="국기 이미지"
           />
@@ -895,7 +917,6 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
                   }
                   )}
               </div> */}
-
             </div>
           </div>
         </div>
