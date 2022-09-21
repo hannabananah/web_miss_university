@@ -805,13 +805,38 @@ const Posts = ({ user, popupmodal, onClick }) => {
         </div>
       </div>
       <div className="sideArea">
-        {user.rank < 4 && <Raking user={user} />}
+        {user.rank < 6 && <Raking user={user} />}
         <div className="sideCardLayout" onClick={onClick}>
-          <SVGCard className="sideCardImage" />
-          <span className="name">
-            <span className="flag">{renderImage(user.country)}</span>
-            {user.country}
-          </span>
+          {user.rank === 1 ? (
+            <SVGCard className="sideCardImage1" />
+          ) : user.rank === 2 ? (
+            <SVGCard className="sideCardImage2" />
+          ) : user.rank === 3 ? (
+            <SVGCard className="sideCardImage3" />
+          ) : (
+            <SVGCard className="sideCardImage" />
+          )}
+          {user.rank === 1 ? (
+            <span className="name1">
+              <span className="flag">{renderImage(user.country)}</span>
+              {user.country}
+            </span>
+          ) : user.rank === 2 ? (
+            <span className="name2">
+              <span className="flag">{renderImage(user.country)}</span>
+              {user.country}
+            </span>
+          ) : user.rank === 3 ? (
+            <span className="name3">
+              <span className="flag">{renderImage(user.country)}</span>
+              {user.country}
+            </span>
+          ) : (
+            <span className="name">
+              <span className="flag">{renderImage(user.country)}</span>
+              {user.country}
+            </span>
+          )}
         </div>
       </div>
     </div>

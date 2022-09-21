@@ -134,12 +134,27 @@
   height: 414px;
   /* 기본 색상 */
   stroke: #737373;
+  position: relative;
+}
+.sideCardImage1 {
+  width: 44px;
+  height: 414px;
   /* 1위 색상 */
-  /* stroke: #c19b3f; */
+  stroke: #c19b3f;
+  position: relative;
+}
+.sideCardImage2 {
+  width: 44px;
+  height: 414px;
   /* 2위 색상 */
-  /* stroke: #696d72; */
-  /* 3위 색상 */
-  /* stroke: #a44a2a; */
+  stroke: #696d72;
+  position: relative;
+}
+.sideCardImage3 {
+  width: 44px;
+  height: 414px;
+  /* 3,4,5위 색상 */
+  stroke: #a44a2a;
   position: relative;
 }
 .name {
@@ -147,7 +162,50 @@
   writing-mode: vertical-rl;
   top: 24px;
   right: 10px;
+  /* 기본 색상 */
   color: #737373;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: -0.8px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+.name1 {
+  position: absolute;
+  writing-mode: vertical-rl;
+  top: 24px;
+  right: 10px;
+  /* 1위 색상 */
+  color: #c19b3f;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: -0.8px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+.name2 {
+  position: absolute;
+  writing-mode: vertical-rl;
+  top: 24px;
+  right: 10px;
+  /* 2위 색상 */
+  color: #696d72;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: -0.8px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+.name3 {
+  position: absolute;
+  writing-mode: vertical-rl;
+  top: 24px;
+  right: 10px;
+  /* 3,4,5위 색상 */
+  color: #a44a2a;
   font-size: 20px;
   line-height: 20px;
   letter-spacing: -0.8px;
