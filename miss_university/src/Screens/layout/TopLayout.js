@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 // import Select from "react-select";
 import { useSelector, useDispatch } from "react-redux";
 import "../../assets/css/topLayout.css";
+// import { useStyles } from "../../assets/css/topLayout";
 import "react-dropdown/style.css";
 import { ReactComponent as SVGLogo } from "../../assets/images/logo.svg";
 import i18n from "i18next";
@@ -16,6 +17,7 @@ export const TopLayout = ({
 
   number, onIncrease, onDecrease 
 }) => {
+  // const classes = useStyles();
   const { t } = useTranslation();
   const currLang = useSelector((state) => state.langData);
 
