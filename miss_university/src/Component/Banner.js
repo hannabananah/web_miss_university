@@ -1,9 +1,9 @@
 import React from "react";
 
 import "../Assets/css/banner.css";
-import { ReactComponent as SVGBanner1 } from "../Assets/images/text_world.svg";
-import { ReactComponent as SVGBanner2 } from "../Assets/images/text_miss.svg";
-import { ReactComponent as SVGBanner3 } from "../Assets/images/text_university.svg";
+import { ReactComponent as SVGBanner1 } from "../assets/images/text_world.svg";
+import { ReactComponent as SVGBanner2 } from "../assets/images/text_miss.svg";
+import { ReactComponent as SVGBanner3 } from "../assets/images/text_university.svg";
 import i18n from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
 

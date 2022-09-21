@@ -1,18 +1,28 @@
 import React, { useState, useEffect } from "react";
-import Select from "react-select";
-
-import "../Assets/css/topLayout.css";
+// import Select from "react-select";
+import { useSelector, useDispatch } from "react-redux";
+import "../../assets/css/topLayout.css";
+// import { useStyles } from "../../assets/css/topLayout";
 import "react-dropdown/style.css";
-import { ReactComponent as SVGLogo } from "../Assets/images/logo.svg";
+import { ReactComponent as SVGLogo } from "../../assets/images/logo.svg";
 import i18n from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
+import MenuItem from '@mui/material/MenuItem';
 
 export const TopLayout = ({
-  selectedValue,
-  setSelectedValue,
-  handleChange,
+  selectLangVal,
+  onChangeLang,
+
+  number, onIncrease, onDecrease 
 }) => {
+  // const classes = useStyles();
   const { t } = useTranslation();
+  const currLang = useSelector((state) => state.langData);
+
+  console.log('currLang:::::::::::::::::::::::',currLang);
+
   const options = [
     { value: "ko", label: "한국어 (ko)" },
     { value: "en", label: "Englilsh (en)" },
@@ -30,30 +40,30 @@ export const TopLayout = ({
     // { value: "tl", label: "Tagalog (tl)" },
   ];
 
-  console.log(Select);
+  // console.log(Select);
 
-  const customStyles = {
-    option: (provided, state) => ({
-      ...provided,
-      color: state.isSelected ? "#7c4dff" : "#191919",
-      fontWeight: state.isSelected ? "bold" : "normal",
-      boxSizing: "border-box",
-      width: "150px",
-      display: "flex",
-      justifyContent: "center",
-      rowGap: "20px",
-      paddingRight: "28px",
-      paddingLeft: "28px",
-      fontSize: "14px",
-      lineHeight: "14px",
-      letterSpacing: "-0.42px",
-      "&:hover": {
-        fontWeight: "bold",
-        backgroundColor: "#7c4dff",
-        color: "#fff",
-      },
-    }),
-  };
+  // const customStyles = {
+  //   option: (provided, state) => ({
+  //     ...provided,
+  //     color: state.isSelected ? "#7c4dff" : "#191919",
+  //     fontWeight: state.isSelected ? "bold" : "normal",
+  //     boxSizing: "border-box",
+  //     width: "150px",
+  //     display: "flex",
+  //     justifyContent: "center",
+  //     rowGap: "20px",
+  //     paddingRight: "28px",
+  //     paddingLeft: "28px",
+  //     fontSize: "14px",
+  //     lineHeight: "14px",
+  //     letterSpacing: "-0.42px",
+  //     "&:hover": {
+  //       fontWeight: "bold",
+  //       backgroundColor: "#7c4dff",
+  //       color: "#fff",
+  //     },
+  //   }),
+  // };
 
   // Sticky TopLayout Area
   useEffect(() => {
@@ -83,6 +93,14 @@ export const TopLayout = ({
         </div>
         {/* right */}
         <nav className="right">
+
+          {/* 카운터 예제 */}
+          {/* <div>
+            <h3>{number}</h3>
+            <button onClick={onIncrease}>+1</button>
+            <button onClick={onDecrease}>-1</button>
+          </div> */}
+
           <ul className="nav">
             <li>
               <a href="https://www.anychat.com/main/" target="_blank">
@@ -99,8 +117,9 @@ export const TopLayout = ({
                 월드 미스 유니버시티 소식통
               </a>
             </li> */}
+            
             <li>
-              <Select
+              {/* <Select
                 placeholder={t("link_to_worldmissuniversity_homepage")}
                 options={options}
                 isSearchable={false}
@@ -116,9 +135,23 @@ export const TopLayout = ({
                     primary: "#ffffff",
                   },
                 })}
-              />
+              /> */}
             </li>
           </ul>
+
+          <FormControl sx={{ minWidth: 120 }}>
+            <Select
+              value={selectLangVal}
+              onChange={onChangeLang}
+              // displayEmpty
+            >
+              {options.map((option,index)=>{
+                return (
+                  <MenuItem key={index} value={option.value}>{option.label}</MenuItem>
+                )
+              })}
+            </Select>
+          </FormControl>
         </nav>
       </header>
     </div>
