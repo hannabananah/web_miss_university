@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 // import Select from "react-select";
 import { useSelector, useDispatch } from "react-redux";
-import "../assets/css/topLayout.css";
+import "../../assets/css/topLayout.css";
 import "react-dropdown/style.css";
-import { ReactComponent as SVGLogo } from "../assets/images/logo.svg";
+import { ReactComponent as SVGLogo } from "../../assets/images/logo.svg";
 import i18n from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
 import FormControl from "@mui/material/FormControl";
