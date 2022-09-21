@@ -15,26 +15,50 @@
   display: flex;
   justify-content: space-between;
   position: relative;
+  margin-top: 25px;
 }
-.left {
+.banner_left {
+  max-width: 320px;
+  width: 100%;
+  position: relative;
+  left: 0;
+  top: -55px;
+  text-align: left;
+  margin-right: 50px;
+}
+.banner_right {
+  max-width: 840px;
   width: 100%;
   display: flex;
   flex-direction: column;
-  row-gap: 25px;
+  row-gap: 10px;
 }
 .banner_top_text {
   display: flex;
   justify-content: left;
+  font-size: 43px;
+  line-height: 100%;
+  letter-spacing: -0.048em;
+  color: #ad0081;
+}
+.banner_highlight {
+  color: #2d2f92;
 }
 .banner_mid_text {
-  display: flex;
-  justify-content: left;
-  column-gap: 30px;
+  font-weight: 700;
+  font-size: 74px;
+  line-height: 100%;
+  text-align: right;
+  letter-spacing: -0.04em;
+  color: #ad0081;
+  text-align: left;
+  margin-bottom: 20px;
 }
 .banner_bottom_text {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .titleText {
   font-size: 24px;
