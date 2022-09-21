@@ -1,6 +1,6 @@
 import React from "react";
 
-import "../Assets/css/banner.css";
+import "../assets/css/banner.css";
 import { ReactComponent as SVGBanner1 } from "../assets/images/text_world.svg";
 import { ReactComponent as SVGBanner2 } from "../assets/images/text_miss.svg";
 import { ReactComponent as SVGBanner3 } from "../assets/images/text_university.svg";
