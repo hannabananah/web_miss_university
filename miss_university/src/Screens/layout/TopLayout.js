@@ -2,6 +2,9 @@ import React, { useEffect } from "react";
 // import Select from "react-select";
 import { useSelector, useDispatch } from "react-redux";
 import "../../assets/css/topLayout.css";
+import "../../assets/css/responsive/top1.css";
+import "../../assets/css/responsive/top2.css";
+import "../../assets/css/responsive/top3.css";
 // import { useStyles } from "../../assets/css/topLayout";
 import "react-dropdown/style.css";
 import { ReactComponent as SVGLogo } from "../../assets/images/logo.svg";
@@ -64,7 +67,7 @@ export const TopLayout = ({
         {/* left */}
         <div>
           <a href="http://15.165.203.122/WMU/">
-            <SVGLogo className="logoIcon" alt="anychat official logo"/>
+            <SVGLogo className="logoIcon" alt="anychat official logo" />
           </a>
         </div>
         {/* right */}
