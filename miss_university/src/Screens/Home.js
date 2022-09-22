@@ -3,6 +3,8 @@ import Pagination from "react-js-pagination";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../assets/css/homeLayout.css";
+import "../assets/css/responsive/home1.css";
+import "../assets/css/responsive/home2.css";
 import "../assets/css/pagination.css";
 import "../assets/css/responsive/pagination.css";
 import { ReactComponent as SVGSearch } from "../assets/images/search.svg";
