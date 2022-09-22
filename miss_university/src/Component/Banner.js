@@ -26,7 +26,7 @@ export const Banner = ({ selectLangVal }) => {
           <SVGLogo
             width="320px"
             height="190px"
-            alt="월드미스유니버시티 공식 로고"
+            alt="world miss uni official logo"
           />
         </div>
         <div className="banner_right">

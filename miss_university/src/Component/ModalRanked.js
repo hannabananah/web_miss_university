@@ -9,7 +9,7 @@ const ModalRanked = () => {
   const rank3 = "3";
   return (
     <div className="modalRankingLayout">
-      <SVGRaking className="modalRankingImage" alt="랭킹 알림 배경스타일" />
+      <SVGRaking className="modalRankingImage" alt="lanking background style" />
       <span className="modalRankingText">
         실시간 <span className="modalRankingNum">{rank1}위</span>
       </span>

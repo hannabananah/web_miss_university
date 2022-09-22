@@ -170,7 +170,7 @@ export const Home = ({ popupmodal, selectedValue }) => {
             {/* {t("sequance_follower")} */}
           </p>
           <div className="searchInput">
-            <SVGSearch className="searchIcon" alt="검색 아이콘" />
+            <SVGSearch className="searchIcon" alt="search Icon" />
             <input
               value={search}
               onChange={onChangeSearch}
