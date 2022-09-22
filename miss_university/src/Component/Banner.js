@@ -1,6 +1,9 @@
 import React from "react";
 
 import "../assets/css/banner.css";
+import "../assets/css/responsive/banner1.css";
+import "../assets/css/responsive/banner2.css";
+import "../assets/css/responsive/banner3.css";
 import { ReactComponent as SVGLogo } from "../assets/images/ic_wmu.svg";
 import i18n from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
@@ -24,6 +27,7 @@ export const Banner = ({ selectLangVal }) => {
       <div id="banner_container">
         <div className="banner_left">
           <SVGLogo
+            className="logoImg"
             width="320px"
             height="190px"
             alt="world miss uni official logo"

@@ -1,7 +1,8 @@
-@media only screen and (min-width: 1280px) {
+@media only screen and (max-width: 499px) {
   #banner_root {
     width: 100vw;
-    height: 320px;
+    max-height: 40vw;
+    min-height: 30vh;
     box-sizing: border-box;
     color: #191919;
     background-color: #f6f2ff;
@@ -13,62 +14,53 @@
     margin: 0 auto;
     max-width: 1360px;
     width: 100vw;
-    height: 182px;
     display: flex;
-    justify-content: space-between;
-    position: relative;
+    flex-direction: column;
     padding: 0 40px;
-    align-items: flex-start;
-    margin-top: 25px;
+    align-items: center;
   }
   .banner_left {
-    max-width: 320px;
     width: 100%;
-    position: relative;
-    left: 0;
-    top: -55px;
-    text-align: left;
-    margin-right: 50px;
+    margin-top: -50px;
+    display: flex;
+  }
+  .logoImg {
+    width: 30%;
   }
   .banner_right {
-    max-width: 840px;
+    margin-top: -40px;
+    max-width: 460px;
     width: 100%;
     display: flex;
     flex-direction: column;
-    row-gap: 10px;
+    row-gap: 20px;
   }
   .banner_top_text {
     display: flex;
-    justify-content: left;
-    font-size: 43px;
+    justify-content: center;
+    font-size: 16px;
     line-height: 100%;
-    letter-spacing: -0.048em;
+    letter-spacing: -0.02em;
     color: #ad0081;
   }
   .banner_highlight {
     color: #2d2f92;
   }
   .banner_mid_text {
-    font-weight: 700;
-    font-size: 74px;
-    line-height: 100%;
-    text-align: right;
-    letter-spacing: -0.04em;
-    color: #ad0081;
-    text-align: left;
-    margin-bottom: 20px;
+    display: none;
   }
   .banner_bottom_text {
     width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    row-gap: 15px;
+    justify-content: space-between;
   }
   .titleText {
-    font-size: 24px;
-    line-height: 24px;
-    letter-spacing: -0.96px;
-    text-align: left;
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: bold;
+    letter-spacing: -0.42px;
   }
   .bannerLink {
     border: 1px solid transparent;
@@ -82,10 +74,10 @@
     background-clip: content-box, border-box;
   }
   .subText {
-    margin: 5px 16px 5px 20px;
+    margin: 5px 10px 5px 14px;
     font-weight: bold;
-    font-size: 16px;
-    line-height: 16px;
+    font-size: 10px;
+    line-height: 10px;
     letter-spacing: -0.64px;
     display: flex;
     align-items: center;
@@ -97,6 +89,6 @@
   }
   .arrowMark {
     width: 9px;
-    height: 18px;
+    height: 10px;
   }
 }

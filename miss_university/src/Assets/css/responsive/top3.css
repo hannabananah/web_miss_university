@@ -104,6 +104,12 @@
     color: #191919 !important;
     cursor: pointer !important;
   }
+  .css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
+    font-weight: bold !important;
+    font-size: 12px !important;
+    letter-spacing: -0.64px !important;
+    padding-bottom: 3px !important;
+  }
   .css-tlfecz-indicatorContainer {
     color: #191919 !important;
     padding-right: 0 !important;
@@ -117,6 +123,9 @@
   }
   .css-319lph-ValueContainer {
     padding-right: 0 !important;
+  }
+  .MuiOutlinedInput-notchedOutline {
+    border: none !important;
   }
   /* 스크롤 시 생기는 그림자 */
   .shadow {
