@@ -835,7 +835,8 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
             <div className="modalTextContainer">
               {/* 해당 참가자의 이름이 길어질 경우 폰트 사이즈가 바뀌는 영역 */}
               <div className="modalTitle">
-                <span>{user.name}</span>의 프로필 사진
+                <span>{user.name}</span>
+                {t("name_profile_pic")}
               </div>
               <a
                 href="https://play.google.com/store/search?q=anystory&c=apps"
