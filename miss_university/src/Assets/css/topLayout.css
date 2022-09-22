@@ -58,7 +58,7 @@
 }
 .nav a:link {
   text-decoration: none;
-  color:#191919;
+  color: #191919;
 }
 .dropdown {
   width: 150px;
@@ -84,6 +84,9 @@
 }
 .css-qc6sy-singleValue {
   overflow: visible !important;
+}
+.MuiOutlinedInput-notchedOutline {
+  border: none !important;
 }
 /* 스크롤 시 생기는 그림자 */
 .shadow {
