@@ -64,7 +64,7 @@ export const TopLayout = ({
         {/* left */}
         <div>
           <a href="http://15.165.203.122/WMU/">
-            <SVGLogo className="logoIcon" />
+            <SVGLogo className="logoIcon" alt="애니챗 공식 로고"/>
           </a>
         </div>
         {/* right */}

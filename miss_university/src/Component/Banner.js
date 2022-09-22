@@ -1,9 +1,6 @@
 import React from "react";
 
 import "../assets/css/banner.css";
-import { ReactComponent as SVGBanner1 } from "../assets/images/text_world.svg";
-import { ReactComponent as SVGBanner2 } from "../assets/images/text_miss.svg";
-import { ReactComponent as SVGBanner3 } from "../assets/images/text_university.svg";
 import { ReactComponent as SVGLogo } from "../assets/images/ic_wmu.svg";
 import i18n from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
@@ -26,7 +23,11 @@ export const Banner = ({ selectLangVal }) => {
     <div id="banner_root">
       <div id="banner_container">
         <div className="banner_left">
-          <SVGLogo width="320px" height="190px" />
+          <SVGLogo
+            width="320px"
+            height="190px"
+            alt="월드미스유니버시티 공식 로고"
+          />
         </div>
         <div className="banner_right">
           {selectLangVal == "en" && (

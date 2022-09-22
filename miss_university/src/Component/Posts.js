@@ -781,7 +781,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           </div>
           {/* 팔로워 관련 디테일 */}
           <div className="details">
-            {/* <SVGPeople className="peopleIcon" />
+            {/* <SVGPeople className="peopleIcon" alt="팔로워 명수 알림 아이콘"/>
             <span className="detailText">{user.follower_count}</span> */}
           </div>
           {/* 프로필 자세히 보기 */}
@@ -789,7 +789,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
             <p className="seeMoreText1" onClick={onClick}>
               {/* 프로필 자세히 보기 */}
               {t("see_more_detail")}
-              <SVGArrow className="arrowIcon1" />
+              <SVGArrow className="arrowIcon1" alt="오른쪽 화살표" />
             </p>
             {/* SNS 보러 가기 */}
             <a
@@ -799,7 +799,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
             >
               {/* SNS 보러 가기 */}
               {t("link_to_sns")}
-              <SVGArrow className="arrowIcon2" />
+              <SVGArrow className="arrowIcon2" alt="오른쪽 화살표" />
             </a>
           </div>
         </div>
@@ -808,13 +808,25 @@ const Posts = ({ user, popupmodal, onClick }) => {
         {user.rank < 6 && <Raking user={user} />}
         <div className="sideCardLayout" onClick={onClick}>
           {user.rank === 1 ? (
-            <SVGCard className="sideCardImage1" />
+            <SVGCard
+              className="sideCardImage1"
+              alt="참가자 정보 사이드카드 이미지"
+            />
           ) : user.rank === 2 ? (
-            <SVGCard className="sideCardImage2" />
+            <SVGCard
+              className="sideCardImage2"
+              alt="참가자 정보 사이드카드 이미지"
+            />
           ) : user.rank < 6 ? (
-            <SVGCard className="sideCardImage3" />
+            <SVGCard
+              className="sideCardImage3"
+              alt="참가자 정보 사이드카드 이미지"
+            />
           ) : (
-            <SVGCard className="sideCardImage" />
+            <SVGCard
+              className="sideCardImage"
+              alt="참가자 정보 사이드카드 이미지"
+            />
           )}
           {user.rank === 1 ? (
             <span className="name1">

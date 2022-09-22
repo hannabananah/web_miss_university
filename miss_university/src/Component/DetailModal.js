@@ -800,7 +800,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
                 <span className="modaltext">{user.country}</span>
               </div>
               {/* <div className="modalDetail">
-                <SVGPeople className="modalIcon" />
+                <SVGPeople className="modalIcon" alt="팔로워 명수 알림 아이콘"/>
                 <span className="modaltext">1,050</span>
               </div> */}
             </div>
@@ -863,13 +863,17 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
                             className="modalImg"
                             // controls
                           ></video>
-                          <button 
-                            onClick={()=>onClickImage(idx)}
+                          <button
+                            onClick={() => onClickImage(idx)}
                             style={{
-                              position:"absolute",
-                              left:"50%",
-                              top:"50%",
-                              transform:"translate(-50%,-50%)"}}>play</button>
+                              position: "absolute",
+                              left: "50%",
+                              top: "50%",
+                              transform: "translate(-50%,-50%)",
+                            }}
+                          >
+                            play
+                          </button>
                         </div>
                       );
                     } else if (u.content_type === 1) {

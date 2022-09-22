@@ -136,23 +136,23 @@ export const Home = ({ popupmodal, selectedValue }) => {
   const onkeydown = async (e) => {
     if (e.keyCode === 13) {
       const response = await axios
-      .post(
-        "https://anystorydev.anychat.com:3030/v1/login/get_web_miss_list",
-        {
-          page: 1,
-          language:'',
-          last_muidx: 0,
-          search_result: search,
-        },
-      )
-      .then((response) => {
-        console.log(response);
-        setUserData(response.data.data.user_data);
-        setTotalPage(response.data.data.total_page)
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+        .post(
+          "https://anystorydev.anychat.com:3030/v1/login/get_web_miss_list",
+          {
+            page: 1,
+            language: "",
+            last_muidx: 0,
+            search_result: search,
+          }
+        )
+        .then((response) => {
+          console.log(response);
+          setUserData(response.data.data.user_data);
+          setTotalPage(response.data.data.total_page);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     } //if 끝
   }; //onkeydown 끝
   const onClickClear = () => {
@@ -165,13 +165,12 @@ export const Home = ({ popupmodal, selectedValue }) => {
         <h1 className="headText">{t("participant_info")}</h1>
         <div className="textArea">
           <p className="alignText">
-            
             {/* 참가자 실시간 정렬 순서: 애니스토리 팔로워 순서 */}
             {/* {t("sequance_participants")} */}
             {/* {t("sequance_follower")} */}
           </p>
           <div className="searchInput">
-            <SVGSearch className="searchIcon" />
+            <SVGSearch className="searchIcon" alt="검색 아이콘" />
             <input
               value={search}
               onChange={onChangeSearch}

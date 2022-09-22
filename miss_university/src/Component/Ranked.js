@@ -35,7 +35,7 @@ const Ranked = ({ user }) => {
             : t("mu_ranking_3rd")}
           {}
         </span> */}
-        <SVGBird />
+        <SVGBird alt="월드미스유니버시티 비둘기 아이콘"/>
       </div>
     </div>
   );
