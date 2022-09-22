@@ -2,6 +2,12 @@ import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
 // 0201,0202 (<" "의 프로필 사진>텍스트 디폴트 크기 32px)
 import "../assets/css/modal.css";
+import "../assets/css/responsive/modal1.css";
+import "../assets/css/responsive/modal2.css";
+import "../assets/css/responsive/modal3.css";
+import "../assets/css/responsive/modal4.css";
+import "../assets/css/responsive/modal5.css";
+import "../assets/css/responsive/modal6.css";
 import axios from "axios";
 import ImageModal from "./ImageModal";
 import { useTranslation, initReactI18next } from "react-i18next";

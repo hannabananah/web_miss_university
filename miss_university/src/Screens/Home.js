@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../assets/css/homeLayout.css";
 import "../assets/css/pagination.css";
+import "../assets/css/responsive/pagination.css";
 import { ReactComponent as SVGSearch } from "../assets/images/search.svg";
 // 페이징 처리되면 콘텐츠 넘어가는 영역
 import Posts from "../component/Posts";

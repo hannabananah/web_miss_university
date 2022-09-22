@@ -773,7 +773,6 @@ const Posts = ({ user, popupmodal, onClick }) => {
         <div className="detailContainer">
           {/* 국가 관련 디테일 */}
           <div className="details">
-            {/* 국기 이미지 삽입 필요 */}
             <div className="countryWrap">
               <p className="userCountry">{user.name}</p>
             </div>
