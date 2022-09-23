@@ -39,7 +39,7 @@
     overflow: hidden;
   }
   .modalImg {
-    height: 100%;
+    width: 100%;
   }
   .modalName {
     font-weight: bold;
@@ -164,6 +164,9 @@
     transform: translate(-50%, -50%);
     background: transparent;
     border: none;
+  }
+  .modalVideoPlayButton:focus {
+    outline: none;
   }
   .modalImagesList {
     width: 8.1vw;

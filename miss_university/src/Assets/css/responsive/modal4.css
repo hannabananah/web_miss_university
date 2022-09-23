@@ -167,6 +167,9 @@
     background: transparent;
     border: none;
   }
+  .modalVideoPlayButton:focus-visible {
+    outline: none;
+  }
   .modalImagesList {
     width: 162px;
     height: 225px;
