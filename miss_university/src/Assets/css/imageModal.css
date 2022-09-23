@@ -23,7 +23,6 @@
   height: 100%;
 }
 .swiper.swiper-container {
-  /* width: 65%; */
   width: 45%;
   height: 68vh;
 }
@@ -37,4 +36,10 @@
   text-indent: -9999em;
   background:url("../images/close_wh.svg") no-repeat;
   cursor: pointer;
+}
+
+@media(max-width: 600px) {
+  .swiper.swiper-container {
+    width: 90%;
+  }
 }
