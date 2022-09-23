@@ -19,7 +19,6 @@
   .modalLayout::-webkit-scrollbar {
     display: none;
   }
-
   /* Hide scrollbar for IE, Edge and Firefox */
   .modalLayout {
     -ms-overflow-style: none; /* IE and Edge */
@@ -115,13 +114,14 @@
   }
   .modalTitle {
     display: flex;
-    flex-direction: column;
     font-size: 18px;
     line-height: 24px;
     letter-spacing: -1.28px;
     margin-bottom: 15px;
     word-break: keep-all;
     align-items: center;
+    justify-content: center;
+    font-weight: bold;
   }
   .modalTitle span {
     color: #7c4dff;

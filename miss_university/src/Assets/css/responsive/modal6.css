@@ -19,7 +19,6 @@
   .modalLayout::-webkit-scrollbar {
     display: none;
   }
-
   /* Hide scrollbar for IE, Edge and Firefox */
   .modalLayout {
     -ms-overflow-style: none; /* IE and Edge */
@@ -35,9 +34,10 @@
     height: 250px;
     margin: 0 auto;
     position: relative;
+    text-align: center;
   }
   .modalImg {
-    width: 100%;
+    width: 95%;
     margin: 0 auto;
   }
   .modalName {
@@ -57,9 +57,8 @@
     align-items: center;
   }
   .modalFlag {
-    width: 16px;
-    height: 16px;
-    border-radius: 8px;
+    display: flex;
+    align-items: center;
   }
   .modalIcon {
     width: 18px;
@@ -116,13 +115,14 @@
   }
   .modalTitle {
     display: flex;
-    flex-direction: column;
     font-size: 18px;
     line-height: 24px;
     letter-spacing: -1.28px;
     margin-bottom: 15px;
     word-break: keep-all;
     align-items: center;
+    justify-content: center;
+    font-weight: bold;
   }
   .modalTitle span {
     color: #7c4dff;
