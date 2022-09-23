@@ -28,7 +28,7 @@ Modal.setAppElement("#root");
 const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
   const { t } = useTranslation();
   const [isOpenImage, setIsOpenImage] = useState(false);
-  const [targetIdx, setTargetIdx] = useState(0);
+  const [targetIdx, setTargetIdx] = useState(-1);
   const [view, setView] = useState(targetIdx);
 
   const onClickImage = (idx) => {
@@ -38,6 +38,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
   const onCloseImageModal = () => {
     if (isOpenImage) {
       setIsOpenImage(false);
+      setTargetIdx(-1);
       setView(-1)
     }
   };
@@ -947,9 +948,9 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
       <ImageModal
         isOpenImage={isOpenImage}
         onCloseImageModal={onCloseImageModal}
-        // onClickDetails={onClickDetails}
         user={user}
         targetIdx={targetIdx}
+        setTargetIdx={setTargetIdx}
         view={view}
         setView={setView}
         // loaded={loaded}

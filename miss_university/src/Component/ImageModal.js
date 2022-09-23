@@ -12,8 +12,6 @@ import "../assets/css/imageModal.css";
 const ImageModal = ({ isOpenImage, onCloseImageModal, user, targetIdx, view, setView }) => {
   // console.log("targetIdx========================", targetIdx);
   const imageList =  document.querySelectorAll('.bigImage');
-  
-  console.log(view)
 
   useEffect(()=>{
     for (let i=0; i<imageList.length; i++) {
@@ -27,8 +25,7 @@ const ImageModal = ({ isOpenImage, onCloseImageModal, user, targetIdx, view, set
         imageList[i].classList.remove("zoomHeight");
       }
     }    
-  },[view])
-
+  },[view,targetIdx])
 
   return (
     <div>
@@ -51,7 +48,6 @@ const ImageModal = ({ isOpenImage, onCloseImageModal, user, targetIdx, view, set
           onSwiper={(swiper) => setView(swiper.activeIndex)}
         >
           {user.content_data?.map((u, idx) => {
-            // console.log('u=====================================',u)
             if (u.content_type === 1) {
               // 사진
               return (
