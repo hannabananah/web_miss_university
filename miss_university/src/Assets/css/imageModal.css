@@ -5,10 +5,14 @@
 .swiper-slide {
   display: flex;
   justify-content: center;
-
 }
-.bigImage {
-
+.swiper-slide-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bigVideo {
+  width: 100%;
 }
 .imageModal {
   border: none;
@@ -25,7 +29,7 @@
 }
 .closeBtn {
   position: absolute;
-  right: 200px;
+  right: 50px;
   top: 70px;
   width: 25px;
   height: 25px;

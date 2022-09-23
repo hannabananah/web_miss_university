@@ -47,8 +47,8 @@ const ImageModal = ({ isOpenImage, onCloseImageModal, user, targetIdx }) => {
             } else if (u.content_type === 2) {
               // 동영상
               return (
-                <SwiperSlide key={idx} className="swiper-slide">
-                  <video src={u.file_url} className="bigImage" controls></video>
+                <SwiperSlide key={idx} className="swiper-slide-video">
+                  <video src={u.file_url} className="bigVideo" controls></video>
                 </SwiperSlide>
               );
             }
