@@ -58,4 +58,13 @@
     letter-spacing: -0.48px;
     margin: 0;
   }
+  span a {
+    color: inherit;
+  }
+  span a:visited {
+    color: inherit;
+  }
+  span a:link {
+    text-decoration: none;
+  }
 }

@@ -12,7 +12,11 @@ export const BottomLayout = () => {
       <footer id="footer">
         {/* top */}
         <div className="top">
-          <span>{t("terms_and_conditions")}</span>
+          <span>
+            <a href="https://www.anychat.com/sub_guide/agree.php">
+              {t("terms_and_conditions")}
+            </a>
+          </span>
           <span className="emphasis">{t("privacy_policy")}</span>
           <span>{t("customer_service")}</span>
           <span>{t("visit_us")}</span>
