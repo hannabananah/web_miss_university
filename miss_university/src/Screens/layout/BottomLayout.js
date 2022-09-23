@@ -51,7 +51,10 @@ export const BottomLayout = () => {
           <address className="address">{t("address")}</address>
           <span>{t("president")}</span>
           <span>
-            {t("phone")} : <span className="number">02-6959-3088</span>
+            {t("phone")} :
+            <span className="number">
+              <a href="tel:02-6959-3088">02-6959-3088</a>
+            </span>
           </span>
           <span>{t("registrationNum")} : 110111-7783700</span>
         </div>
