@@ -8,6 +8,7 @@
     background-color: #f6f2ff;
     display: flex;
     align-items: center;
+    cursor: default;
   }
   #banner_container {
     box-sizing: border-box;
