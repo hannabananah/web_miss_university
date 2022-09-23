@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import "../assets/css/modal.css";
 import axios from "axios";
 import Modal from "react-modal";
-
+import CloseIcon from '@mui/icons-material/Close';
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation } from "swiper";
 import "swiper/css";
@@ -39,7 +39,7 @@ const ImageModal = ({ isOpenImage, onCloseImageModal, user, targetIdx, view, set
         shouldCloseOnOverlayClick={true}
       >
         <button onClick={onCloseImageModal} className="closeBtn">
-          close
+          <CloseIcon style={{fontSize:"40px",color:"#fff"}}/>
         </button>
         <Swiper
           initialSlide={targetIdx}
