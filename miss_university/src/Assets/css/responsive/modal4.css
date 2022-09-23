@@ -165,6 +165,7 @@
     transform: translate(-50%, -50%);
     background: transparent;
     border: none;
+    cursor: pointer;
   }
   .modalVideoPlayButton:focus-visible {
     outline: none;
@@ -178,6 +179,7 @@
     overflow: hidden;
     background-color: black;
     position: relative;
+    cursor: pointer;
   }
   /* 모달 백그라운드 투명도 */
   .ReactModal__Overlay {

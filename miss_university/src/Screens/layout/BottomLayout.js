@@ -12,10 +12,38 @@ export const BottomLayout = () => {
       <footer id="footer">
         {/* top */}
         <div className="top">
-          <span>{t("terms_and_conditions")}</span>
-          <span className="emphasis">{t("privacy_policy")}</span>
-          <span>{t("customer_service")}</span>
-          <span>{t("visit_us")}</span>
+          <span>
+            <a
+              href="https://www.anychat.com/sub_guide/agree.php"
+              target="_blank"
+            >
+              {t("terms_and_conditions")}
+            </a>
+          </span>
+          <span className="emphasis">
+            <a
+              href="https://www.anychat.com/sub_guide/privacy.php"
+              target="_blank"
+            >
+              {t("privacy_policy")}
+            </a>
+          </span>
+          <span>
+            <a
+              href="https://www.anychat.com/sub_customer/qna.php"
+              target="_blank"
+            >
+              {t("customer_service")}
+            </a>
+          </span>
+          <span>
+            <a
+              href="https://www.anychat.com/sub_company/?goLink=location"
+              target="_blank"
+            >
+              {t("visit_us")}
+            </a>
+          </span>
         </div>
         {/* bottom */}
         <div className="bottom">
@@ -23,7 +51,10 @@ export const BottomLayout = () => {
           <address className="address">{t("address")}</address>
           <span>{t("president")}</span>
           <span>
-            {t("phone")} : <span className="number">02-6959-3088</span>
+            {t("phone")} :
+            <span className="number">
+              <a href="tel:02-6959-3088">02-6959-3088</a>
+            </span>
           </span>
           <span>{t("registrationNum")} : 110111-7783700</span>
         </div>

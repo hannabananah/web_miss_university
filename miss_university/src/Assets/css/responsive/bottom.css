@@ -44,7 +44,6 @@
   }
   address {
     font-style: inherit;
-    cursor: pointer;
   }
   .number {
     cursor: pointer;
@@ -56,5 +55,14 @@
     letter-spacing: -0.32px;
     margin: 0;
     padding: 12px 0 24px;
+  }
+  span a {
+    color: inherit;
+  }
+  span a:visited {
+    color: inherit;
+  }
+  span a:link {
+    text-decoration: none;
   }
 }
