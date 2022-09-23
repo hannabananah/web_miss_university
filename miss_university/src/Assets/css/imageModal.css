@@ -36,4 +36,5 @@
   border: none;
   text-indent: -9999em;
   background:url("../images/close_wh.svg") no-repeat;
+  cursor: pointer;
 }
