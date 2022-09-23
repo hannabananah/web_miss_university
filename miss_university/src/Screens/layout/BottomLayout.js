@@ -13,13 +13,37 @@ export const BottomLayout = () => {
         {/* top */}
         <div className="top">
           <span>
-            <a href="https://www.anychat.com/sub_guide/agree.php">
+            <a
+              href="https://www.anychat.com/sub_guide/agree.php"
+              target="_blank"
+            >
               {t("terms_and_conditions")}
             </a>
           </span>
-          <span className="emphasis">{t("privacy_policy")}</span>
-          <span>{t("customer_service")}</span>
-          <span>{t("visit_us")}</span>
+          <span className="emphasis">
+            <a
+              href="https://www.anychat.com/sub_guide/privacy.php"
+              target="_blank"
+            >
+              {t("privacy_policy")}
+            </a>
+          </span>
+          <span>
+            <a
+              href="https://www.anychat.com/sub_customer/qna.php"
+              target="_blank"
+            >
+              {t("customer_service")}
+            </a>
+          </span>
+          <span>
+            <a
+              href="https://www.anychat.com/sub_company/?goLink=location"
+              target="_blank"
+            >
+              {t("visit_us")}
+            </a>
+          </span>
         </div>
         {/* bottom */}
         <div className="bottom">
