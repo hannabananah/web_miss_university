@@ -5,14 +5,13 @@
 .swiper-slide {
   display: flex;
   justify-content: center;
-}
-.swiper-slide-video {
-  display: flex;
-  justify-content: center;
   align-items: center;
 }
-.bigVideo {
+.zoomWidth {
   width: 100%;
+}
+.zoomHeight {
+  height: 100%;
 }
 .imageModal {
   border: none;
@@ -24,8 +23,9 @@
   height: 100%;
 }
 .swiper.swiper-container {
-  width: 65%;
-  height: 75vh;
+  /* width: 65%; */
+  width: 45%;
+  height: 68vh;
 }
 .closeBtn {
   position: absolute;

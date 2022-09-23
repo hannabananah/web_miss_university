@@ -22,12 +22,14 @@ import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
 // 순위권 표시
 import Raking from "./ModalRanked";
 import { ReactComponent as SVGPeople } from "../assets/images/people.svg";
+import { Streetview } from "@mui/icons-material";
 Modal.setAppElement("#root");
 
 const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
   const { t } = useTranslation();
   const [isOpenImage, setIsOpenImage] = useState(false);
   const [targetIdx, setTargetIdx] = useState(0);
+  const [view, setView] = useState(targetIdx);
 
   const onClickImage = (idx) => {
     setIsOpenImage(true);
@@ -36,6 +38,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
   const onCloseImageModal = () => {
     if (isOpenImage) {
       setIsOpenImage(false);
+      setView(-1)
     }
   };
   // 국기 이미지
@@ -947,6 +950,8 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
         // onClickDetails={onClickDetails}
         user={user}
         targetIdx={targetIdx}
+        view={view}
+        setView={setView}
         // loaded={loaded}
       />
     </div>

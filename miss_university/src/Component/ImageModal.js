@@ -9,8 +9,26 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "../assets/css/imageModal.css";
 
-const ImageModal = ({ isOpenImage, onCloseImageModal, user, targetIdx }) => {
-  console.log("targetIdx========================", targetIdx);
+const ImageModal = ({ isOpenImage, onCloseImageModal, user, targetIdx, view, setView }) => {
+  // console.log("targetIdx========================", targetIdx);
+  const imageList =  document.querySelectorAll('.bigImage');
+  
+  console.log(view)
+
+  useEffect(()=>{
+    for (let i=0; i<imageList.length; i++) {
+      const imageWidth = imageList[i].naturalWidth !== undefined ? imageList[i].naturalWidth : imageList[i].videoWidth;
+      const imageHeight = imageList[i].naturalHeight !== undefined ? imageList[i].naturalHeight : imageList[i].videoHeight ;
+      if ( imageWidth / imageHeight <= 1 ) { //세로가 긴 이미지
+        imageList[i].classList.add("zoomHeight");
+        imageList[i].classList.remove("zoomWidth");
+      } else {
+        imageList[i].classList.add("zoomWidth");
+        imageList[i].classList.remove("zoomHeight");
+      }
+    }    
+  },[view])
+
 
   return (
     <div>
@@ -29,10 +47,11 @@ const ImageModal = ({ isOpenImage, onCloseImageModal, user, targetIdx }) => {
           navigation={true}
           modules={[Navigation]}
           className="swiper-container"
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={(swiper) => setView(swiper.activeIndex)}
+          onSwiper={(swiper) => setView(swiper.activeIndex)}
         >
           {user.content_data?.map((u, idx) => {
+            // console.log('u=====================================',u)
             if (u.content_type === 1) {
               // 사진
               return (
@@ -47,8 +66,10 @@ const ImageModal = ({ isOpenImage, onCloseImageModal, user, targetIdx }) => {
             } else if (u.content_type === 2) {
               // 동영상
               return (
-                <SwiperSlide key={idx} className="swiper-slide-video">
-                  <video src={u.file_url} className="bigVideo" controls></video>
+                <SwiperSlide key={idx} className="swiper-slide">
+                  <video src={u.file_url} 
+                  className="bigImage" 
+                  controls></video>
                 </SwiperSlide>
               );
             }
