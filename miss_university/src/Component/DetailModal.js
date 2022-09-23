@@ -11,6 +11,7 @@ import "../assets/css/responsive/modal6.css";
 import axios from "axios";
 import ImageModal from "./ImageModal";
 import { useTranslation, initReactI18next } from "react-i18next";
+import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
 
 // 0203(이름의 길이가 너무 길어서 최대 가로 길이를 넘어갈 경우:<" "의 프로필 사진>텍스트 크기를 24px로 변경)
 // import "../assets/css/modalLongName.css";
@@ -872,14 +873,16 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
                           ></video>
                           <button
                             onClick={() => onClickImage(idx)}
-                            style={{
-                              position: "absolute",
-                              left: "50%",
-                              top: "50%",
-                              transform: "translate(-50%,-50%)",
-                            }}
+                            className="modalVideoPlayButton"
                           >
-                            play
+                            <PlayCircleOutlineIcon
+                              style={{
+                                backgroundColor: "white",
+                                width: "60%",
+                                height: "100%",
+                                borderRadius: "50%",
+                              }}
+                            />
                           </button>
                         </div>
                       );

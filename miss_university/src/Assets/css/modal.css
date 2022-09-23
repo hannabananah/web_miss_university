@@ -157,6 +157,14 @@
     row-gap: 32px;
     justify-items: space-between;
   }
+  .modalVideoPlayButton {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    border: none;
+  }
   .modalImagesList {
     width: 8.1vw;
     height: 11.3vw;

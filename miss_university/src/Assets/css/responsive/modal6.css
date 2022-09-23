@@ -30,10 +30,7 @@
     align-items: center;
   }
   .modalImgContainer {
-    width: 180px;
     height: 250px;
-    margin: 0 auto;
-    position: relative;
     text-align: center;
   }
   .modalImg {
@@ -164,6 +161,14 @@
   }
   .modalImgsContainer div {
     justify-content: center;
+  }
+  .modalVideoPlayButton {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    border: none;
   }
   .modalImagesList {
     width: 162px;
