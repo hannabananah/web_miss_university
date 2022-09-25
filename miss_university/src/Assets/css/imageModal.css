@@ -27,8 +27,8 @@
 }
 .closeBtn {
   position: absolute;
-  right: 50px;
-  top: 50px;
+  right: 3%;
+  top: 3%;
   border: none;
   cursor: pointer;
   padding: 0;
@@ -42,6 +42,6 @@
 @media(max-width: 600px) {
   .swiper.swiper-container {
     width: 80%;
-    /* height: 58vh; */
+    height: 50vh;
   }
 }
