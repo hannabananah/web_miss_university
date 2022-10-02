@@ -1,6 +1,6 @@
 @media only screen and (max-width: 485px) {
   #top_root {
-    width: 100vw;
+    /* width: 100vw; */
     box-sizing: border-box;
     background-color: #ffffff;
     color: #191919;
@@ -11,7 +11,7 @@
   #header {
     box-sizing: border-box;
     max-width: 1360px;
-    width: 100vw;
+    width: 100%;
     margin: 0 auto;
     height: 120px;
     display: flex;

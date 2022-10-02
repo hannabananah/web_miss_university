@@ -1,12 +1,12 @@
 @media only screen and (max-width: 485px) {
   #home_root {
-    width: 100vw;
+    /* width: 100vw; */
     box-sizing: border-box;
     background-color: #ffffff;
   }
   #main_container {
     max-width: 1360px;
-    width: 100vw;
+    width: 100%;
     margin: 0 auto;
     padding: 40px;
     display: flex;

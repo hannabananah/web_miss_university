@@ -1,12 +1,12 @@
 @media (min-width: 486px) and (max-width: 1019px) {
   #home_root {
-    width: 100vw;
+    /* width: 100vw; */
     box-sizing: border-box;
     background-color: #ffffff;
   }
   #main_container {
     max-width: 1360px;
-    width: 100vw;
+    width: 100%;
     margin: 0 auto;
     padding: 64px 40px 40px;
     display: flex;
