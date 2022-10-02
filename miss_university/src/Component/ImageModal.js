@@ -34,7 +34,7 @@ const ImageModal = ({ isOpenImage, onCloseImageModal, user, targetIdx}) => {
   }
 
   useEffect( () => {
-    // 영상이 있을수도 없을수도 있음. 
+    // 영상이 있을수도 없을수도 있음. 비디오가 로드 전이라면 videoWidth, wideoHeight 는 0 
     if ( document.querySelectorAll('.video').length > 0 && 
       document.querySelectorAll('.video').length == videoLoadCount) {
       imgViewSize();
