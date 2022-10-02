@@ -29,17 +29,14 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
   const { t } = useTranslation();
   const [isOpenImage, setIsOpenImage] = useState(false);
   const [targetIdx, setTargetIdx] = useState(-1);
-  const [view, setView] = useState(targetIdx);
 
   const onClickImage = (idx) => {
     setIsOpenImage(true);
-    setTargetIdx(idx);
+    setTargetIdx(idx)
   };
   const onCloseImageModal = () => {
     if (isOpenImage) {
       setIsOpenImage(false);
-      setTargetIdx(-1);
-      setView(-1)
     }
   };
   // 국기 이미지
@@ -950,9 +947,6 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
         onCloseImageModal={onCloseImageModal}
         user={user}
         targetIdx={targetIdx}
-        setTargetIdx={setTargetIdx}
-        view={view}
-        setView={setView}
         // loaded={loaded}
       />
     </div>
