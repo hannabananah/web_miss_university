@@ -199,7 +199,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           />
         );
         break;
-      case "Cote_d_Ivoire":
+      case "Cote D'Ivoire":
         return (
           <img
             src={
@@ -210,7 +210,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           />
         );
         break;
-      case "Czech_Republic":
+      case "Czech Republic":
         return (
           <img
             src={
@@ -221,7 +221,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           />
         );
         break;
-      case "Dominican_Republic":
+      case "DominiCan Republic":
         return (
           <img
             src={
@@ -232,7 +232,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           />
         );
         break;
-      case "El_Salvador":
+      case "El Salvador":
         return (
           <img
             src={
@@ -474,7 +474,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           />
         );
         break;
-      case "New_Zealand":
+      case "New Zealand":
         return (
           <img
             src={
@@ -562,7 +562,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           />
         );
         break;
-      case "Russian_Federation":
+      case "Russian Federation":
         return (
           <img
             src={
@@ -595,7 +595,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           />
         );
         break;
-      case "South_Korea":
+      case "South Korea":
         return (
           <img
             src={
@@ -661,7 +661,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           />
         );
         break;
-      case "Trinidad_Tobago":
+      case "Trinidad Tobago":
         return (
           <img
             src={
@@ -738,7 +738,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           />
         );
         break;
-      case "Viet_Nam":
+      case "Vietnam":
         return (
           <img
             src={
@@ -863,13 +863,17 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
                             className="modalImg"
                             // controls
                           ></video>
-                          <button 
-                            onClick={()=>onClickImage(idx)}
+                          <button
+                            onClick={() => onClickImage(idx)}
                             style={{
-                              position:"absolute",
-                              left:"50%",
-                              top:"50%",
-                              transform:"translate(-50%,-50%)"}}>play</button>
+                              position: "absolute",
+                              left: "50%",
+                              top: "50%",
+                              transform: "translate(-50%,-50%)",
+                            }}
+                          >
+                            play
+                          </button>
                         </div>
                       );
                     } else if (u.content_type === 1) {

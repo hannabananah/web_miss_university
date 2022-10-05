@@ -179,7 +179,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           />
         );
         break;
-      case "Cote_d_Ivoire":
+      case "Cote D'Ivoire":
         return (
           <img
             src={
@@ -190,7 +190,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           />
         );
         break;
-      case "Czech_Republic":
+      case "Czech Republic":
         return (
           <img
             src={
@@ -201,7 +201,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           />
         );
         break;
-      case "Dominican_Republic":
+      case "DominiCan Republic":
         return (
           <img
             src={
@@ -212,7 +212,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           />
         );
         break;
-      case "El_Salvador":
+      case "El Salvador":
         return (
           <img
             src={
@@ -454,7 +454,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           />
         );
         break;
-      case "New_Zealand":
+      case "New Zealand":
         return (
           <img
             src={
@@ -542,7 +542,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           />
         );
         break;
-      case "Russian_Federation":
+      case "Russian Federation":
         return (
           <img
             src={
@@ -575,7 +575,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           />
         );
         break;
-      case "South_Korea":
+      case "South Korea":
         return (
           <img
             src={
@@ -641,7 +641,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           />
         );
         break;
-      case "Trinidad_Tobago":
+      case "Trinidad Tobago":
         return (
           <img
             src={
@@ -718,7 +718,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           />
         );
         break;
-      case "Viet_Nam":
+      case "Vietnam":
         return (
           <img
             src={
