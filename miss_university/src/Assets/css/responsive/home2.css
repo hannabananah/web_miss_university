@@ -1,0 +1,74 @@
+@media only screen and (max-width: 485px) {
+  #home_root {
+    /* width: 100vw; */
+    box-sizing: border-box;
+    background-color: #ffffff;
+  }
+  #main_container {
+    max-width: 1360px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+  }
+  .headText {
+    color: #7c4dff;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.84px;
+    margin: 0;
+    margin-right: auto;
+  }
+  .textArea {
+    display: flex;
+    flex-direction: column;
+  }
+  .alignText {
+    font-size: 10px;
+    line-height: 10px;
+    letter-spacing: -0.72px;
+    color: #191919;
+    text-align: left;
+    margin-bottom: 32px;
+  }
+  .searchInput {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .searchText {
+    width: 273px;
+    font-size: 13px;
+    line-height: 19px;
+    letter-spacing: -1.24px;
+    color: #737373;
+    caret-color: #737373;
+    border: none;
+    outline: none;
+  }
+  ::-webkit-input-placeholder {
+    color: #7c4dff;
+  }
+  .searchIcon {
+    width: 14px;
+    height: 14px;
+    margin-right: 8px;
+  }
+  .closeIcon {
+    width: 8px;
+    height: 8px;
+    margin-left: 8px;
+    stroke: #b2a5c3;
+  }
+  .listContainer {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 100px;
+    row-gap: 90px;
+    margin-top: 69px;
+    justify-content: center;
+  }
+}

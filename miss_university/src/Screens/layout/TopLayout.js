@@ -1,7 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 // import Select from "react-select";
 import { useSelector, useDispatch } from "react-redux";
 import "../../assets/css/topLayout.css";
+import "../../assets/css/responsive/top1.css";
+import "../../assets/css/responsive/top2.css";
+import "../../assets/css/responsive/top3.css";
 // import { useStyles } from "../../assets/css/topLayout";
 import "react-dropdown/style.css";
 import { ReactComponent as SVGLogo } from "../../assets/images/logo.svg";
@@ -9,19 +12,20 @@ import i18n from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
-import MenuItem from '@mui/material/MenuItem';
+import MenuItem from "@mui/material/MenuItem";
 
 export const TopLayout = ({
   selectLangVal,
   onChangeLang,
-
-  number, onIncrease, onDecrease 
+  number,
+  onIncrease,
+  onDecrease,
 }) => {
   // const classes = useStyles();
   const { t } = useTranslation();
   const currLang = useSelector((state) => state.langData);
 
-  console.log('currLang:::::::::::::::::::::::',currLang);
+  console.log("currLang:::::::::::::::::::::::", currLang);
 
   const options = [
     { value: "ko", label: "한국어 (ko)" },
@@ -39,31 +43,6 @@ export const TopLayout = ({
     // { value: "th", label: "ไทย (th)" },
     // { value: "tl", label: "Tagalog (tl)" },
   ];
-
-  // console.log(Select);
-
-  // const customStyles = {
-  //   option: (provided, state) => ({
-  //     ...provided,
-  //     color: state.isSelected ? "#7c4dff" : "#191919",
-  //     fontWeight: state.isSelected ? "bold" : "normal",
-  //     boxSizing: "border-box",
-  //     width: "150px",
-  //     display: "flex",
-  //     justifyContent: "center",
-  //     rowGap: "20px",
-  //     paddingRight: "28px",
-  //     paddingLeft: "28px",
-  //     fontSize: "14px",
-  //     lineHeight: "14px",
-  //     letterSpacing: "-0.42px",
-  //     "&:hover": {
-  //       fontWeight: "bold",
-  //       backgroundColor: "#7c4dff",
-  //       color: "#fff",
-  //     },
-  //   }),
-  // };
 
   // Sticky TopLayout Area
   useEffect(() => {
@@ -88,19 +67,11 @@ export const TopLayout = ({
         {/* left */}
         <div>
           <a href="http://15.165.203.122/WMU/">
-            <SVGLogo className="logoIcon" />
+            <SVGLogo className="logoIcon" alt="anychat official logo" />
           </a>
         </div>
         {/* right */}
         <nav className="right">
-
-          {/* 카운터 예제 */}
-          {/* <div>
-            <h3>{number}</h3>
-            <button onClick={onIncrease}>+1</button>
-            <button onClick={onDecrease}>-1</button>
-          </div> */}
-
           <ul className="nav">
             <li>
               <a href="https://www.anychat.com/main/" target="_blank">
@@ -117,26 +88,8 @@ export const TopLayout = ({
                 월드 미스 유니버시티 소식통
               </a>
             </li> */}
-            
-            <li>
-              {/* <Select
-                placeholder={t("link_to_worldmissuniversity_homepage")}
-                options={options}
-                isSearchable={false}
-                className="dropdown"
-                styles={customStyles}
-                value={options.filter((obj) => obj.value === selectedValue)}
-                onChange={handleChange}
-                theme={(theme) => ({
-                  ...theme,
-                  border: "none",
-                  colors: {
-                    ...theme.colors,
-                    primary: "#ffffff",
-                  },
-                })}
-              /> */}
-            </li>
+
+            <li></li>
           </ul>
 
           <FormControl sx={{ minWidth: 120 }}>
@@ -145,10 +98,12 @@ export const TopLayout = ({
               onChange={onChangeLang}
               // displayEmpty
             >
-              {options.map((option,index)=>{
+              {options.map((option, index) => {
                 return (
-                  <MenuItem key={index} value={option.value}>{option.label}</MenuItem>
-                )
+                  <MenuItem key={index} value={option.value}>
+                    {option.label}
+                  </MenuItem>
+                );
               })}
             </Select>
           </FormControl>

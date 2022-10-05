@@ -35,7 +35,7 @@ const Ranked = ({ user }) => {
             : t("mu_ranking_3rd")}
           {}
         </span> */}
-        <SVGBird />
+        <SVGBird alt="world miss uni Bird Img"/>
       </div>
     </div>
   );

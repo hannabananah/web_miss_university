@@ -2,9 +2,16 @@ import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
 // 0201,0202 (<" "의 프로필 사진>텍스트 디폴트 크기 32px)
 import "../assets/css/modal.css";
+import "../assets/css/responsive/modal1.css";
+import "../assets/css/responsive/modal2.css";
+import "../assets/css/responsive/modal3.css";
+import "../assets/css/responsive/modal4.css";
+import "../assets/css/responsive/modal5.css";
+import "../assets/css/responsive/modal6.css";
 import axios from "axios";
 import ImageModal from "./ImageModal";
 import { useTranslation, initReactI18next } from "react-i18next";
+import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
 
 // 0203(이름의 길이가 너무 길어서 최대 가로 길이를 넘어갈 경우:<" "의 프로필 사진>텍스트 크기를 24px로 변경)
 // import "../assets/css/modalLongName.css";
@@ -15,16 +22,17 @@ import { useTranslation, initReactI18next } from "react-i18next";
 // 순위권 표시
 import Raking from "./ModalRanked";
 import { ReactComponent as SVGPeople } from "../assets/images/people.svg";
+import { Streetview } from "@mui/icons-material";
 Modal.setAppElement("#root");
 
 const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
   const { t } = useTranslation();
   const [isOpenImage, setIsOpenImage] = useState(false);
-  const [targetIdx, setTargetIdx] = useState(0);
+  const [targetIdx, setTargetIdx] = useState(-1);
 
   const onClickImage = (idx) => {
     setIsOpenImage(true);
-    setTargetIdx(idx);
+    setTargetIdx(idx)
   };
   const onCloseImageModal = () => {
     if (isOpenImage) {
@@ -41,7 +49,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Albania.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -52,7 +60,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Algeria.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -63,7 +71,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Argentina.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -74,7 +82,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Armenia.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -85,7 +93,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Azerbaijan.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -96,7 +104,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Bangladesh.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -107,7 +115,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Belarus.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -118,7 +126,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Bolivia.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -129,7 +137,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Botswana.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -140,7 +148,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Brazil.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -151,7 +159,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Bulgaria.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -162,7 +170,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Cameroon.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -173,7 +181,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Canada.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -184,7 +192,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Chile.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -195,7 +203,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Colombia.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -217,7 +225,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Cote_d_Ivoire.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -239,7 +247,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Czech_Republic.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -250,7 +258,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Dominican_Republic.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -261,7 +269,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/El_Salvador.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -272,7 +280,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Ecuador.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -283,7 +291,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Estonia.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -294,7 +302,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/France.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -305,7 +313,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Georgia.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -316,7 +324,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Germany.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -327,7 +335,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Ghana.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -338,7 +346,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Guatemala.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -360,7 +368,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Indonesia.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -382,7 +390,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Kazakhstan.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -393,7 +401,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Kenya.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -404,7 +412,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Kosovo.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -415,7 +423,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Kyrgyzstan.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -426,7 +434,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Lesotho.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -437,7 +445,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Macedonia.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -448,7 +456,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Malawi.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -459,7 +467,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Malaysia.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -470,7 +478,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Mexico.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -481,7 +489,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Moldova.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -503,7 +511,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Mongolia.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -514,7 +522,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Montenegro.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -525,7 +533,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Namibia.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -536,7 +544,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/New_Zealand.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -547,7 +555,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Nicaragua.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -558,7 +566,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Nigeria.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -591,7 +599,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Paraguay.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -602,7 +610,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Peru.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -613,7 +621,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Philippines.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -635,7 +643,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Portugal.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -646,7 +654,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Romania.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -657,7 +665,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Russian_Federation.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -668,7 +676,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Serbia.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -690,7 +698,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Singapore.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -712,7 +720,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/South_Korea.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -723,7 +731,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Spain.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -734,7 +742,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Taiwan.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -745,7 +753,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Tajikistan.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -756,7 +764,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Tanzania.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -767,7 +775,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Thailand.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -778,7 +786,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Trinidad_Tobago.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -789,7 +797,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Turkmenistan.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -800,7 +808,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Uganda.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -811,7 +819,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Ukraine.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -822,7 +830,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Uruguay.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -844,7 +852,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Uzbekistan.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -855,7 +863,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Venezuela.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -866,7 +874,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Viet_Nam.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -877,7 +885,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Zambia.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -888,7 +896,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
               // user.country ==
               require("../assets/images/flags/Zimbabwe.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -921,7 +929,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
                 <span className="modaltext">{user.country}</span>
               </div>
               {/* <div className="modalDetail">
-                <SVGPeople className="modalIcon" />
+                <SVGPeople className="modalIcon" alt="팔로워 명수 알림 아이콘"/>
                 <span className="modaltext">1,050</span>
               </div> */}
             </div>
@@ -956,7 +964,8 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
             <div className="modalTextContainer">
               {/* 해당 참가자의 이름이 길어질 경우 폰트 사이즈가 바뀌는 영역 */}
               <div className="modalTitle">
-                <span>{user.name}</span>의 프로필 사진
+                <span>{user.name}</span>
+                {t("name_profile_pic")}
               </div>
               <a
                 href="https://play.google.com/store/search?q=anystory&c=apps"
@@ -986,14 +995,16 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
                           ></video>
                           <button
                             onClick={() => onClickImage(idx)}
-                            style={{
-                              position: "absolute",
-                              left: "50%",
-                              top: "50%",
-                              transform: "translate(-50%,-50%)",
-                            }}
+                            className="modalVideoPlayButton"
                           >
-                            play
+                            <PlayCircleOutlineIcon
+                              style={{
+                                backgroundColor: "white",
+                                width: "60%",
+                                height: "100%",
+                                borderRadius: "50%",
+                              }}
+                            />
                           </button>
                         </div>
                       );
@@ -1055,7 +1066,6 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
       <ImageModal
         isOpenImage={isOpenImage}
         onCloseImageModal={onCloseImageModal}
-        // onClickDetails={onClickDetails}
         user={user}
         targetIdx={targetIdx}
         // loaded={loaded}
