@@ -3,7 +3,10 @@ import Pagination from "react-js-pagination";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../assets/css/homeLayout.css";
+import "../assets/css/responsive/home1.css";
+import "../assets/css/responsive/home2.css";
 import "../assets/css/pagination.css";
+import "../assets/css/responsive/pagination.css";
 import { ReactComponent as SVGSearch } from "../assets/images/search.svg";
 // 페이징 처리되면 콘텐츠 넘어가는 영역
 import Posts from "../component/Posts";
@@ -15,36 +18,13 @@ import DetailModal from "../component/DetailModal";
 import i18n from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
 
-// import ko from "../Util/i18n/ko/trans.json";
-// import en from "../Util/i18n/en/trans.json";
-
-// i18n.use(initReactI18next).init({
-//   fallbackLng: "ko",
-//   debug: true,
-//   lng: "ko",
-//   resources: {
-//     en: {
-//       lang: en,
-//     },
-//     ko: {
-//       lang: ko,
-//     },
-//   },
-//   ns: ["lang"],
-
-//   interpolation: {
-//     escapeValue: false,
-//   },
-// });
 const postsPerPage = 12;
+
 export const Home = ({ popupmodal, selectedValue }) => {
   const { t } = useTranslation();
   const [search, setSearch] = useState("");
-  // const [language, setLanguage] = useState("en");
-  // const [posts, setPosts] = useState([]);
   const [userData, setUserData] = useState([]);
   const [totalPage, setTotalPage] = useState();
-  // const [lang, setLang] = useState();
   const [loaded, setLoaded] = useState(false);
 
   // 페이지네이션
@@ -67,13 +47,13 @@ export const Home = ({ popupmodal, selectedValue }) => {
   // };
 
   //참가자 리스트 데이터
-  const fetchData = async (page, last_idx) => {
+  const fetchData = async (last_idx) => {
     const response = await axios
       .post("https://anystorydev.anychat.com:3030/v1/login/get_web_miss_list", {
-        page: page,
+        page: currentPage,
         language: selectedValue,
         last_muidx: last_idx,
-        search_result: "",
+        search_result: search,
       })
       .then((response) => {
         console.log(response.data.data);
@@ -84,17 +64,31 @@ export const Home = ({ popupmodal, selectedValue }) => {
         console.log(error);
       });
   };
-
+  const resultData = () => {
+    if (currentPage == 1) {
+      fetchData(0);
+    } else {
+      fetchData(userData[userData.length - 1].muidx); //현재 보고 있는 페이지의 마지막 참가자 muidx 넘겨주기
+    }
+  } 
   useEffect(() => {
-    fetchData(1, 0);
-  }, []);
-
+    resultData();
+  }, [currentPage, selectedValue]);
   //페이지네이션
   const handlePageChange = (page) => {
-    setCurrentPage(page);
-    fetchData(page, userData[userData.length - 1].muidx); //현재 보고 있는 페이지의 마지막 참가자 muidx 넘겨주기
+    setCurrentPage(page);   
   };
-  // console.log(userData);
+  const onChangeSearch = (e) => {
+    setSearch(e.target.value);
+  };
+  const onkeydown = (e) => {
+    if (e.keyCode === 13) {
+      resultData();
+    }
+  };
+  const onClickClear = () => {
+    setSearch("");
+  };
 
   //모달 데이터
   const fetchDetailsData = async (userIdx, userCountry) => {
@@ -116,7 +110,6 @@ export const Home = ({ popupmodal, selectedValue }) => {
         setLoaded(false);
       });
   };
-
   const onClickDetails = (muidx, country) => {
     setIsOpen(true);
     fetchDetailsData(muidx, country);
@@ -129,49 +122,18 @@ export const Home = ({ popupmodal, selectedValue }) => {
     }
   };
 
-  //참가자 검색
-  const onChangeSearch = (e) => {
-    setSearch(e.target.value);
-  };
-  const onkeydown = async (e) => {
-    if (e.keyCode === 13) {
-      const response = await axios
-      .post(
-        "https://anystorydev.anychat.com:3030/v1/login/get_web_miss_list",
-        {
-          page: 1,
-          language:'',
-          last_muidx: 0,
-          search_result: search,
-        },
-      )
-      .then((response) => {
-        console.log(response);
-        setUserData(response.data.data.user_data);
-        setTotalPage(response.data.data.total_page)
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-    } //if 끝
-  }; //onkeydown 끝
-  const onClickClear = () => {
-    setSearch("");
-    fetchData(1, 0);
-  };
   return (
     <div id="home_root">
       <section id="main_container">
         <h1 className="headText">{t("participant_info")}</h1>
         <div className="textArea">
           <p className="alignText">
-            
             {/* 참가자 실시간 정렬 순서: 애니스토리 팔로워 순서 */}
             {/* {t("sequance_participants")} */}
             {/* {t("sequance_follower")} */}
           </p>
           <div className="searchInput">
-            <SVGSearch className="searchIcon" />
+            <SVGSearch className="searchIcon" alt="search Icon" />
             <input
               value={search}
               onChange={onChangeSearch}

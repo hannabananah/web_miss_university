@@ -21,7 +21,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Albania.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -32,7 +32,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Algeria.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -43,7 +43,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Argentina.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -54,7 +54,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Armenia.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -65,7 +65,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Azerbaijan.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -76,7 +76,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Bangladesh.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -87,7 +87,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Belarus.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -98,7 +98,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Bolivia.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -109,7 +109,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Botswana.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -120,7 +120,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Brazil.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -131,7 +131,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Bulgaria.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -142,7 +142,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Cameroon.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -153,18 +153,18 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Canada.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
-      case "Canada":
+      case "Chile":
         return (
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Canada.png")
+              require("../assets/images/flags/Chile.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -175,7 +175,18 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Colombia.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
+          />
+        );
+        break;
+      case "Costa Rica":
+        return (
+          <img
+            src={
+              // user.country ==
+              require("../assets/images/flags/Costa_Rica.png")
+            }
+            alt="flag Img"
           />
         );
         break;
@@ -186,7 +197,18 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Cote_d_Ivoire.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
+          />
+        );
+        break;
+      case "Croatia":
+        return (
+          <img
+            src={
+              // user.country ==
+              require("../assets/images/flags/Croatia.png")
+            }
+            alt="flag Img"
           />
         );
         break;
@@ -197,7 +219,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Czech_Republic.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -208,7 +230,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Dominican_Republic.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -219,7 +241,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/El_Salvador.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -230,7 +252,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Ecuador.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -241,7 +263,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Estonia.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -252,7 +274,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/France.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -263,7 +285,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Georgia.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -274,7 +296,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Germany.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -285,7 +307,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Ghana.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -296,7 +318,18 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Guatemala.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
+          />
+        );
+        break;
+      case "Hungary":
+        return (
+          <img
+            src={
+              // user.country ==
+              require("../assets/images/flags/Hungary.png")
+            }
+            alt="flag Img"
           />
         );
         break;
@@ -307,7 +340,18 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Indonesia.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
+          />
+        );
+        break;
+      case "Japan":
+        return (
+          <img
+            src={
+              // user.country ==
+              require("../assets/images/flags/japan.png")
+            }
+            alt="flag Img"
           />
         );
         break;
@@ -318,7 +362,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Kazakhstan.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -329,7 +373,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Kenya.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -340,7 +384,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Kosovo.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -351,7 +395,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Kyrgyzstan.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -362,7 +406,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Lesotho.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -373,7 +417,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Macedonia.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -384,7 +428,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Malawi.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -395,7 +439,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Malaysia.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -406,7 +450,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Mexico.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -417,7 +461,18 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Moldova.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
+          />
+        );
+        break;
+      case "Monaco":
+        return (
+          <img
+            src={
+              // user.country ==
+              require("../assets/images/flags/Monaco.png")
+            }
+            alt="flag Img"
           />
         );
         break;
@@ -428,7 +483,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Mongolia.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -439,7 +494,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Montenegro.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -450,7 +505,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Namibia.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -461,7 +516,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/New_Zealand.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -472,7 +527,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Nicaragua.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -483,7 +538,29 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Nigeria.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
+          />
+        );
+        break;
+      case "Palestine":
+        return (
+          <img
+            src={
+              // user.country ==
+              require("../assets/images/flags/Palestine.png")
+            }
+            alt="flag Img"
+          />
+        );
+        break;
+      case "Panama":
+        return (
+          <img
+            src={
+              // user.country ==
+              require("../assets/images/flags/Panama.png")
+            }
+            alt="flag Img"
           />
         );
         break;
@@ -494,7 +571,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Paraguay.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -505,7 +582,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Peru.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -516,7 +593,18 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Philippines.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
+          />
+        );
+        break;
+      case "Poland":
+        return (
+          <img
+            src={
+              // user.country ==
+              require("../assets/images/flags/Poland.png")
+            }
+            alt="flag Img"
           />
         );
         break;
@@ -527,7 +615,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Portugal.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -538,7 +626,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Romania.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -549,7 +637,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Russian_Federation.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -560,7 +648,18 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Serbia.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
+          />
+        );
+        break;
+      case "Sierra Leone":
+        return (
+          <img
+            src={
+              // user.country ==
+              require("../assets/images/flags/Sierra_Leone.png")
+            }
+            alt="flag Img"
           />
         );
         break;
@@ -571,7 +670,18 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Singapore.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
+          />
+        );
+        break;
+      case "Slovenia":
+        return (
+          <img
+            src={
+              // user.country ==
+              require("../assets/images/flags/Slovenia.png")
+            }
+            alt="flag Img"
           />
         );
         break;
@@ -582,7 +692,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/South_Korea.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -593,7 +703,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Spain.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -604,7 +714,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Taiwan.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -615,7 +725,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Tajikistan.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -626,7 +736,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Tanzania.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -637,7 +747,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Thailand.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -648,7 +758,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Trinidad_Tobago.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -659,7 +769,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Turkmenistan.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -670,18 +780,18 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Uganda.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
-      case "USA":
+      case "Ukraine":
         return (
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/USA.png")
+              require("../assets/images/flags/Ukraine.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -692,7 +802,18 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Uruguay.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
+          />
+        );
+        break;
+      case "USA":
+        return (
+          <img
+            src={
+              // user.country ==
+              require("../assets/images/flags/USA.png")
+            }
+            alt="flag Img"
           />
         );
         break;
@@ -703,7 +824,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Uzbekistan.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -714,7 +835,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Venezuela.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -725,7 +846,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Viet_Nam.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -736,7 +857,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Zambia.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -747,7 +868,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
               // user.country ==
               require("../assets/images/flags/Zimbabwe.png")
             }
-            alt="국기 이미지"
+            alt="flag Img"
           />
         );
         break;
@@ -773,7 +894,6 @@ const Posts = ({ user, popupmodal, onClick }) => {
         <div className="detailContainer">
           {/* 국가 관련 디테일 */}
           <div className="details">
-            {/* 국기 이미지 삽입 필요 */}
             <div className="countryWrap">
               <p className="userCountry">{user.name}</p>
             </div>
@@ -781,7 +901,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           </div>
           {/* 팔로워 관련 디테일 */}
           <div className="details">
-            {/* <SVGPeople className="peopleIcon" />
+            {/* <SVGPeople className="peopleIcon" alt="팔로워 명수 알림 아이콘"/>
             <span className="detailText">{user.follower_count}</span> */}
           </div>
           {/* 프로필 자세히 보기 */}
@@ -789,7 +909,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
             <p className="seeMoreText1" onClick={onClick}>
               {/* 프로필 자세히 보기 */}
               {t("see_more_detail")}
-              <SVGArrow className="arrowIcon1" />
+              <SVGArrow className="arrowIcon1" alt="오른쪽 화살표" />
             </p>
             {/* SNS 보러 가기 */}
             <a
@@ -799,7 +919,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
             >
               {/* SNS 보러 가기 */}
               {t("link_to_sns")}
-              <SVGArrow className="arrowIcon2" />
+              <SVGArrow className="arrowIcon2" alt="오른쪽 화살표" />
             </a>
           </div>
         </div>
@@ -808,13 +928,25 @@ const Posts = ({ user, popupmodal, onClick }) => {
         {user.rank < 6 && <Raking user={user} />}
         <div className="sideCardLayout" onClick={onClick}>
           {user.rank === 1 ? (
-            <SVGCard className="sideCardImage1" />
+            <SVGCard
+              className="sideCardImage1"
+              alt="참가자 정보 사이드카드 이미지"
+            />
           ) : user.rank === 2 ? (
-            <SVGCard className="sideCardImage2" />
+            <SVGCard
+              className="sideCardImage2"
+              alt="참가자 정보 사이드카드 이미지"
+            />
           ) : user.rank < 6 ? (
-            <SVGCard className="sideCardImage3" />
+            <SVGCard
+              className="sideCardImage3"
+              alt="참가자 정보 사이드카드 이미지"
+            />
           ) : (
-            <SVGCard className="sideCardImage" />
+            <SVGCard
+              className="sideCardImage"
+              alt="참가자 정보 사이드카드 이미지"
+            />
           )}
           {user.rank === 1 ? (
             <span className="name1">

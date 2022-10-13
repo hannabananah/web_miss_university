@@ -29,8 +29,6 @@
   height: 250px;
   margin: 0 auto;
   position: relative;
-  /* 이미지 삽입 필요 */
-  background-color: azure;
 }
 .modalImg {
   width: 100%;
@@ -52,11 +50,8 @@
   align-items: center;
 }
 .modalFlag {
-  width: 16px;
-  height: 16px;
-  border-radius: 8px;
-  /* 이미지 삽입 필요 */
-  background-color: pink;
+  display: flex;
+  align-items: center;
 }
 .modalIcon {
   width: 18px;
@@ -156,8 +151,6 @@
 .modalImagesList {
   width: 162px;
   height: 225px;
-  /* 이미지 삽입 필요 */
-  background-color: azure;
 }
 /* 모달 백그라운드 투명도 */
 .ReactModal__Overlay {

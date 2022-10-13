@@ -1,4 +1,4 @@
-@media only screen and (min-width: 1020px) {
+@media only screen and (max-width: 485px) {
   #top_root {
     /* width: 100vw; */
     box-sizing: border-box;
@@ -13,15 +13,15 @@
     max-width: 1360px;
     width: 100%;
     margin: 0 auto;
-    height: 98px;
+    height: 120px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 40px;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 40px 10px;
   }
   .logoIconLayout {
-    max-width: 234px;
-    max-height: 50px;
+    max-width: 150px;
+    max-height: 25px;
   }
   .logoIcon {
     max-width: 100%;
@@ -29,26 +29,29 @@
     height: auto;
   }
   .right {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     display: flex;
-    justify-self: flex-end;
+    padding-top: 10px;
     justify-content: space-between;
   }
   .nav {
     box-sizing: border-box;
-    padding-left: 20px;
     display: flex;
     flex-direction: row;
-    font-size: 16px;
-    line-height: 16px;
-    column-gap: 20px;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 12px;
     letter-spacing: -0.64px;
     align-items: center;
     list-style: none;
+    padding-top: 10px;
   }
   .nav li {
     position: relative;
+  }
+  .nav li:first-child {
+    margin-right: 20px;
   }
   .nav li:after {
     content: "";
@@ -74,16 +77,26 @@
     text-decoration: none;
   }
   .dropdown {
-    width: 140px;
-    font-size: 16px;
-    line-height: 16px;
+    width: 100px;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 12px;
     letter-spacing: -0.64px;
+    word-break: keep-all;
   }
   /* 언어 설정 드롭다운 */
   .css-1s2u09g-control {
     background-color: #ffffff !important;
     border: none !important;
     cursor: pointer !important;
+    margin-right: 0 !important;
+  }
+  .css-19skad5-control {
+    background-color: #ffffff !important;
+    border: none !important;
+    cursor: pointer !important;
+    margin-right: 0 !important;
+    box-shadow: none !important;
   }
   .css-1okebmr-indicatorSeparator {
     display: none !important;
@@ -92,14 +105,25 @@
     color: #191919 !important;
     cursor: pointer !important;
   }
+  .css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
+    font-weight: bold !important;
+    font-size: 12px !important;
+    letter-spacing: -0.64px !important;
+    padding-bottom: 3px !important;
+  }
   .css-tlfecz-indicatorContainer {
     color: #191919 !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
   }
   .css-1gtu0rj-indicatorContainer {
     color: #191919 !important;
   }
   .css-qc6sy-singleValue {
     overflow: visible !important;
+  }
+  .css-319lph-ValueContainer {
+    padding-right: 0 !important;
   }
   .MuiOutlinedInput-notchedOutline {
     border: none !important;

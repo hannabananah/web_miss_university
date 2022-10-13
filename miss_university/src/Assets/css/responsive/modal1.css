@@ -1,4 +1,4 @@
-@media only screen and (min-width: 1660px) {
+@media (min-width: 1359px) and (max-width: 1659px) {
   .modalLayout {
     box-sizing: border-box;
     position: fixed;
@@ -108,15 +108,13 @@
     color: #737373;
   }
   .modalTextContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
     margin-bottom: 18px;
   }
   .modalTitle {
     font-size: 32px;
     line-height: 32px;
     letter-spacing: -1.28px;
+    margin-bottom: 15px;
     word-break: keep-all;
   }
   .modalTitle span {
@@ -126,8 +124,7 @@
     font-size: 18px;
     line-height: 18px;
     letter-spacing: -0.72px;
-    display: flex;
-    align-items: center;
+    display: inline-flex;
     background: linear-gradient(to left, rgb(124, 77, 255), rgb(252, 110, 111));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -155,8 +152,6 @@
     flex-wrap: wrap;
     column-gap: 5px;
     row-gap: 32px;
-    justify-items: space-between;
-    cursor: pointer;
   }
   .modalVideoPlayButton {
     position: absolute;
@@ -171,8 +166,8 @@
     outline: none;
   }
   .modalImagesList {
-    width: 8.1vw;
-    height: 11.3vw;
+    width: 9.8vw;
+    height: 13.62vw;
     display: flex;
     justify-content: center;
     align-items: center;

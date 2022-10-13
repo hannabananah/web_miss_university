@@ -1,4 +1,4 @@
-@media only screen and (min-width: 1020px) {
+@media (min-width: 785px) and (max-width: 1019px) {
   #top_root {
     /* width: 100vw; */
     box-sizing: border-box;
@@ -20,8 +20,8 @@
     padding: 0 40px;
   }
   .logoIconLayout {
-    max-width: 234px;
-    max-height: 50px;
+    max-width: 200px;
+    max-height: 45px;
   }
   .logoIcon {
     max-width: 100%;
@@ -78,6 +78,7 @@
     font-size: 16px;
     line-height: 16px;
     letter-spacing: -0.64px;
+    word-break: "keep-all";
   }
   /* 언어 설정 드롭다운 */
   .css-1s2u09g-control {
