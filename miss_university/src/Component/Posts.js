@@ -201,7 +201,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           />
         );
         break;
-      case "DominiCan Republic":
+      case "Dominican Republic":
         return (
           <img
             src={
@@ -542,7 +542,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           />
         );
         break;
-      case "Russian Federation":
+      case "Russia":
         return (
           <img
             src={

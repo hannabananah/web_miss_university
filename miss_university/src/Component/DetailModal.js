@@ -221,7 +221,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           />
         );
         break;
-      case "DominiCan Republic":
+      case "Dominican Republic":
         return (
           <img
             src={
@@ -562,7 +562,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           />
         );
         break;
-      case "Russian Federation":
+      case "Russia":
         return (
           <img
             src={
