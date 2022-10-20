@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import "../assets/css/posts.css";
-import flags from "../assets/js/flags";
+import "../Assets/css/posts.css";
+import flags from "../Assets/js/flags";
 
 // 순위권 표시
 import Raking from "./Ranked.js";
-import { ReactComponent as SVGCard } from "../assets/images/sideCard.svg";
-import { ReactComponent as SVGArrow } from "../assets/images/arrow.svg";
-import { ReactComponent as SVGPeople } from "../assets/images/people.svg";
+import { ReactComponent as SVGCard } from "../Assets/images/sideCard.svg";
+import { ReactComponent as SVGArrow } from "../Assets/images/arrow.svg";
+import { ReactComponent as SVGPeople } from "../Assets/images/people.svg";
 import { useTranslation, initReactI18next } from "react-i18next";
 
 const Posts = ({ user, popupmodal, onClick }) => {
@@ -19,7 +19,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Albania.png")
+              require("../Assets/images/flags/Albania.png")
             }
             alt="flag Img"
           />
@@ -30,7 +30,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Algeria.png")
+              require("../Assets/images/flags/Algeria.png")
             }
             alt="flag Img"
           />
@@ -41,7 +41,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Argentina.png")
+              require("../Assets/images/flags/Argentina.png")
             }
             alt="flag Img"
           />
@@ -52,7 +52,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Armenia.png")
+              require("../Assets/images/flags/Armenia.png")
             }
             alt="flag Img"
           />
@@ -63,7 +63,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Azerbaijan.png")
+              require("../Assets/images/flags/Azerbaijan.png")
             }
             alt="flag Img"
           />
@@ -74,7 +74,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Bangladesh.png")
+              require("../Assets/images/flags/Bangladesh.png")
             }
             alt="flag Img"
           />
@@ -85,7 +85,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Belarus.png")
+              require("../Assets/images/flags/Belarus.png")
             }
             alt="flag Img"
           />
@@ -96,7 +96,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Bolivia.png")
+              require("../Assets/images/flags/Bolivia.png")
             }
             alt="flag Img"
           />
@@ -107,7 +107,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Botswana.png")
+              require("../Assets/images/flags/Botswana.png")
             }
             alt="flag Img"
           />
@@ -118,7 +118,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Brazil.png")
+              require("../Assets/images/flags/Brazil.png")
             }
             alt="flag Img"
           />
@@ -129,7 +129,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Bulgaria.png")
+              require("../Assets/images/flags/Bulgaria.png")
             }
             alt="flag Img"
           />
@@ -140,7 +140,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Cameroon.png")
+              require("../Assets/images/flags/Cameroon.png")
             }
             alt="flag Img"
           />
@@ -151,7 +151,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Canada.png")
+              require("../Assets/images/flags/Canada.png")
             }
             alt="flag Img"
           />
@@ -162,7 +162,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Chile.png")
+              require("../Assets/images/flags/Chile.png")
             }
             alt="flag Img"
           />
@@ -173,7 +173,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Colombia.png")
+              require("../Assets/images/flags/Colombia.png")
             }
             alt="flag Img"
           />
@@ -184,7 +184,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Costa_Rica.png")
+              require("../Assets/images/flags/Costa_Rica.png")
             }
             alt="flag Img"
           />
@@ -195,7 +195,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Cote_d_Ivoire.png")
+              require("../Assets/images/flags/Cote_d_Ivoire.png")
             }
             alt="flag Img"
           />
@@ -206,7 +206,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Croatia.png")
+              require("../Assets/images/flags/Croatia.png")
             }
             alt="flag Img"
           />
@@ -217,7 +217,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Czech_Republic.png")
+              require("../Assets/images/flags/Czech_Republic.png")
             }
             alt="flag Img"
           />
@@ -228,7 +228,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Dominican_Republic.png")
+              require("../Assets/images/flags/Dominican_Republic.png")
             }
             alt="flag Img"
           />
@@ -239,7 +239,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/El_Salvador.png")
+              require("../Assets/images/flags/El_Salvador.png")
             }
             alt="flag Img"
           />
@@ -250,7 +250,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Ecuador.png")
+              require("../Assets/images/flags/Ecuador.png")
             }
             alt="flag Img"
           />
@@ -261,7 +261,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Estonia.png")
+              require("../Assets/images/flags/Estonia.png")
             }
             alt="flag Img"
           />
@@ -272,7 +272,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/France.png")
+              require("../Assets/images/flags/France.png")
             }
             alt="flag Img"
           />
@@ -283,7 +283,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Georgia.png")
+              require("../Assets/images/flags/Georgia.png")
             }
             alt="flag Img"
           />
@@ -294,7 +294,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Germany.png")
+              require("../Assets/images/flags/Germany.png")
             }
             alt="flag Img"
           />
@@ -305,7 +305,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Ghana.png")
+              require("../Assets/images/flags/Ghana.png")
             }
             alt="flag Img"
           />
@@ -316,7 +316,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Guatemala.png")
+              require("../Assets/images/flags/Guatemala.png")
             }
             alt="flag Img"
           />
@@ -327,7 +327,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Hungary.png")
+              require("../Assets/images/flags/Hungary.png")
             }
             alt="flag Img"
           />
@@ -338,7 +338,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Indonesia.png")
+              require("../Assets/images/flags/Indonesia.png")
             }
             alt="flag Img"
           />
@@ -349,7 +349,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/japan.png")
+              require("../Assets/images/flags/japan.png")
             }
             alt="flag Img"
           />
@@ -360,7 +360,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Kazakhstan.png")
+              require("../Assets/images/flags/Kazakhstan.png")
             }
             alt="flag Img"
           />
@@ -371,7 +371,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Kenya.png")
+              require("../Assets/images/flags/Kenya.png")
             }
             alt="flag Img"
           />
@@ -382,7 +382,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Kosovo.png")
+              require("../Assets/images/flags/Kosovo.png")
             }
             alt="flag Img"
           />
@@ -393,7 +393,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Kyrgyzstan.png")
+              require("../Assets/images/flags/Kyrgyzstan.png")
             }
             alt="flag Img"
           />
@@ -404,7 +404,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Lesotho.png")
+              require("../Assets/images/flags/Lesotho.png")
             }
             alt="flag Img"
           />
@@ -415,7 +415,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Macedonia.png")
+              require("../Assets/images/flags/Macedonia.png")
             }
             alt="flag Img"
           />
@@ -426,7 +426,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Malawi.png")
+              require("../Assets/images/flags/Malawi.png")
             }
             alt="flag Img"
           />
@@ -437,7 +437,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Malaysia.png")
+              require("../Assets/images/flags/Malaysia.png")
             }
             alt="flag Img"
           />
@@ -448,7 +448,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Mexico.png")
+              require("../Assets/images/flags/Mexico.png")
             }
             alt="flag Img"
           />
@@ -459,7 +459,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Moldova.png")
+              require("../Assets/images/flags/Moldova.png")
             }
             alt="flag Img"
           />
@@ -470,7 +470,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Monaco.png")
+              require("../Assets/images/flags/Monaco.png")
             }
             alt="flag Img"
           />
@@ -481,7 +481,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Mongolia.png")
+              require("../Assets/images/flags/Mongolia.png")
             }
             alt="flag Img"
           />
@@ -492,7 +492,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Montenegro.png")
+              require("../Assets/images/flags/Montenegro.png")
             }
             alt="flag Img"
           />
@@ -503,7 +503,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Namibia.png")
+              require("../Assets/images/flags/Namibia.png")
             }
             alt="flag Img"
           />
@@ -514,7 +514,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/New_Zealand.png")
+              require("../Assets/images/flags/New_Zealand.png")
             }
             alt="flag Img"
           />
@@ -525,7 +525,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Nicaragua.png")
+              require("../Assets/images/flags/Nicaragua.png")
             }
             alt="flag Img"
           />
@@ -536,7 +536,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Nigeria.png")
+              require("../Assets/images/flags/Nigeria.png")
             }
             alt="flag Img"
           />
@@ -547,7 +547,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Palestine.png")
+              require("../Assets/images/flags/Palestine.png")
             }
             alt="flag Img"
           />
@@ -558,7 +558,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Panama.png")
+              require("../Assets/images/flags/Panama.png")
             }
             alt="flag Img"
           />
@@ -569,7 +569,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Paraguay.png")
+              require("../Assets/images/flags/Paraguay.png")
             }
             alt="flag Img"
           />
@@ -580,7 +580,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Peru.png")
+              require("../Assets/images/flags/Peru.png")
             }
             alt="flag Img"
           />
@@ -591,7 +591,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Philippines.png")
+              require("../Assets/images/flags/Philippines.png")
             }
             alt="flag Img"
           />
@@ -602,7 +602,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Poland.png")
+              require("../Assets/images/flags/Poland.png")
             }
             alt="flag Img"
           />
@@ -613,7 +613,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Portugal.png")
+              require("../Assets/images/flags/Portugal.png")
             }
             alt="flag Img"
           />
@@ -624,7 +624,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Romania.png")
+              require("../Assets/images/flags/Romania.png")
             }
             alt="flag Img"
           />
@@ -635,7 +635,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Russian_Federation.png")
+              require("../Assets/images/flags/Russian_Federation.png")
             }
             alt="flag Img"
           />
@@ -646,7 +646,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Serbia.png")
+              require("../Assets/images/flags/Serbia.png")
             }
             alt="flag Img"
           />
@@ -657,7 +657,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Sierra_Leone.png")
+              require("../Assets/images/flags/Sierra_Leone.png")
             }
             alt="flag Img"
           />
@@ -668,7 +668,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Singapore.png")
+              require("../Assets/images/flags/Singapore.png")
             }
             alt="flag Img"
           />
@@ -679,7 +679,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Slovenia.png")
+              require("../Assets/images/flags/Slovenia.png")
             }
             alt="flag Img"
           />
@@ -690,7 +690,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/South_Korea.png")
+              require("../Assets/images/flags/South_Korea.png")
             }
             alt="flag Img"
           />
@@ -701,7 +701,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Spain.png")
+              require("../Assets/images/flags/Spain.png")
             }
             alt="flag Img"
           />
@@ -712,7 +712,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Taiwan.png")
+              require("../Assets/images/flags/Taiwan.png")
             }
             alt="flag Img"
           />
@@ -723,7 +723,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Tajikistan.png")
+              require("../Assets/images/flags/Tajikistan.png")
             }
             alt="flag Img"
           />
@@ -734,7 +734,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Tanzania.png")
+              require("../Assets/images/flags/Tanzania.png")
             }
             alt="flag Img"
           />
@@ -745,7 +745,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Thailand.png")
+              require("../Assets/images/flags/Thailand.png")
             }
             alt="flag Img"
           />
@@ -756,7 +756,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Trinidad_Tobago.png")
+              require("../Assets/images/flags/Trinidad_Tobago.png")
             }
             alt="flag Img"
           />
@@ -767,7 +767,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Turkmenistan.png")
+              require("../Assets/images/flags/Turkmenistan.png")
             }
             alt="flag Img"
           />
@@ -778,7 +778,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Uganda.png")
+              require("../Assets/images/flags/Uganda.png")
             }
             alt="flag Img"
           />
@@ -789,7 +789,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Ukraine.png")
+              require("../Assets/images/flags/Ukraine.png")
             }
             alt="flag Img"
           />
@@ -800,7 +800,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Uruguay.png")
+              require("../Assets/images/flags/Uruguay.png")
             }
             alt="flag Img"
           />
@@ -811,7 +811,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/USA.png")
+              require("../Assets/images/flags/USA.png")
             }
             alt="flag Img"
           />
@@ -822,7 +822,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Uzbekistan.png")
+              require("../Assets/images/flags/Uzbekistan.png")
             }
             alt="flag Img"
           />
@@ -833,7 +833,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Venezuela.png")
+              require("../Assets/images/flags/Venezuela.png")
             }
             alt="flag Img"
           />
@@ -844,7 +844,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Viet_Nam.png")
+              require("../Assets/images/flags/Viet_Nam.png")
             }
             alt="flag Img"
           />
@@ -855,7 +855,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Zambia.png")
+              require("../Assets/images/flags/Zambia.png")
             }
             alt="flag Img"
           />
@@ -866,7 +866,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           <img
             src={
               // user.country ==
-              require("../assets/images/flags/Zimbabwe.png")
+              require("../Assets/images/flags/Zimbabwe.png")
             }
             alt="flag Img"
           />

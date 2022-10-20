@@ -2,18 +2,18 @@ import React, { useState, useEffect } from "react";
 import Pagination from "react-js-pagination";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import "../assets/css/homeLayout.css";
-import "../assets/css/responsive/home1.css";
-import "../assets/css/responsive/home2.css";
-import "../assets/css/pagination.css";
-import "../assets/css/responsive/pagination.css";
-import { ReactComponent as SVGSearch } from "../assets/images/search.svg";
+import "../Assets/css/homeLayout.css";
+import "../Assets/css/responsive/home1.css";
+import "../Assets/css/responsive/home2.css";
+import "../Assets/css/pagination.css";
+import "../Assets/css/responsive/pagination.css";
+import { ReactComponent as SVGSearch } from "../Assets/images/search.svg";
 // 페이징 처리되면 콘텐츠 넘어가는 영역
-import Posts from "../component/Posts";
+import Posts from "../Component/Posts";
 // 프로필 카드 하나에 대한 참가자 정보
-import ParticipantsList from "../component/ParticipantsList";
+import ParticipantsList from "../Component/ParticipantsList";
 // 프로필 자세히 보기 모달 팝업
-import DetailModal from "../component/DetailModal";
+import DetailModal from "../Component/DetailModal";
 
 import i18n from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
