@@ -1,10 +1,10 @@
 import React from "react";
 
-import "../assets/css/banner.css";
-import "../assets/css/responsive/banner1.css";
-import "../assets/css/responsive/banner2.css";
-import "../assets/css/responsive/banner3.css";
-import { ReactComponent as SVGLogo } from "../assets/images/ic_wmu.svg";
+import "../Assets/css/banner.css";
+import "../Assets/css/responsive/banner1.css";
+import "../Assets/css/responsive/banner2.css";
+import "../Assets/css/responsive/banner3.css";
+import { ReactComponent as SVGLogo } from "../Assets/images/ic_wmu.svg";
 import i18n from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
 

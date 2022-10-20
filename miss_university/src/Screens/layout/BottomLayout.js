@@ -1,7 +1,7 @@
 import React from "react";
 
-import "../../assets/css/bottomLayout.css";
-import "../../assets/css/responsive/bottom.css";
+import "../../Assets/css/bottomLayout.css";
+import "../../Assets/css/responsive/bottom.css";
 import i18n from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
 

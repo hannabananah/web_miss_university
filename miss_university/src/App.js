@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import { HashRouter, Routes, Route } from "react-router-dom";
-import { Home } from "./screens/Home";
-import { TopLayout } from "./screens/layout/TopLayout";
-import { BottomLayout } from "./screens/layout/BottomLayout";
-import { Banner } from "./component/Banner";
+import { Home } from "./Screens/Home";
+import { TopLayout } from "./Screens/layout/TopLayout";
+import { BottomLayout } from "./Screens/layout/BottomLayout";
+import { Banner } from "./Component/Banner";
 import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
 import store from "./redux";

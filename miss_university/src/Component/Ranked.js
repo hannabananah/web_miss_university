@@ -1,7 +1,7 @@
 import React from "react";
-import "../assets/css/ranked.css";
+import "../Assets/css/ranked.css";
 import { useTranslation, initReactI18next } from "react-i18next";
-import { ReactComponent as SVGBird } from "../assets/images/ic_wmu_white.svg";
+import { ReactComponent as SVGBird } from "../Assets/images/ic_wmu_white.svg";
 
 const Ranked = ({ user }) => {
   const { t } = useTranslation();

@@ -5,7 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import store from "./redux";
-import "./util/i18n/index";
+import "./Util/i18n/index";
 // replace console.* for disable log on production
 if (process.env.NODE_ENV === "production") {
   console.log = () => {};
