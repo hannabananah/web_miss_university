@@ -18,6 +18,9 @@ import DetailModal from "../Component/DetailModal";
 import i18n from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
 
+import g from "../Util/global";
+const base_url = g.base_url;
+
 const postsPerPage = 12;
 
 export const Home = ({ popupmodal, selectedValue }) => {
@@ -49,7 +52,7 @@ export const Home = ({ popupmodal, selectedValue }) => {
   //참가자 리스트 데이터
   const fetchData = async (last_idx) => {
     const response = await axios
-      .post("https://anystorydev.anychat.com:3030/v1/login/get_web_miss_list", {
+      .post(base_url + "v1/login/get_web_miss_list", {
         page: currentPage,
         language: selectedValue,
         last_muidx: last_idx,
@@ -70,13 +73,13 @@ export const Home = ({ popupmodal, selectedValue }) => {
     } else {
       fetchData(userData[userData.length - 1].muidx); //현재 보고 있는 페이지의 마지막 참가자 muidx 넘겨주기
     }
-  } 
+  };
   useEffect(() => {
     resultData();
   }, [currentPage, selectedValue]);
   //페이지네이션
   const handlePageChange = (page) => {
-    setCurrentPage(page);   
+    setCurrentPage(page);
   };
   const onChangeSearch = (e) => {
     setSearch(e.target.value);
@@ -93,13 +96,10 @@ export const Home = ({ popupmodal, selectedValue }) => {
   //모달 데이터
   const fetchDetailsData = async (userIdx, userCountry) => {
     const response = await axios
-      .post(
-        "https://anystorydev.anychat.com:3030/v1/login/get_web_miss_detail",
-        {
-          muidx: userIdx,
-          language: userCountry,
-        }
-      )
+      .post(base_url + "v1/login/get_web_miss_detail", {
+        muidx: userIdx,
+        language: userCountry,
+      })
       .then((response) => {
         setUser(response.data.data);
         console.log("user:::::::", response.data.data);
