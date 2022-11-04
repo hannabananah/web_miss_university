@@ -152,12 +152,12 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           />
         );
         break;
-      case "Bosnia & Herzegovina":
+      case "Bosnia and Herzegovina":
         return (
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Bosnia & Herzegovina.png")
+              require("../Assets/images/flags/Bosnia_Herzegovina.png")
             }
             alt="flag Image"
           />
@@ -855,7 +855,7 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           />
         );
         break;
-      case "South_Africa":
+      case "South Africa":
         return (
           <img
             src={
