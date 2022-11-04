@@ -66,7 +66,7 @@ export const TopLayout = ({
       <header id="header">
         {/* left */}
         <div>
-          <a href="http://223.130.134.216/WMU/">
+          <a href="http://www.anychat.click/WMU/">
             <SVGLogo className="logoIcon" alt="anychat official logo" />
           </a>
         </div>
