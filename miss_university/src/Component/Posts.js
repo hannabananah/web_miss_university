@@ -102,12 +102,34 @@ const Posts = ({ user, popupmodal, onClick }) => {
           />
         );
         break;
+      case "Belgium":
+        return (
+          <img
+            src={
+              // user.country ==
+              require("../Assets/images/flags/Belgium.png")
+            }
+            alt="flag Image"
+          />
+        );
+        break;
       case "Bolivia":
         return (
           <img
             src={
               // user.country ==
               require("../Assets/images/flags/Bolivia.png")
+            }
+            alt="flag Image"
+          />
+        );
+        break;
+      case "Bosnia & Herzegovina":
+        return (
+          <img
+            src={
+              // user.country ==
+              require("../Assets/images/flags/Bosnia & Herzegovina.png")
             }
             alt="flag Image"
           />
@@ -222,7 +244,6 @@ const Posts = ({ user, popupmodal, onClick }) => {
             alt="flag Image"
           />
         );
-        break;
       case "Cyprus":
         return (
           <img
@@ -267,23 +288,23 @@ const Posts = ({ user, popupmodal, onClick }) => {
           />
         );
         break;
-      case "England":
-        return (
-          <img
-            src={
-              // user.country ==
-              require("../Assets/images/flags/England.png")
-            }
-            alt="flag Image"
-          />
-        );
-        break;
       case "El Salvador":
         return (
           <img
             src={
               // user.country ==
               require("../Assets/images/flags/El_Salvador.png")
+            }
+            alt="flag Image"
+          />
+        );
+        break;
+      case "England":
+        return (
+          <img
+            src={
+              // user.country ==
+              require("../Assets/images/flags/England.png")
             }
             alt="flag Image"
           />
@@ -366,6 +387,28 @@ const Posts = ({ user, popupmodal, onClick }) => {
           />
         );
         break;
+      case "Guinea":
+        return (
+          <img
+            src={
+              // user.country ==
+              require("../Assets/images/flags/Guinea.png")
+            }
+            alt="flag Image"
+          />
+        );
+        break;
+      case "Haiti":
+        return (
+          <img
+            src={
+              // user.country ==
+              require("../Assets/images/flags/Haiti.png")
+            }
+            alt="flag Image"
+          />
+        );
+        break;
       case "Hungary":
         return (
           <img
@@ -394,6 +437,17 @@ const Posts = ({ user, popupmodal, onClick }) => {
             src={
               // user.country ==
               require("../Assets/images/flags/Ireland.png")
+            }
+            alt="flag Image"
+          />
+        );
+        break;
+      case "Italy":
+        return (
+          <img
+            src={
+              // user.country ==
+              require("../Assets/images/flags/Italy.png")
             }
             alt="flag Image"
           />
@@ -757,6 +811,17 @@ const Posts = ({ user, popupmodal, onClick }) => {
             src={
               // user.country ==
               require("../Assets/images/flags/Slovenia.png")
+            }
+            alt="flag Image"
+          />
+        );
+        break;
+      case "South_Africa":
+        return (
+          <img
+            src={
+              // user.country ==
+              require("../Assets/images/flags/South_Africa.png")
             }
             alt="flag Image"
           />

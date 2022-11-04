@@ -130,12 +130,34 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           />
         );
         break;
+      case "Belgium":
+        return (
+          <img
+            src={
+              // user.country ==
+              require("../Assets/images/flags/Belgium.png")
+            }
+            alt="flag Image"
+          />
+        );
+        break;
       case "Bolivia":
         return (
           <img
             src={
               // user.country ==
               require("../Assets/images/flags/Bolivia.png")
+            }
+            alt="flag Image"
+          />
+        );
+        break;
+      case "Bosnia & Herzegovina":
+        return (
+          <img
+            src={
+              // user.country ==
+              require("../Assets/images/flags/Bosnia & Herzegovina.png")
             }
             alt="flag Image"
           />
@@ -393,6 +415,28 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           />
         );
         break;
+      case "Guinea":
+        return (
+          <img
+            src={
+              // user.country ==
+              require("../Assets/images/flags/Guinea.png")
+            }
+            alt="flag Image"
+          />
+        );
+        break;
+      case "Haiti":
+        return (
+          <img
+            src={
+              // user.country ==
+              require("../Assets/images/flags/Haiti.png")
+            }
+            alt="flag Image"
+          />
+        );
+        break;
       case "Hungary":
         return (
           <img
@@ -421,6 +465,17 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
             src={
               // user.country ==
               require("../Assets/images/flags/Ireland.png")
+            }
+            alt="flag Image"
+          />
+        );
+        break;
+      case "Italy":
+        return (
+          <img
+            src={
+              // user.country ==
+              require("../Assets/images/flags/Italy.png")
             }
             alt="flag Image"
           />
@@ -784,6 +839,17 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
             src={
               // user.country ==
               require("../Assets/images/flags/Slovenia.png")
+            }
+            alt="flag Image"
+          />
+        );
+        break;
+      case "South_Africa":
+        return (
+          <img
+            src={
+              // user.country ==
+              require("../Assets/images/flags/South_Africa.png")
             }
             alt="flag Image"
           />
