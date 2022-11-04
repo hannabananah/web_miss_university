@@ -657,6 +657,17 @@ const DetailModal = ({ onCloseModal, isOpen, user, loaded }) => {
           />
         );
         break;
+      case "Nepal":
+        return (
+          <img
+            src={
+              // user.country ==
+              require("../Assets/images/flags/Nepal.png")
+            }
+            alt="flag Image"
+          />
+        );
+        break;
       case "New Zealand":
         return (
           <img
