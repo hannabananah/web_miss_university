@@ -124,22 +124,12 @@ const Posts = ({ user, popupmodal, onClick }) => {
           />
         );
         break;
-        case "Bosnia and Herzegovina":
-          return (
-            <img
-              src={
-                // user.country ==
-                require("../Assets/images/flags/Bosnia_Herzegovina.png")
-              }
-              alt="flag Image"
-            />
-          );
-          break;  
+      case "Bosnia and Herzegovina":
         return (
           <img
             src={
               // user.country ==
-              require("../Assets/images/flags/Bosnia & Herzegovina.png")
+              require("../Assets/images/flags/Bosnia_Herzegovina.png")
             }
             alt="flag Image"
           />
@@ -634,6 +624,17 @@ const Posts = ({ user, popupmodal, onClick }) => {
             src={
               // user.country ==
               require("../Assets/images/flags/Namibia.png")
+            }
+            alt="flag Image"
+          />
+        );
+        break;
+      case "Nepal":
+        return (
+          <img
+            src={
+              // user.country ==
+              require("../Assets/images/flags/Nepal.png")
             }
             alt="flag Image"
           />
