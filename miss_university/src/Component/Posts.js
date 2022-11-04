@@ -124,7 +124,17 @@ const Posts = ({ user, popupmodal, onClick }) => {
           />
         );
         break;
-      case "Bosnia & Herzegovina":
+        case "Bosnia and Herzegovina":
+          return (
+            <img
+              src={
+                // user.country ==
+                require("../Assets/images/flags/Bosnia_Herzegovina.png")
+              }
+              alt="flag Image"
+            />
+          );
+          break;  
         return (
           <img
             src={
@@ -816,7 +826,7 @@ const Posts = ({ user, popupmodal, onClick }) => {
           />
         );
         break;
-      case "South_Africa":
+      case "South Africa":
         return (
           <img
             src={
