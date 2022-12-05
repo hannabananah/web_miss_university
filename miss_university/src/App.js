@@ -11,18 +11,7 @@ import store from "./redux";
 import { increase, decrease, changeLang } from "./redux/module/counter";
 import { setLangCode } from "./redux/actions/langAction";
 import { useTranslation, initReactI18next } from "react-i18next";
-import Modal from "react-modal";
-
-const customStyles = {
-  content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
-  },
-};
+import { Popup } from "./Component/Popup";
 
 function App({ setTotalPage }) {
   // 다국어
@@ -63,19 +52,22 @@ function App({ setTotalPage }) {
     console.warn = function no_console() {};
     console.warn = function () {};
   }
-  const [modalIsOpen, setIsOpen] = React.useState(false);
-  function openModal() {
-    setIsOpen(true);
-  }
+  // 모달 창 닫기
+  const [modalIsOpen, setModalIsOpen] = useState(true);
 
-  function afterOpenModal() {
-    // references are now sync'd and can be accessed.
-  }
-
-  function closeModal() {
-    setIsOpen(false);
-  }
-
+  // 모달 오버레이에서 스크롤 방지
+  useEffect(() => {
+    document.body.style.cssText = `
+        position: fixed; 
+        top: -${window.scrollY}px;
+        overflow-y: scroll;
+        width: 100%;`;
+    return () => {
+      const scrollY = document.body.style.top;
+      document.body.style.cssText = "";
+      window.scrollTo(0, parseInt(scrollY || "0", 10) * -1);
+    };
+  }, []);
 
   return (
     <div className="App" style={{ position: "relative" }}>
@@ -88,18 +80,7 @@ function App({ setTotalPage }) {
         setSelectLangVal={setSelectLangVal}
       />
       <Banner selectLangVal={selectLangVal} />
-      <Modal
-        isOpen={true}
-        onAfterOpen={afterOpenModal}
-        onRequestClose={closeModal}
-        style={customStyles}
-        contentLabel="Example Modal"
-      >
-        <h3>31st WORLD MISS UNIVERSITY is upcoming now</h3>
-        <span>December 21,2022</span>
-        <img src="#" />
-        <button onClick={closeModal}>close</button>
-      </Modal>
+      <Popup modalIsOpen={modalIsOpen} setModalIsOpen={setModalIsOpen} />
       <HashRouter>
         <Routes>
           <Route path="/" element={<Home setTotalPage={setTotalPage} />} />
