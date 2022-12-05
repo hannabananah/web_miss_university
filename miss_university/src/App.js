@@ -11,6 +11,18 @@ import store from "./redux";
 import { increase, decrease, changeLang } from "./redux/module/counter";
 import { setLangCode } from "./redux/actions/langAction";
 import { useTranslation, initReactI18next } from "react-i18next";
+import Modal from "react-modal";
+
+const customStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+  },
+};
 
 function App({ setTotalPage }) {
   // 다국어
@@ -51,6 +63,19 @@ function App({ setTotalPage }) {
     console.warn = function no_console() {};
     console.warn = function () {};
   }
+  const [modalIsOpen, setIsOpen] = React.useState(false);
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function afterOpenModal() {
+    // references are now sync'd and can be accessed.
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
 
   return (
     <div className="App" style={{ position: "relative" }}>
@@ -63,6 +88,18 @@ function App({ setTotalPage }) {
         setSelectLangVal={setSelectLangVal}
       />
       <Banner selectLangVal={selectLangVal} />
+      <Modal
+        isOpen={true}
+        onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Example Modal"
+      >
+        <h3>31st WORLD MISS UNIVERSITY is upcoming now</h3>
+        <span>December 21,2022</span>
+        <img src="#" />
+        <button onClick={closeModal}>close</button>
+      </Modal>
       <HashRouter>
         <Routes>
           <Route path="/" element={<Home setTotalPage={setTotalPage} />} />

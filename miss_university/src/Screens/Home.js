@@ -14,7 +14,6 @@ import Posts from "../Component/Posts";
 import ParticipantsList from "../Component/ParticipantsList";
 // 프로필 자세히 보기 모달 팝업
 import DetailModal from "../Component/DetailModal";
-
 import i18n from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
 
