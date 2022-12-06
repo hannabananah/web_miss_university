@@ -54,19 +54,17 @@ const Carousel = () => {
     centerMode: true,
   };
   return (
-    <div>
-      <StyledSlider {...settings}>
-        {items.map((item) => {
-          return (
-            <div key={item.id}>
-              <ImageContainer>
-                <Image src={item.url} />
-              </ImageContainer>
-            </div>
-          );
-        })}
-      </StyledSlider>
-    </div>
+    <StyledSlider {...settings}>
+      {items.map((item) => {
+        return (
+          <div key={item.id}>
+            <ImageContainer>
+              <Image src={item.url} />
+            </ImageContainer>
+          </div>
+        );
+      })}
+    </StyledSlider>
   );
 };
 

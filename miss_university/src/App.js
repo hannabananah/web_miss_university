@@ -55,10 +55,18 @@ function App({ setTotalPage }) {
   // 모달 창 닫기
   const [modalIsOpen, setModalIsOpen] = useState(true);
 
+  // 오늘 하루 보지 않기
+  const handleClose = () => {
+    let expires = new Date();
+    expires = expires.setHours(expires.getHours() + 24);
+    localStorage.setItem("VisitedBefore", expires);
+    setModalIsOpen(false);
+  };
+
   // 모달 오버레이에서 스크롤 방지
   // useEffect(() => {
   //   document.body.style.cssText = `
-  //       position: fixed; 
+  //       position: fixed;
   //       top: -${window.scrollY}px;
   //       overflow-y: scroll;
   //       width: 100%;`;
@@ -68,14 +76,6 @@ function App({ setTotalPage }) {
   //     window.scrollTo(0, parseInt(scrollY || "0", 10) * -1);
   //   };
   // }, []);
-  
-  // 오늘 하루 보지 않기 
-  const handleClose = () => {
-    let expires = new Date();
-    expires = expires.setHours(expires.getHours() + 24);
-    localStorage.setItem("VisitedBefore", expires);
-    setModalIsOpen(false);
-  };
 
   return (
     <div className="App" style={{ position: "relative" }}>
@@ -88,7 +88,11 @@ function App({ setTotalPage }) {
         setSelectLangVal={setSelectLangVal}
       />
       <Banner selectLangVal={selectLangVal} />
-      <Popup modalIsOpen={modalIsOpen} setModalIsOpen={setModalIsOpen} handleClose={handleClose}/>
+      <Popup
+        modalIsOpen={modalIsOpen}
+        setModalIsOpen={setModalIsOpen}
+        handleClose={handleClose}
+      />
       <HashRouter>
         <Routes>
           <Route path="/" element={<Home setTotalPage={setTotalPage} />} />
