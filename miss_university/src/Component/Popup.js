@@ -5,15 +5,18 @@ import { useStyles } from "../Assets/js/popup";
 
 const popupStyle = {
   content: {
-    top: "40%",
-    left: "28%",
+    top: "45%",
+    left: "35%",
     right: "auto",
     bottom: "auto",
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
     border: "2px solid #666",
     textAlign: "center",
-    width: "450px",
+    maxWidth: "450px",
+    width: "80vw",
+    maxHeight: "720px",
+    height: "80vh",
     boxSizing: "border-box",
   },
 };
