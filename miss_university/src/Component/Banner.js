@@ -10,18 +10,6 @@ import { useTranslation, initReactI18next } from "react-i18next";
 
 export const Banner = ({ selectLangVal }) => {
   const { t } = useTranslation();
-  // function highlight(firstLetter) {
-  //   const highlight = document.getElementById("highlight");
-  //   const highlightTxt = highlight.innerText;
-  //   const highlightWords = highlightTxt.split(/[ \t]+/); //regex matches any number of spaces
-  //   highlight.innerHTML = highlightWords
-  //     .map((word) => {
-  //       const firstLetter = word.substring(0, 1);
-  //       const restOfWord = word.substring(1, word.length);
-  //       return `<span style="color: red">${firstLetter}</span>${restOfWord}`;
-  //     })
-  //     .join("");
-  // }
   return (
     <div id="banner_root">
       <div id="banner_container">

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Modal from "react-modal";
 import Carousel from "./carousel";
 import { useStyles } from "../Assets/js/popup";
@@ -17,7 +17,9 @@ const popupStyle = {
     boxSizing: "border-box",
   },
 };
-export const Popup = ({ modalIsOpen, setModalIsOpen }) => {
+const popupCheck = useRef();
+
+export const Popup = ({ modalIsOpen, setModalIsOpen, handleClose }) => {
   const classes = useStyles();
 
   return (
@@ -33,15 +35,15 @@ export const Popup = ({ modalIsOpen, setModalIsOpen }) => {
         <br />
         is upcoming now
       </h2>
-      <p class={classes.date}>December 21, 2022</p>
+      <p className={classes.date}>December 21, 2022</p>
       <Carousel />
-      <div class={classes.buttons}>
-        <div class={classes.popupButton1Style}>
-          <button class={classes.popupButton}>오늘 하루 안보기</button>
+      <div className={classes.buttons}>
+        <div className={classes.popupButton1Style} onClick={handleClose}>
+          <button className={classes.popupButton}>오늘 하루 안보기</button>
           <input type="checkbox" id="check" />
         </div>
         <button
-          class={classes.popupButton}
+          className={classes.popupButton}
           onClick={() => setModalIsOpen(false)}
         >
           close

@@ -68,6 +68,13 @@ function App({ setTotalPage }) {
       window.scrollTo(0, parseInt(scrollY || "0", 10) * -1);
     };
   }, []);
+  // 오늘 하루 보지 않기 
+  const handleClose = () => {
+    let expires = new Date();
+    expires = expires.setHours(expires.getHours() + 24);
+    localStorage.setItem("VisitedBefore", expires);
+    setModalIsOpen(false);
+  };
 
   return (
     <div className="App" style={{ position: "relative" }}>
@@ -80,7 +87,7 @@ function App({ setTotalPage }) {
         setSelectLangVal={setSelectLangVal}
       />
       <Banner selectLangVal={selectLangVal} />
-      <Popup modalIsOpen={modalIsOpen} setModalIsOpen={setModalIsOpen} />
+      <Popup modalIsOpen={modalIsOpen} setModalIsOpen={setModalIsOpen} handleClose={handleClose}/>
       <HashRouter>
         <Routes>
           <Route path="/" element={<Home setTotalPage={setTotalPage} />} />
