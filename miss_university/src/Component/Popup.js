@@ -17,11 +17,13 @@ const popupStyle = {
     boxSizing: "border-box",
   },
 };
-const popupCheck = useRef();
 
 export const Popup = ({ modalIsOpen, setModalIsOpen, handleClose }) => {
   const classes = useStyles();
-
+  const popupCheck = useRef(null);
+  const onButtonClick = () => {
+    popupCheck.current.click();
+  };
   return (
     <Modal
       isOpen={modalIsOpen}
@@ -38,10 +40,18 @@ export const Popup = ({ modalIsOpen, setModalIsOpen, handleClose }) => {
       <p className={classes.date}>December 21, 2022</p>
       <Carousel />
       <div className={classes.buttons}>
-        <div className={classes.popupButton1Style} onClick={handleClose}>
-          <button className={classes.popupButton}>오늘 하루 안보기</button>
-          <input type="checkbox" id="check" />
-        </div>
+        {/* 오늘 하루 안보기 */}
+        {/* <div className={classes.popupButton1Style}>
+          <button className={classes.popupButton} onClick={onButtonClick}>
+            오늘 하루 안보기
+          </button>
+          <input
+            type="checkbox"
+            id="check"
+            ref={popupCheck}
+            onClick={handleClose}
+          />
+        </div> */}
         <button
           className={classes.popupButton}
           onClick={() => setModalIsOpen(false)}
