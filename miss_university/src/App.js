@@ -56,18 +56,19 @@ function App({ setTotalPage }) {
   const [modalIsOpen, setModalIsOpen] = useState(true);
 
   // 모달 오버레이에서 스크롤 방지
-  useEffect(() => {
-    document.body.style.cssText = `
-        position: fixed; 
-        top: -${window.scrollY}px;
-        overflow-y: scroll;
-        width: 100%;`;
-    return () => {
-      const scrollY = document.body.style.top;
-      document.body.style.cssText = "";
-      window.scrollTo(0, parseInt(scrollY || "0", 10) * -1);
-    };
-  }, []);
+  // useEffect(() => {
+  //   document.body.style.cssText = `
+  //       position: fixed; 
+  //       top: -${window.scrollY}px;
+  //       overflow-y: scroll;
+  //       width: 100%;`;
+  //   return () => {
+  //     const scrollY = document.body.style.top;
+  //     document.body.style.cssText = "";
+  //     window.scrollTo(0, parseInt(scrollY || "0", 10) * -1);
+  //   };
+  // }, []);
+  
   // 오늘 하루 보지 않기 
   const handleClose = () => {
     let expires = new Date();
