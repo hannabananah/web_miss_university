@@ -35,13 +35,6 @@ export const Popup = ({ modalIsOpen, setModalIsOpen, handleClose }) => {
       onRequestClose={() => setModalIsOpen(false)}
       shouldCloseOnOverlayClick={false}
     >
-      <h2>
-        31st WORLD MISS UNIVERSITY
-        <br />
-        is upcoming now
-      </h2>
-      <p className={classes.date}>December 21, 2022</p>
-      <Carousel />
       <div className={classes.buttons}>
         {/* 오늘 하루 안보기 */}
         {/* <div className={classes.popupButton1Style}>
@@ -62,6 +55,13 @@ export const Popup = ({ modalIsOpen, setModalIsOpen, handleClose }) => {
           close
         </button>
       </div>
+      <h2>
+        31st WORLD MISS UNIVERSITY
+        <br />
+        is upcoming now
+      </h2>
+      <p className={classes.date}>December 21, 2022</p>
+      <Carousel />
     </Modal>
   );
 };

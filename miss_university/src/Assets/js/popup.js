@@ -6,7 +6,6 @@ export const useStyles = makeStyles({
     fontSize: 18,
   },
   buttons: {
-    paddingTop: "20px",
     color: "white",
     display: "flex",
     width: "100%",
