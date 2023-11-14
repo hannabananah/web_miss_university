@@ -127,7 +127,6 @@ export const Home = ({ popupmodal, selectedValue }) => {
         <h1 className="headText">{t("participant_info")}</h1>
         <div className="textArea">
           <p className="alignText">
-            {/* 참가자 실시간 정렬 순서: 애니스토리 팔로워 순서 */}
             {/* {t("sequance_participants")} */}
             {/* {t("sequance_follower")} */}
           </p>
