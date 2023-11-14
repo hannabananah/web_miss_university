@@ -20,19 +20,18 @@
     padding: 20px 40px 10px;
   }
   .logoIconLayout {
-    max-width: 150px;
+    max-width: 30px;
     max-height: 25px;
   }
   .logoIcon {
-    max-width: 100%;
-    min-width: 150px;
+    max-width: 70px;
+    min-width: 30px;
     height: auto;
   }
   .right {
     width: 100%;
     height: auto;
     display: flex;
-    padding-top: 10px;
     justify-content: space-between;
   }
   .nav {

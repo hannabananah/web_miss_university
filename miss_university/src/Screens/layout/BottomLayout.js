@@ -14,7 +14,7 @@ export const BottomLayout = () => {
         <div className="top">
           <span>
             <a
-              href="https://www.anychat.com/sub_guide/agree.php"
+              href="#"
               target="_blank"
             >
               {t("terms_and_conditions")}
@@ -22,7 +22,7 @@ export const BottomLayout = () => {
           </span>
           <span className="emphasis">
             <a
-              href="https://www.anychat.com/sub_guide/privacy.php"
+              href="#"
               target="_blank"
             >
               {t("privacy_policy")}
@@ -30,7 +30,7 @@ export const BottomLayout = () => {
           </span>
           <span>
             <a
-              href="https://www.anychat.com/sub_customer/qna.php"
+              href="#"
               target="_blank"
             >
               {t("customer_service")}
@@ -38,7 +38,7 @@ export const BottomLayout = () => {
           </span>
           <span>
             <a
-              href="https://www.anychat.com/sub_company/?goLink=location"
+              href="#"
               target="_blank"
             >
               {t("visit_us")}
@@ -47,7 +47,7 @@ export const BottomLayout = () => {
         </div>
         {/* bottom */}
         <div className="bottom">
-          <span>{t("anychat_corp")}</span>
+          <span>{t("company_corp")}</span>
           <address className="address">{t("address")}</address>
           <span>{t("president")}</span>
           <span>
@@ -59,7 +59,7 @@ export const BottomLayout = () => {
           <span>{t("registrationNum")} : 110111-7783700</span>
         </div>
         <p className="rights">
-          COPYRIGHT (C) ANYCHAT CORP. ALL RIGHTS RESERVED.
+          COPYRIGHT (C) COMPANY CORP. ALL RIGHTS RESERVED.
         </p>
       </footer>
     </div>

@@ -65,17 +65,17 @@ export const TopLayout = ({
     <div id="top_root" className="scrollShadow">
       <header id="header">
         {/* left */}
-        <div>
-          <a href="http://www.anychat.click/WMU/">
-            <SVGLogo className="logoIcon" alt="anychat official logo" />
+        <div className="leftLayout">
+          <a href="./">
+            <SVGLogo className="logoIcon" alt="company official logo" />
           </a>
         </div>
         {/* right */}
         <nav className="right">
           <ul className="nav">
             <li>
-              <a href="https://www.anychat.com/main/" target="_blank">
-                {t("link_to_anychat_homepage")}
+              <a href="#" target="_blank">
+                {t("link_to_company_homepage")}
               </a>
             </li>
             <li>
